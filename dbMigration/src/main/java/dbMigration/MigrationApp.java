@@ -10,12 +10,12 @@ import java.util.concurrent.*;
 import java.util.stream.*;
 
 import dbMigration.config.*;
+import dbMigration.utils.Import;
 
-public class migrationApp {
+public class MigrationApp {
 
-
-
-
+    private static Import importUtils = new Import();
+    
 
     static Config config;
     static String LOG_FILE = "load_data_log.txt";
@@ -23,6 +23,9 @@ public class migrationApp {
     public static void main(String[] args) throws Exception {
         Properties props = loadProperties("src/main/resources/application.properties");
         config = buildConfigFromProperties(props);
+
+        importUtils.importDataIntoCsv(config);
+
         List<Map<String, String>> csvTableMap = buildCsvTableMap(config.data_dir);
         int totalFiles = csvTableMap.size();
         log("=== Starting parallel data load with " + config.max_workers + " workers ===");
@@ -194,16 +197,24 @@ public class migrationApp {
     }
 
     static Config buildConfigFromProperties(Properties props) {
+
         Config cfg = new Config();
-        DbConfig db = new DbConfig();
-        db.user = props.getProperty("db_config_target.user");
-        db.password = props.getProperty("db_config_target.password");
-        db.host = props.getProperty("db_config_target.host");
-        db.database = props.getProperty("db_config_target.database");
-        db.allow_local_infile = Boolean.parseBoolean(props.getProperty("db_config_target.allow_local_infile", "false"));
-        cfg.db_config_target = db;
+        DbConfig dbSource = new DbConfig();
+        dbSource.user = props.getProperty("db_config_target.user");
+        dbSource.password = props.getProperty("db_config_target.password");
+        dbSource.host = props.getProperty("db_config_target.host");
+        dbSource.database = props.getProperty("db_config_target.database");
+        dbSource.allow_local_infile = Boolean.parseBoolean(props.getProperty("db_config_target.allow_local_infile", "false"));
+        cfg.db_config_source = dbSource;
+        DbConfig dbTarget = new DbConfig();
+        dbTarget.user = props.getProperty("db_config_source.user");
+        dbTarget.password = props.getProperty("db_config_source.password");
+        dbTarget.host = props.getProperty("db_config_source.host");
+        dbTarget.database = props.getProperty("db_config_source.database");
+        dbTarget.allow_local_infile = Boolean.parseBoolean(props.getProperty("db_config_source.allow_local_infile", "false"));
+        cfg.db_config_target= dbTarget;
         cfg.data_dir = props.getProperty("data_dir");
-        cfg.max_workers = Integer.parseInt(props.getProperty("max_workers", "4"));
+        cfg.max_workers = Integer.parseInt(props.getProperty("max_workers"));
         return cfg;
     }
 
