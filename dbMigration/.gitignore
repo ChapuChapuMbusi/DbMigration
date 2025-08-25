@@ -2,4 +2,6 @@
 
 /target*
 
+/src/resources/csv*
+
 .prefs
