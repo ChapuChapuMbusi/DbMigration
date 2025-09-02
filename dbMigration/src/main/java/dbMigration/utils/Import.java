@@ -1,6 +1,7 @@
 package dbMigration.utils;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 import java.sql.*;
 import java.text.SimpleDateFormat;
@@ -26,6 +27,7 @@ public class Import {
 
         ExecutorService executor = Executors.newFixedThreadPool(THREADS);
 
+        System.out.println(dbConfig.host);
         try (Connection conn = DriverManager.getConnection(dbConfig.host, dbConfig.user, dbConfig.password)) {
             System.out.println("Connected to Oracle Database");
 
@@ -87,7 +89,7 @@ public class Import {
             stmt.setFetchSize(500);
 
             try (ResultSet rs = stmt.executeQuery(sql);
-                    CSVWriter writer = new CSVWriter(new BufferedWriter(new FileWriter(outputFile)))) {
+                    CSVWriter writer = new CSVWriter(new BufferedWriter(new FileWriter(outputFile, StandardCharsets.UTF_8)))) {
 
                 ResultSetMetaData meta = rs.getMetaData();
                 int columnCount = meta.getColumnCount();

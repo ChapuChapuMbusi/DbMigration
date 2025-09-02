@@ -10316,3 +10316,2555 @@
 [2025-08-07 20:36:40] === All data loads completed ===
 [2025-08-07 20:36:40] ? Total successful: 1163
 [2025-08-07 20:36:40] ? Total failed: 0
+[2025-08-22 16:23:39] === Starting parallel data load with 16 workers ===
+[2025-08-22 16:23:39] Total files to process: 1163
+[2025-08-22 16:23:42] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  ACCORDI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  ALEX_ESTRAZIONE, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  AZIENDE, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  ACCORDI_NUCLEO, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  ASSISTITO, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:42] ERROR : table  ASSEGNI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  BRANCHE_TIPISTRUTTURA, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  CLASSI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  CAUSALI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  BRANCHE, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  BLOCCO_VOCI_DISPONIBILI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  CIRCUITISTRUTTURA, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  CLIENTE, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:44] ERROR : table  CAP, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:45] ERROR : table  CLIENTI_QUOTE_ECCEZIONI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:45] ERROR : table  CLIENTI_QUOTE, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONFIG_VOCI_ONESHOT, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONTRATTO_BCK, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  COMPAGNIE, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONDIZIONI_PART, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONVENZIONIDETTAGLI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONVENZIONI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONTRATTO, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONVENZIONI_CIRCUITISTRUTTURA, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:47] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:49] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:49] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:49] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:49] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:49] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:49] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:49] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:50] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:50] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:50] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:50] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:50] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:50] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:50] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:50] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:50] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:52] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:52] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:52] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:52] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:52] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:52] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:52] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:52] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:52] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:52] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:52] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:52] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:52] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:53] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:53] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:53] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:54] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:54] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:54] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:55] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:55] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:55] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:55] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:55] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:55] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:55] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:55] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:55] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:55] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:55] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:55] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:55] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:57] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:57] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:57] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:57] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:57] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:57] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:57] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:57] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:57] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:57] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:57] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:57] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:58] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:58] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:58] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:58] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:23:59] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:00] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:00] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:00] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:00] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:00] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:00] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:00] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:00] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:00] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:00] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:00] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:00] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:00] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:01] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:01] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:24:02] ERROR : table  CONVENZIONI_VOCI, with message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2025-08-22 16:30:29] === Starting parallel data load with 16 workers ===
+[2025-08-22 16:30:29] Total files to process: 0
+[2025-08-22 16:30:29] === All data loads completed ===
+[2025-08-22 16:30:29] ? Total successful: 0
+[2025-08-22 16:30:29] ? Total failed: 0
+[2025-08-22 16:33:09] === Starting parallel data load with 16 workers ===
+[2025-08-22 16:33:09] Total files to process: 0
+[2025-08-22 16:33:09] === All data loads completed ===
+[2025-08-22 16:33:09] ? Total successful: 0
+[2025-08-22 16:33:09] ? Total failed: 0
+[2025-08-22 16:38:04] === Starting parallel data load with 16 workers ===
+[2025-08-22 16:38:04] Total files to process: 0
+[2025-08-22 16:38:04] === All data loads completed ===
+[2025-08-22 16:38:04] ? Total successful: 0
+[2025-08-22 16:38:04] ? Total failed: 0
+[2025-08-22 16:43:36] === Starting parallel data load with 16 workers ===
+[2025-08-22 16:43:36] Total files to process: 0
+[2025-08-22 16:43:36] === All data loads completed ===
+[2025-08-22 16:43:36] ? Total successful: 0
+[2025-08-22 16:43:36] ? Total failed: 0
+[2025-08-22 16:44:50] === Starting parallel data load with 16 workers ===
+[2025-08-22 16:44:50] Total files to process: 0
+[2025-08-22 16:44:50] === All data loads completed ===
+[2025-08-22 16:44:50] ? Total successful: 0
+[2025-08-22 16:44:50] ? Total failed: 0
+[2025-08-22 18:22:23] === Starting parallel data load with 16 workers ===
+[2025-08-22 18:22:23] Total files to process: 0
+[2025-08-22 18:22:23] === All data loads completed ===
+[2025-08-22 18:22:23] ? Total successful: 0
+[2025-08-22 18:22:23] ? Total failed: 0
+[2025-08-22 18:24:41] === Starting parallel data load with 16 workers ===
+[2025-08-22 18:24:41] Total files to process: 0
+[2025-08-22 18:24:41] === All data loads completed ===
+[2025-08-22 18:24:41] ? Total successful: 0
+[2025-08-22 18:24:41] ? Total failed: 0
+[2025-08-22 18:29:22] === Starting parallel data load with 16 workers ===
+[2025-08-22 18:29:22] Total files to process: 0
+[2025-08-22 18:29:22] === All data loads completed ===
+[2025-08-22 18:29:22] ? Total successful: 0
+[2025-08-22 18:29:22] ? Total failed: 0
+[2025-08-22 19:28:24] === Starting parallel data load with 16 workers ===
+[2025-08-22 19:28:24] Total files to process: 0
+[2025-08-22 19:28:24] === All data loads completed ===
+[2025-08-22 19:28:24] ? Total successful: 0
+[2025-08-22 19:28:24] ? Total failed: 0
+[2025-08-22 19:32:29] === Starting parallel data load with 16 workers ===
+[2025-08-22 19:32:29] Total files to process: 0
+[2025-08-22 19:32:29] === All data loads completed ===
+[2025-08-22 19:32:29] ? Total successful: 0
+[2025-08-22 19:32:29] ? Total failed: 0
+[2025-08-22 19:41:30] === Starting parallel data load with 16 workers ===
+[2025-08-22 19:41:30] Total files to process: 0
+[2025-08-22 19:41:30] === All data loads completed ===
+[2025-08-22 19:41:30] ? Total successful: 0
+[2025-08-22 19:41:30] ? Total failed: 0
+[2025-08-22 19:56:34] === Starting parallel data load with 16 workers ===
+[2025-08-22 19:56:34] Total files to process: 0
+[2025-08-22 19:56:34] === All data loads completed ===
+[2025-08-22 19:56:34] ? Total successful: 0
+[2025-08-22 19:56:34] ? Total failed: 0
+[2025-08-22 20:40:17] === Starting parallel data load with 16 workers ===
+[2025-08-22 20:40:17] Total files to process: 208
+[2025-08-22 20:40:18] ERROR : table  BLOCCO, with message: Table 'caspieown.blocco' doesn't exist
+[2025-08-22 20:40:18] ERROR : table  ALEX, with message: Table 'caspieown.alex' doesn't exist
+[2025-08-22 20:40:18] ERROR : table  CLIENTI, with message: Table 'caspieown.clienti' doesn't exist
+[2025-08-22 20:40:18] ERROR : table  CLIENTI, with message: Table 'caspieown.clienti' doesn't exist
+[2025-08-22 20:40:18] INSERT 0 in table BROKER
+[2025-08-22 20:40:18] INSERT 0 in table BRANCHE
+[2025-08-22 20:40:18] ERROR : table  BRANCHE, with message: Invalid utf8mb4 character string: '"Premesse specifiche di branca Per segmenti ossei s'
+[2025-08-22 20:40:18] ERROR : table  CONDIZIONI, with message: Table 'caspieown.condizioni' doesn't exist
+[2025-08-22 20:40:18] INSERT 0 in table ASSEGNI
+[2025-08-22 20:40:18] INSERT 0 in table ACCORDI
+[2025-08-22 20:40:18] INSERT 0 in table ASSISTITO
+[2025-08-22 20:40:18] ERROR : table  CONFIG, with message: Table 'caspieown.config' doesn't exist
+[2025-08-22 20:40:19] INSERT 0 in table CONVENZIONI
+[2025-08-22 20:40:19] INSERT 0 in table CONVENZIONI
+[2025-08-22 20:40:19] INSERT 0 in table CONVENZIONI
+[2025-08-22 20:40:19] ERROR : table  CWT, with message: Table 'caspieown.cwt' doesn't exist
+[2025-08-22 20:40:19] ERROR : table  CAUSALI, with message: Invalid utf8mb4 character string: '"INDENNITA'
+[2025-08-22 20:40:19] ERROR : table  CWT, with message: Table 'caspieown.cwt' doesn't exist
+[2025-08-22 20:40:19] ERROR : table  EBIPRO, with message: Table 'caspieown.ebipro' doesn't exist
+[2025-08-22 20:40:19] ERROR : table  EBIPRO, with message: Table 'caspieown.ebipro' doesn't exist
+[2025-08-22 20:40:19] ERROR : table  EBI_WS, with message: Table 'caspieown.ebi_ws' doesn't exist
+[2025-08-22 20:40:19] ERROR : table  EBI, with message: Table 'caspieown.ebi' doesn't exist
+[2025-08-22 20:40:19] ERROR : table  EBI_WS, with message: Table 'caspieown.ebi_ws' doesn't exist
+[2025-08-22 20:40:19] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-22 20:40:19] ERROR : table  ASSISTITO, with message: Invalid utf8mb4 character string: '"DAV+'
+[2025-08-22 20:40:19] INSERT 23 in table CLASSI
+[2025-08-22 20:40:19] ERROR : table  ETICHETTE, with message: Table 'caspieown.etichette' doesn't exist
+[2025-08-22 20:40:19] INSERT 4 in table CLIENTE
+[2025-08-22 20:40:19] INSERT 0 in table CAP
+[2025-08-22 20:40:19] ERROR : table  DIAGNOSI, with message: Invalid utf8mb4 character string: '"Frattura esposta soltanto del corpo dell'
+[2025-08-22 20:40:19] ERROR : table  GERARCHIA, with message: Table 'caspieown.gerarchia' doesn't exist
+[2025-08-22 20:40:19] ERROR : table  GRUPPI, with message: Table 'caspieown.gruppi' doesn't exist
+[2025-08-22 20:40:19] ERROR : table  ENTI, with message: Invalid utf8mb4 character string: '"PIAZZA S.ONOFRIO N'
+[2025-08-22 20:40:19] INSERT 0 in table AZIENDE
+[2025-08-22 20:40:19] ERROR : table  GRUPPO, with message: Table 'caspieown.gruppo' doesn't exist
+[2025-08-22 20:40:19] ERROR : table  INDIRIZZO, with message: Table 'caspieown.indirizzo' doesn't exist
+[2025-08-22 20:40:20] INSERT 0 in table CIRCUITISTRUTTURA
+[2025-08-22 20:40:19] INSERT 0 in table COMPAGNIE
+[2025-08-22 20:40:20] ERROR : table  MACROBRANCA, with message: Table 'caspieown.macrobranca' doesn't exist
+[2025-08-22 20:40:20] INSERT 1 in table INVII
+[2025-08-22 20:40:20] INSERT 0 in table IVA
+[2025-08-22 20:40:20] INSERT 0 in table ENTI
+[2025-08-22 20:40:20] INSERT 0 in table CONVENZIONIDETTAGLI
+[2025-08-22 20:40:20] ERROR : table  FATTURA, with message: Invalid utf8mb4 character string: '"10xLaserterapia antalgica : 250,00'
+[2025-08-22 20:40:20] INSERT 124 in table ACCORDI
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] INSERT 0 in table MACROBRANCHE
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD_USER_DEFINED, with message: Table 'caspieown.md_user_defined' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:40:20] INSERT 0 in table MESSAGGI
+[2025-08-22 20:40:20] ERROR : table  MASSIMALI, with message: Invalid utf8mb4 character string: '"INDENNIT'
+[2025-08-22 20:40:20] ERROR : table  MIGR_DATATYPE, with message: Table 'caspieown.migr_datatype' doesn't exist
+[2025-08-22 20:40:20] INSERT 0 in table MIGRLOG
+[2025-08-22 20:40:20] INSERT 0 in table GRUPPISTRUTTURA
+[2025-08-22 20:40:20] ERROR : table  MIGR_DATATYPE, with message: Table 'caspieown.migr_datatype' doesn't exist
+[2025-08-22 20:40:20] INSERT 0 in table MASSIMALI
+[2025-08-22 20:40:20] ERROR : table  MIGR, with message: Table 'caspieown.migr' doesn't exist
+[2025-08-22 20:40:20] INSERT 0 in table LETTERE
+[2025-08-22 20:40:20] ERROR : table  MPT_COPIA, with message: Table 'caspieown.mpt_copia' doesn't exist
+[2025-08-22 20:40:20] INSERT 0 in table LETTERE
+[2025-08-22 20:40:20] ERROR : table  MPT, with message: Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MPT, with message: Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MPT, with message: Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MPT, with message: Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MPT, with message: Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:40:20] ERROR : table  MOTIVIRIFIUTO, with message: Invalid utf8mb4 character string: '"Dichiarazione di conformita''
+[2025-08-22 20:40:20] INSERT 0 in table NOTE
+[2025-08-22 20:40:20] ERROR : table  LOCALITA, with message: Invalid utf8mb4 character string: '"ROR'
+[2025-08-22 20:40:20] INSERT 0 in table MASSIMALI
+[2025-08-22 20:40:20] ERROR : table  PARTI, with message: Table 'caspieown.parti' doesn't exist
+[2025-08-22 20:40:21] ERROR : table  MOTIVISOSPENSIONE, with message: Invalid utf8mb4 character string: '"MANCA CERTIFICATO DI MORTE, ATTO NOTORIO, COORDINATE BANCARIE, '
+[2025-08-22 20:40:21] ERROR : table  PATTI, with message: Table 'caspieown.patti' doesn't exist
+[2025-08-22 20:40:21] INSERT 0 in table MOTIVISOSPENSIONEPRESTAZIONE
+[2025-08-22 20:40:21] INSERT 0 in table PAGAMENTI
+[2025-08-22 20:40:21] INSERT 431 in table NOTE
+[2025-08-22 20:40:21] INSERT 0 in table NOMENCLATORE
+[2025-08-22 20:40:21] ERROR : table  NUCLEO, with message: Invalid utf8mb4 character string: '"IT60M0306905142100000060365'
+[2025-08-22 20:40:21] INSERT 0 in table PARENTELA
+[2025-08-22 20:40:21] INSERT 0 in table ASSEGNI
+[2025-08-22 20:40:21] INSERT 0 in table POLIZZE
+[2025-08-22 20:40:21] ERROR : table  PRATICHE, with message: Table 'caspieown.pratiche' doesn't exist
+[2025-08-22 20:40:21] INSERT 0 in table PRATICA
+[2025-08-22 20:40:21] INSERT 0 in table PRATICA
+[2025-08-22 20:40:21] INSERT 0 in table PRATICA
+[2025-08-22 20:40:21] INSERT 0 in table PRATOF
+[2025-08-22 20:40:21] ERROR : table  PRESTAZIONI, with message: Invalid utf8mb4 character string: '"RETTA GIORNALIERA DI DEGENZA IN REGIME DI RICOVERO NOTTURNO CON'
+[2025-08-22 20:40:21] INSERT 0 in table PRATOF
+[2025-08-22 20:40:21] ERROR : table  PRATICA, with message: Invalid utf8mb4 character string: '"FAMILIARIT'
+[2025-08-22 20:40:21] INSERT 0 in table PRIVILEGI
+[2025-08-22 20:40:21] INSERT 0 in table PRIVILEGI
+[2025-08-22 20:40:21] INSERT 0 in table PROFILI
+[2025-08-22 20:40:21] INSERT 0 in table PROVIDER
+[2025-08-22 20:40:21] INSERT 0 in table PROVIDER
+[2025-08-22 20:40:21] INSERT 0 in table PROTOCOLLO
+[2025-08-22 20:40:21] ERROR : table  QUALIFICHE, with message: Table 'caspieown.qualifiche' doesn't exist
+[2025-08-22 20:40:21] ERROR : table  QUOTE, with message: Table 'caspieown.quote' doesn't exist
+[2025-08-22 20:40:22] INSERT 107 in table PROVINCIA
+[2025-08-22 20:40:22] INSERT 0 in table PROVIDER
+[2025-08-22 20:40:22] ERROR : table  PRATICA, with message: Invalid utf8mb4 character string: '"CONTEGGIATO IL BOLLO NON RIMBORSABILE IMPORTO FATTURA 121.50
+2'
+[2025-08-22 20:40:22] ERROR : table  MEDICI, with message: Invalid utf8mb4 character string: '"UNIT'
+[2025-08-22 20:40:22] INSERT 0 in table QUALIFICA
+[2025-08-22 20:40:22] INSERT 0 in table RATE
+[2025-08-22 20:40:22] INSERT 0 in table REPORTS
+[2025-08-22 20:40:22] INSERT 0 in table REPORTS
+[2025-08-22 20:40:22] INSERT 515 in table PRATICA
+[2025-08-22 20:40:22] INSERT 0 in table RITORNI
+[2025-08-22 20:40:22] ERROR : table  SPESE, with message: Table 'caspieown.spese' doesn't exist
+[2025-08-22 20:40:22] INSERT 21 in table STAMPE
+[2025-08-22 20:40:22] INSERT 345 in table MEDICI
+[2025-08-22 20:40:22] ERROR : table  STATI, with message: Table 'caspieown.stati' doesn't exist
+[2025-08-22 20:40:22] ERROR : table  STATI, with message: Table 'caspieown.stati' doesn't exist
+[2025-08-22 20:40:22] ERROR : table  STATI, with message: Table 'caspieown.stati' doesn't exist
+[2025-08-22 20:40:22] ERROR : table  STATI, with message: Table 'caspieown.stati' doesn't exist
+[2025-08-22 20:40:22] INSERT 0 in table SCHEDULATORE
+[2025-08-22 20:40:22] ERROR : table  STRUTTURA, with message: Invalid utf8mb4 character string: '"VIALE CARR'
+[2025-08-22 20:40:22] INSERT 0 in table STRUTTURA
+[2025-08-22 20:40:22] INSERT 0 in table STRUTTURA
+[2025-08-22 20:40:23] INSERT 0 in table STRUTTURA
+[2025-08-22 20:40:23] INSERT 20 in table REGIONI
+[2025-08-22 20:40:23] INSERT 0 in table SCHEDULATORE
+[2025-08-22 20:40:23] INSERT 0 in table STRUTTURA
+[2025-08-22 20:40:23] INSERT 0 in table STRUTTURA
+[2025-08-22 20:40:23] INSERT 25 in table SISTEMA
+[2025-08-22 20:40:23] INSERT 0 in table SPECIALIZZAZIONI
+[2025-08-22 20:40:23] INSERT 0 in table STRUTTURA
+[2025-08-22 20:40:23] ERROR : table  STRUTTURE, with message: Table 'caspieown.strutture' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  STRUTTURE, with message: Table 'caspieown.strutture' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  TARIFFARIO, with message: Table 'caspieown.tariffario' doesn't exist
+[2025-08-22 20:40:23] INSERT 0 in table STRUTTURA
+[2025-08-22 20:40:23] INSERT 0 in table STAMPANTI
+[2025-08-22 20:40:23] ERROR : table  STRUTTURA, with message: Deadlock found when trying to get lock; try restarting transaction
+[2025-08-22 20:40:23] ERROR : table  TIPISTRUTTURA, with message: Table 'caspieown.tipistruttura' doesn't exist
+[2025-08-22 20:40:23] INSERT 4 in table STRUTTURA
+[2025-08-22 20:40:23] ERROR : table  TIPISTRUTTURA, with message: Table 'caspieown.tipistruttura' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  TIPI, with message: Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  TIPI, with message: Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  TIPI, with message: Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  TIPI, with message: Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  TIPI, with message: Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  TIPO, with message: Table 'caspieown.tipo' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  TIPO, with message: Table 'caspieown.tipo' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  T, with message: Table 'caspieown.t' doesn't exist
+[2025-08-22 20:40:23] INSERT 0 in table UTENTI
+[2025-08-22 20:40:23] INSERT 7 in table UTENTI
+[2025-08-22 20:40:23] ERROR : table  STRUTTURA, with message: Deadlock found when trying to get lock; try restarting transaction
+[2025-08-22 20:40:23] INSERT 0 in table CONTRATTO
+[2025-08-22 20:40:23] INSERT 370 in table CONTRATTO
+[2025-08-22 20:40:23] INSERT 0 in table TIPODOCUMENTOPRIVACY
+[2025-08-22 20:40:23] INSERT 5 in table TITOLI
+[2025-08-22 20:40:23] INSERT 0 in table VERSIONE
+[2025-08-22 20:40:23] ERROR : table  V, with message: Table 'caspieown.v' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  STRUTTURA, with message: Invalid utf8mb4 character string: '"2-'
+[2025-08-22 20:40:23] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  VOCI, with message: Invalid utf8mb4 character string: '"MASSOTERAPIA DISTRETTUALE '
+[2025-08-22 20:40:23] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:40:23] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:40:24] INSERT 0 in table PRATICADETTAGLI
+[2025-08-22 20:40:24] ERROR : table  PROTOCOLLO, with message: Invalid utf8mb4 character string: '"OGGETTO: Rifiutata pratica N'
+[2025-08-22 20:40:24] INSERT 0 in table VOCI_PRATICA
+[2025-08-22 20:40:25] INSERT 18 in table FATTURA
+[2025-08-22 20:40:27] INSERT 4 in table VOCI
+[2025-08-22 20:40:28] INSERT 0 in table VOCIPRATICADETTAGLI
+[2025-08-22 20:40:30] INSERT 614 in table PRATICA
+[2025-08-22 20:40:38] INSERT 1660 in table TARIFFARI
+[2025-08-22 20:40:47] INSERT 5 in table VOCI
+[2025-08-22 20:42:14] INSERT 1660 in table TARIFFARI
+[2025-08-22 20:50:10] INSERT 0 in table MASSIMALI
+[2025-08-22 20:50:13] INSERT 0 in table CONVENZIONI
+[2025-08-22 20:50:13] Retrying 120 failed files...
+[2025-08-22 20:50:13] ERROR : table  ALEX, with message: Table 'caspieown.alex' doesn't exist
+[2025-08-22 20:50:13] [RETRY] ? ALEX: ERROR - Table 'caspieown.alex' doesn't exist
+[2025-08-22 20:50:13] ERROR : table  BLOCCO, with message: Table 'caspieown.blocco' doesn't exist
+[2025-08-22 20:50:13] [RETRY] ? BLOCCO: ERROR - Table 'caspieown.blocco' doesn't exist
+[2025-08-22 20:50:13] ERROR : table  CLIENTI, with message: Table 'caspieown.clienti' doesn't exist
+[2025-08-22 20:50:13] [RETRY] ? CLIENTI: ERROR - Table 'caspieown.clienti' doesn't exist
+[2025-08-22 20:50:13] ERROR : table  CLIENTI, with message: Table 'caspieown.clienti' doesn't exist
+[2025-08-22 20:50:13] [RETRY] ? CLIENTI: ERROR - Table 'caspieown.clienti' doesn't exist
+[2025-08-22 20:50:13] ERROR : table  BRANCHE, with message: Invalid utf8mb4 character string: '"Premesse specifiche di branca Per segmenti ossei s'
+[2025-08-22 20:50:13] [RETRY] ? BRANCHE: ERROR - Invalid utf8mb4 character string: '"Premesse specifiche di branca Per segmenti ossei s'
+[2025-08-22 20:50:13] ERROR : table  CONDIZIONI, with message: Table 'caspieown.condizioni' doesn't exist
+[2025-08-22 20:50:13] [RETRY] ? CONDIZIONI: ERROR - Table 'caspieown.condizioni' doesn't exist
+[2025-08-22 20:50:13] ERROR : table  CONFIG, with message: Table 'caspieown.config' doesn't exist
+[2025-08-22 20:50:13] [RETRY] ? CONFIG: ERROR - Table 'caspieown.config' doesn't exist
+[2025-08-22 20:50:13] ERROR : table  CAUSALI, with message: Invalid utf8mb4 character string: '"INDENNITA'
+[2025-08-22 20:50:13] [RETRY] ? CAUSALI: ERROR - Invalid utf8mb4 character string: '"INDENNITA'
+[2025-08-22 20:50:13] ERROR : table  CWT, with message: Table 'caspieown.cwt' doesn't exist
+[2025-08-22 20:50:13] [RETRY] ? CWT: ERROR - Table 'caspieown.cwt' doesn't exist
+[2025-08-22 20:50:13] ERROR : table  CWT, with message: Table 'caspieown.cwt' doesn't exist
+[2025-08-22 20:50:13] [RETRY] ? CWT: ERROR - Table 'caspieown.cwt' doesn't exist
+[2025-08-22 20:50:13] ERROR : table  EBIPRO, with message: Table 'caspieown.ebipro' doesn't exist
+[2025-08-22 20:50:13] [RETRY] ? EBIPRO: ERROR - Table 'caspieown.ebipro' doesn't exist
+[2025-08-22 20:50:13] ERROR : table  EBIPRO, with message: Table 'caspieown.ebipro' doesn't exist
+[2025-08-22 20:50:13] [RETRY] ? EBIPRO: ERROR - Table 'caspieown.ebipro' doesn't exist
+[2025-08-22 20:50:13] ERROR : table  EBI_WS, with message: Table 'caspieown.ebi_ws' doesn't exist
+[2025-08-22 20:50:13] [RETRY] ? EBI_WS: ERROR - Table 'caspieown.ebi_ws' doesn't exist
+[2025-08-22 20:50:13] ERROR : table  EBI, with message: Table 'caspieown.ebi' doesn't exist
+[2025-08-22 20:50:13] [RETRY] ? EBI: ERROR - Table 'caspieown.ebi' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  EBI_WS, with message: Table 'caspieown.ebi_ws' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? EBI_WS: ERROR - Table 'caspieown.ebi_ws' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? ENTIWIN: ERROR - Table 'caspieown.entiwin' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  ASSISTITO, with message: Invalid utf8mb4 character string: '"DAV+'
+[2025-08-22 20:50:14] [RETRY] ? ASSISTITO: ERROR - Invalid utf8mb4 character string: '"DAV+'
+[2025-08-22 20:50:14] ERROR : table  ETICHETTE, with message: Table 'caspieown.etichette' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? ETICHETTE: ERROR - Table 'caspieown.etichette' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  GERARCHIA, with message: Table 'caspieown.gerarchia' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? GERARCHIA: ERROR - Table 'caspieown.gerarchia' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  DIAGNOSI, with message: Invalid utf8mb4 character string: '"Frattura esposta soltanto del corpo dell'
+[2025-08-22 20:50:14] [RETRY] ? DIAGNOSI: ERROR - Invalid utf8mb4 character string: '"Frattura esposta soltanto del corpo dell'
+[2025-08-22 20:50:14] ERROR : table  GRUPPI, with message: Table 'caspieown.gruppi' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? GRUPPI: ERROR - Table 'caspieown.gruppi' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  ENTI, with message: Invalid utf8mb4 character string: '"PIAZZA S.ONOFRIO N'
+[2025-08-22 20:50:14] [RETRY] ? ENTI: ERROR - Invalid utf8mb4 character string: '"PIAZZA S.ONOFRIO N'
+[2025-08-22 20:50:14] ERROR : table  INDIRIZZO, with message: Table 'caspieown.indirizzo' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? INDIRIZZO: ERROR - Table 'caspieown.indirizzo' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  GRUPPO, with message: Table 'caspieown.gruppo' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? GRUPPO: ERROR - Table 'caspieown.gruppo' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MACROBRANCA, with message: Table 'caspieown.macrobranca' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MACROBRANCA: ERROR - Table 'caspieown.macrobranca' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  FATTURA, with message: Invalid utf8mb4 character string: '"10xLaserterapia antalgica : 250,00'
+[2025-08-22 20:50:14] [RETRY] ? FATTURA: ERROR - Invalid utf8mb4 character string: '"10xLaserterapia antalgica : 250,00'
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:14] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD_USER_DEFINED, with message: Table 'caspieown.md_user_defined' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD_USER_DEFINED: ERROR - Table 'caspieown.md_user_defined' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MD, with message: Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MD: ERROR - Table 'caspieown.md' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MASSIMALI, with message: Invalid utf8mb4 character string: '"INDENNIT'
+[2025-08-22 20:50:15] [RETRY] ? MASSIMALI: ERROR - Invalid utf8mb4 character string: '"INDENNIT'
+[2025-08-22 20:50:15] ERROR : table  MIGR_DATATYPE, with message: Table 'caspieown.migr_datatype' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MIGR_DATATYPE: ERROR - Table 'caspieown.migr_datatype' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MIGR_DATATYPE, with message: Table 'caspieown.migr_datatype' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MIGR_DATATYPE: ERROR - Table 'caspieown.migr_datatype' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MIGR, with message: Table 'caspieown.migr' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MIGR: ERROR - Table 'caspieown.migr' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MPT_COPIA, with message: Table 'caspieown.mpt_copia' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MPT_COPIA: ERROR - Table 'caspieown.mpt_copia' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MPT, with message: Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MPT: ERROR - Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MPT, with message: Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MPT: ERROR - Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MPT, with message: Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MPT: ERROR - Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MPT, with message: Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MPT: ERROR - Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MPT, with message: Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? MPT: ERROR - Table 'caspieown.mpt' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MOTIVIRIFIUTO, with message: Invalid utf8mb4 character string: '"Dichiarazione di conformita''
+[2025-08-22 20:50:15] [RETRY] ? MOTIVIRIFIUTO: ERROR - Invalid utf8mb4 character string: '"Dichiarazione di conformita''
+[2025-08-22 20:50:15] ERROR : table  LOCALITA, with message: Invalid utf8mb4 character string: '"ROR'
+[2025-08-22 20:50:15] [RETRY] ? LOCALITA: ERROR - Invalid utf8mb4 character string: '"ROR'
+[2025-08-22 20:50:15] ERROR : table  PARTI, with message: Table 'caspieown.parti' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? PARTI: ERROR - Table 'caspieown.parti' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  MOTIVISOSPENSIONE, with message: Invalid utf8mb4 character string: '"MANCA CERTIFICATO DI MORTE, ATTO NOTORIO, COORDINATE BANCARIE, '
+[2025-08-22 20:50:15] [RETRY] ? MOTIVISOSPENSIONE: ERROR - Invalid utf8mb4 character string: '"MANCA CERTIFICATO DI MORTE, ATTO NOTORIO, COORDINATE BANCARIE, '
+[2025-08-22 20:50:15] ERROR : table  PATTI, with message: Table 'caspieown.patti' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? PATTI: ERROR - Table 'caspieown.patti' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  NUCLEO, with message: Invalid utf8mb4 character string: '"IT60M0306905142100000060365'
+[2025-08-22 20:50:15] [RETRY] ? NUCLEO: ERROR - Invalid utf8mb4 character string: '"IT60M0306905142100000060365'
+[2025-08-22 20:50:15] ERROR : table  PRATICHE, with message: Table 'caspieown.pratiche' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? PRATICHE: ERROR - Table 'caspieown.pratiche' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  PRESTAZIONI, with message: Invalid utf8mb4 character string: '"RETTA GIORNALIERA DI DEGENZA IN REGIME DI RICOVERO NOTTURNO CON'
+[2025-08-22 20:50:15] [RETRY] ? PRESTAZIONI: ERROR - Invalid utf8mb4 character string: '"RETTA GIORNALIERA DI DEGENZA IN REGIME DI RICOVERO NOTTURNO CON'
+[2025-08-22 20:50:15] ERROR : table  PRATICA, with message: Invalid utf8mb4 character string: '"FAMILIARIT'
+[2025-08-22 20:50:15] [RETRY] ? PRATICA: ERROR - Invalid utf8mb4 character string: '"FAMILIARIT'
+[2025-08-22 20:50:15] ERROR : table  QUALIFICHE, with message: Table 'caspieown.qualifiche' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? QUALIFICHE: ERROR - Table 'caspieown.qualifiche' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  QUOTE, with message: Table 'caspieown.quote' doesn't exist
+[2025-08-22 20:50:15] [RETRY] ? QUOTE: ERROR - Table 'caspieown.quote' doesn't exist
+[2025-08-22 20:50:15] ERROR : table  PRATICA, with message: Invalid utf8mb4 character string: '"CONTEGGIATO IL BOLLO NON RIMBORSABILE IMPORTO FATTURA 121.50
+2'
+[2025-08-22 20:50:15] [RETRY] ? PRATICA: ERROR - Invalid utf8mb4 character string: '"CONTEGGIATO IL BOLLO NON RIMBORSABILE IMPORTO FATTURA 121.50
+2'
+[2025-08-22 20:50:16] ERROR : table  MEDICI, with message: Invalid utf8mb4 character string: '"UNIT'
+[2025-08-22 20:50:16] [RETRY] ? MEDICI: ERROR - Invalid utf8mb4 character string: '"UNIT'
+[2025-08-22 20:50:16] ERROR : table  SPESE, with message: Table 'caspieown.spese' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? SPESE: ERROR - Table 'caspieown.spese' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  STATI, with message: Table 'caspieown.stati' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? STATI: ERROR - Table 'caspieown.stati' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  STATI, with message: Table 'caspieown.stati' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? STATI: ERROR - Table 'caspieown.stati' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  STATI, with message: Table 'caspieown.stati' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? STATI: ERROR - Table 'caspieown.stati' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  STATI, with message: Table 'caspieown.stati' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? STATI: ERROR - Table 'caspieown.stati' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  STRUTTURA, with message: Invalid utf8mb4 character string: '"VIALE CARR'
+[2025-08-22 20:50:16] [RETRY] ? STRUTTURA: ERROR - Invalid utf8mb4 character string: '"VIALE CARR'
+[2025-08-22 20:50:16] ERROR : table  STRUTTURE, with message: Table 'caspieown.strutture' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? STRUTTURE: ERROR - Table 'caspieown.strutture' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  STRUTTURE, with message: Table 'caspieown.strutture' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? STRUTTURE: ERROR - Table 'caspieown.strutture' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  TARIFFARIO, with message: Table 'caspieown.tariffario' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? TARIFFARIO: ERROR - Table 'caspieown.tariffario' doesn't exist
+[2025-08-22 20:50:16] INSERT 0 in table STRUTTURA
+[2025-08-22 20:50:16] [RETRY] ? STRUTTURA: 0 rows inserted
+[2025-08-22 20:50:16] ERROR : table  TIPISTRUTTURA, with message: Table 'caspieown.tipistruttura' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? TIPISTRUTTURA: ERROR - Table 'caspieown.tipistruttura' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  TIPISTRUTTURA, with message: Table 'caspieown.tipistruttura' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? TIPISTRUTTURA: ERROR - Table 'caspieown.tipistruttura' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  TIPI, with message: Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? TIPI: ERROR - Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  TIPI, with message: Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? TIPI: ERROR - Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  TIPI, with message: Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? TIPI: ERROR - Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  TIPI, with message: Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? TIPI: ERROR - Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  TIPI, with message: Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? TIPI: ERROR - Table 'caspieown.tipi' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  TIPO, with message: Table 'caspieown.tipo' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? TIPO: ERROR - Table 'caspieown.tipo' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  TIPO, with message: Table 'caspieown.tipo' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? TIPO: ERROR - Table 'caspieown.tipo' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  T, with message: Table 'caspieown.t' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? T: ERROR - Table 'caspieown.t' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  STRUTTURA, with message: Invalid utf8mb4 character string: '"IL DOTTORE CHE SI OCCUPA DELLE VISITE ? IL DOTTOR LUCA GATTESCH'
+[2025-08-22 20:50:16] [RETRY] ? STRUTTURA: ERROR - Invalid utf8mb4 character string: '"IL DOTTORE CHE SI OCCUPA DELLE VISITE ? IL DOTTOR LUCA GATTESCH'
+[2025-08-22 20:50:16] ERROR : table  STRUTTURA, with message: Invalid utf8mb4 character string: '"2-'
+[2025-08-22 20:50:16] [RETRY] ? STRUTTURA: ERROR - Invalid utf8mb4 character string: '"2-'
+[2025-08-22 20:50:16] ERROR : table  V, with message: Table 'caspieown.v' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? V: ERROR - Table 'caspieown.v' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  VOCI, with message: Invalid utf8mb4 character string: '"MASSOTERAPIA DISTRETTUALE '
+[2025-08-22 20:50:16] [RETRY] ? VOCI: ERROR - Invalid utf8mb4 character string: '"MASSOTERAPIA DISTRETTUALE '
+[2025-08-22 20:50:16] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? WHATSAPP: ERROR - Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? WHATSAPP: ERROR - Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? WHATSAPP: ERROR - Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? WHATSAPP: ERROR - Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? WHATSAPP: ERROR - Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:16] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:16] [RETRY] ? WHATSAPP: ERROR - Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:17] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:17] [RETRY] ? WHATSAPP: ERROR - Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:17] ERROR : table  WHATSAPP, with message: Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:17] [RETRY] ? WHATSAPP: ERROR - Table 'caspieown.whatsapp' doesn't exist
+[2025-08-22 20:50:17] ERROR : table  PROTOCOLLO, with message: Invalid utf8mb4 character string: '"OGGETTO: Rifiutata pratica N'
+[2025-08-22 20:50:17] [RETRY] ? PROTOCOLLO: ERROR - Invalid utf8mb4 character string: '"OGGETTO: Rifiutata pratica N'
+[2025-08-22 20:50:17] === All data loads completed ===
+[2025-08-22 20:50:17] ? Total successful: 90
+[2025-08-22 20:50:17] ? Total failed: 358
+[2025-08-22 21:40:12] === Starting parallel data load with 16 workers ===
+[2025-08-22 21:40:12] Total files to process: 208
+[2025-08-22 21:40:13] INSERT 0 in table ASSEGNI_ANNULLATI
+[2025-08-22 21:40:13] INSERT 0 in table BROKER
+[2025-08-22 21:40:13] INSERT 0 in table ASSISTITO_TMP
+[2025-08-22 21:40:13] INSERT 0 in table ACCORDI
+[2025-08-22 21:40:13] ERROR : table  BRANCHE, with message: Invalid utf8mb4 character string: '"Premesse specifiche di branca Per segmenti ossei s'
+[2025-08-22 21:40:13] ERROR : table  CAUSALI, with message: Invalid utf8mb4 character string: '"INDENNITA'
+[2025-08-22 21:40:13] INSERT 0 in table AZIENDE
+[2025-08-22 21:40:13] INSERT 23 in table CLASSI
+[2025-08-22 21:40:13] INSERT 0 in table CIRCUITISTRUTTURA
+[2025-08-22 21:40:13] INSERT 0 in table BRANCHE_TIPISTRUTTURA
+[2025-08-22 21:40:13] INSERT 4 in table CLIENTE
+[2025-08-22 21:40:13] INSERT 0 in table COMPAGNIE
+[2025-08-22 21:40:13] INSERT 0 in table CONVENZIONI
+[2025-08-22 21:40:13] INSERT 0 in table CONVENZIONI_CIRCUITISTRUTTURA
+[2025-08-22 21:40:13] INSERT 0 in table CLIENTI_QUOTE
+[2025-08-22 21:40:13] INSERT 0 in table CONDIZIONI_PART
+[2025-08-22 21:40:13] INSERT 17 in table CLIENTI_QUOTE_ECCEZIONI
+[2025-08-22 21:40:13] INSERT 0 in table CAP
+[2025-08-22 21:40:13] INSERT 0 in table CONVENZIONIDETTAGLI
+[2025-08-22 21:40:13] ERROR : table  DIAGNOSI, with message: Invalid utf8mb4 character string: '"Frattura esposta soltanto del corpo dell'
+[2025-08-22 21:40:13] INSERT 0 in table CONVENZIONI_STAMPE
+[2025-08-22 21:40:13] INSERT 0 in table CWT_PASSWORD
+[2025-08-22 21:40:13] INSERT 0 in table CWT_LOGWEB
+[2025-08-22 21:40:13] INSERT 0 in table EBIPRO_ADESIONI
+[2025-08-22 21:40:13] INSERT 0 in table EBIPRO_VIDEOCONSULTI
+[2025-08-22 21:40:13] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-22 21:40:13] ERROR : table  ENTI_BROKER, with message: Table 'caspieown.enti_broker' doesn't exist
+[2025-08-22 21:40:13] ERROR : table  ENTI, with message: Invalid utf8mb4 character string: '"PIAZZA S.ONOFRIO N'
+[2025-08-22 21:40:13] INSERT 1381 in table EBI_WS_DOCUMENTALE_INPUT
+[2025-08-22 21:40:14] INSERT 0 in table GRUPPISTRUTTURA
+[2025-08-22 21:40:14] INSERT 1 in table CONFIG_VOCI_ONESHOT
+[2025-08-22 21:40:14] INSERT 0 in table ETICHETTE_NUCLEI
+[2025-08-22 21:40:14] ERROR : table  ASSISTITO, with message: Invalid utf8mb4 character string: '"DAV+'
+[2025-08-22 21:40:14] INSERT 0 in table GERARCHIA_ENTI
+[2025-08-22 21:40:14] INSERT 1 in table INVII
+[2025-08-22 21:40:14] INSERT 0 in table IVA
+[2025-08-22 21:40:14] ERROR : table  EBI_WS_INPUT, with message: Invalid utf8mb4 character string: '"CONTR'
+[2025-08-22 21:40:14] INSERT 337 in table EBI_WS_INPUT_APPO
+[2025-08-22 21:40:14] ERROR : table  FATTURA, with message: Invalid utf8mb4 character string: '"10xLaserterapia antalgica : 250,00'
+[2025-08-22 21:40:14] INSERT 0 in table MACROBRANCHE
+[2025-08-22 21:40:14] INSERT 0 in table LETTERE
+[2025-08-22 21:40:14] INSERT 0 in table GRUPPI_INVIO
+[2025-08-22 21:40:14] INSERT 0 in table MACROBRANCA_NOMENCLATORE
+[2025-08-22 21:40:14] INSERT 0 in table LETTERE_PRATICA
+[2025-08-22 21:40:14] ERROR : table  MASSIMALI, with message: Invalid utf8mb4 character string: '"INDENNIT'
+[2025-08-22 21:40:14] INSERT 0 in table GRUPPO_LETTERE
+[2025-08-22 21:40:14] ERROR : table  LOCALITA, with message: Invalid utf8mb4 character string: '"ROR'
+[2025-08-22 21:40:14] INSERT 0 in table MASSIMALI_CAUSALI
+[2025-08-22 21:40:14] INSERT 0 in table MD_ADDITIONAL_PROPERTIES
+[2025-08-22 21:40:14] INSERT 0 in table MD_APPLICATIONFILES
+[2025-08-22 21:40:14] INSERT 0 in table MD_APPLICATIONS
+[2025-08-22 21:40:14] INSERT 0 in table MASSIMALI_ACCORDI
+[2025-08-22 21:40:14] ERROR : table  MD_COLUMNS, with message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRECISION = NULLIF(NULLIF(@PRECISION, 'null'), ''), SCALE = NULLIF(NULLIF(@SCALE' at line 1
+[2025-08-22 21:40:14] INSERT 0 in table MD_CONSTRAINT_DETAILS
+[2025-08-22 21:40:14] INSERT 0 in table MD_CONNECTIONS
+[2025-08-22 21:40:14] INSERT 0 in table MD_CONSTRAINTS
+[2025-08-22 21:40:14] INSERT 0 in table MD_CATALOGS
+[2025-08-22 21:40:14] INSERT 0 in table MD_DERIVATIVES
+[2025-08-22 21:40:14] INSERT 0 in table MD_FILE_ARTIFACTS
+[2025-08-22 21:40:14] INSERT 0 in table MD_GROUP_MEMBERS
+[2025-08-22 21:40:14] INSERT 0 in table ACCORDI_NUCLEO
+[2025-08-22 21:40:15] INSERT 0 in table MD_GROUP_PRIVILEGES
+[2025-08-22 21:40:15] INSERT 0 in table MD_INDEX_DETAILS
+[2025-08-22 21:40:15] INSERT 0 in table MD_MIGR_WEAKDEP
+[2025-08-22 21:40:15] INSERT 0 in table MD_MIGR_PARAMETER
+[2025-08-22 21:40:15] INSERT 0 in table MD_INDEXES
+[2025-08-22 21:40:15] INSERT 0 in table MD_MIGR_DEPENDENCY
+[2025-08-22 21:40:15] INSERT 0 in table MD_GROUPS
+[2025-08-22 21:40:15] INSERT 0 in table MD_OTHER_OBJECTS
+[2025-08-22 21:40:15] INSERT 0 in table MD_NUMROW$TARGET
+[2025-08-22 21:40:15] INSERT 0 in table MD_NUMROW$SOURCE
+[2025-08-22 21:40:15] INSERT 0 in table MD_PARTITIONS
+[2025-08-22 21:40:15] INSERT 0 in table MD_PACKAGES
+[2025-08-22 21:40:15] INSERT 0 in table MD_REGISTRY
+[2025-08-22 21:40:15] INSERT 0 in table MD_SCHEMAS
+[2025-08-22 21:40:15] INSERT 0 in table MD_PROJECTS
+[2025-08-22 21:40:15] INSERT 0 in table MD_PRIVILEGES
+[2025-08-22 21:40:15] INSERT 0 in table MD_REPOVERSIONS
+[2025-08-22 21:40:15] INSERT 0 in table MD_SEQUENCES
+[2025-08-22 21:40:15] INSERT 0 in table MD_USERS
+[2025-08-22 21:40:15] INSERT 0 in table MD_TRIGGERS
+[2025-08-22 21:40:15] INSERT 0 in table MD_TABLESPACES
+[2025-08-22 21:40:15] INSERT 0 in table MD_TABLES
+[2025-08-22 21:40:15] INSERT 0 in table MD_STORED_PROGRAMS
+[2025-08-22 21:40:15] INSERT 0 in table MD_SYNONYMS
+[2025-08-22 21:40:15] INSERT 0 in table MD_USER_DEFINED_DATA_TYPES
+[2025-08-22 21:40:15] INSERT 0 in table MD_USER_PRIVILEGES
+[2025-08-22 21:40:15] INSERT 0 in table MESSAGGI
+[2025-08-22 21:40:15] INSERT 0 in table MEDICI_STRUTTURE
+[2025-08-22 21:40:15] INSERT 0 in table MIGRLOG
+[2025-08-22 21:40:15] ERROR : table  MOTIVISOSPENSIONE, with message: Invalid utf8mb4 character string: '"MANCA CERTIFICATO DI MORTE, ATTO NOTORIO, COORDINATE BANCARIE, '
+[2025-08-22 21:40:15] ERROR : table  MOTIVIRIFIUTO, with message: Invalid utf8mb4 character string: '"Dichiarazione di conformita''
+[2025-08-22 21:40:15] INSERT 0 in table MD_VIEWS
+[2025-08-22 21:40:15] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_RULE
+[2025-08-22 21:40:15] INSERT 0 in table MIGR_GENERATION_ORDER
+[2025-08-22 21:40:15] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_MAP
+[2025-08-22 21:40:15] INSERT 0 in table MOTIVISOSPENSIONEPRESTAZIONE
+[2025-08-22 21:40:15] INSERT 2 in table MPT_ENTI
+[2025-08-22 21:40:15] ERROR : table  INDIRIZZO_NUCLEO, with message: Invalid utf8mb4 character string: '"VIA LIBERT'
+[2025-08-22 21:40:15] INSERT 13 in table MPT_USER_EPK
+[2025-08-22 21:40:15] INSERT 0 in table NOTE
+[2025-08-22 21:40:16] ERROR : table  MPT_USER_BEPROF, with message: Invalid utf8mb4 character string: '"Cant'
+[2025-08-22 21:40:16] ERROR : table  MPT_USER_CADIPROF, with message: Invalid utf8mb4 character string: '"VIA EMANUELE OLIVERI MANDAL'
+[2025-08-22 21:40:16] INSERT 0 in table PAGAMENTI
+[2025-08-22 21:40:16] ERROR : table  MPT_UTENTI, with message: Invalid utf8mb4 character string: '"KATIA SAM'
+[2025-08-22 21:40:16] ERROR : table  NUCLEO, with message: Invalid utf8mb4 character string: '"IT60M0306905142100000060365'
+[2025-08-22 21:40:16] INSERT 0 in table PARTI_CORPO
+[2025-08-22 21:40:16] INSERT 0 in table NOMENCLATORE
+[2025-08-22 21:40:16] INSERT 0 in table PARENTELA
+[2025-08-22 21:40:16] INSERT 0 in table PATTI_SPECIALI
+[2025-08-22 21:40:16] ERROR : table  ALEX_ESTRAZIONE, with message: Invalid utf8mb4 character string: '"APNEA OSTRUTTIVA NEL SONNO (DELL'
+[2025-08-22 21:40:16] INSERT 0 in table ASSEGNI
+[2025-08-22 21:40:16] INSERT 0 in table PRATICA_AUDIT_BATCH
+[2025-08-22 21:40:16] INSERT 0 in table POLIZZE
+[2025-08-22 21:40:16] INSERT 0 in table PRATICA_PREVISIONI
+[2025-08-22 21:40:16] INSERT 0 in table PRATICA_LOCK
+[2025-08-22 21:40:16] INSERT 3068 in table NOTE_ASSISTITO
+[2025-08-22 21:40:16] ERROR : table  PRATICA, with message: Invalid utf8mb4 character string: '"CONTEGGIATO IL BOLLO NON RIMBORSABILE IMPORTO FATTURA 121.50
+2'
+[2025-08-22 21:40:16] INSERT 0 in table PRATOF
+[2025-08-22 21:40:16] ERROR : table  PRATICA_AUTORIZZAZIONE, with message: Invalid utf8mb4 character string: '"FAMILIARIT'
+[2025-08-22 21:40:16] ERROR : table  PRESTAZIONI, with message: Invalid utf8mb4 character string: '"RETTA GIORNALIERA DI DEGENZA IN REGIME DI RICOVERO NOTTURNO CON'
+[2025-08-22 21:40:16] INSERT 0 in table PRATOF_QUADRATURE
+[2025-08-22 21:40:17] INSERT 1501 in table PRATICA_DOCUMENTAZIONE
+[2025-08-22 21:40:17] INSERT 0 in table PRIVILEGI
+[2025-08-22 21:40:17] INSERT 0 in table PROFILI
+[2025-08-22 21:40:17] INSERT 0 in table PRIVILEGI_PROFILI
+[2025-08-22 21:40:17] INSERT 0 in table PROTOCOLLO_VALORI
+[2025-08-22 21:40:17] INSERT 0 in table PROVIDER_ENTI
+[2025-08-22 21:40:17] INSERT 0 in table PROVIDER
+[2025-08-22 21:40:17] INSERT 0 in table PROVIDER_STRUTTURA
+[2025-08-22 21:40:17] INSERT 0 in table QUALIFICA
+[2025-08-22 21:40:17] INSERT 0 in table QUOTE_ACCORDO
+[2025-08-22 21:40:17] INSERT 0 in table QUALIFICHE_CONVENZIONI
+[2025-08-22 21:40:17] INSERT 0 in table REPORTS
+[2025-08-22 21:40:17] INSERT 107 in table PROVINCIA
+[2025-08-22 21:40:17] INSERT 0 in table RATE
+[2025-08-22 21:40:17] INSERT 0 in table RITORNI
+[2025-08-22 21:40:17] INSERT 0 in table REPORTS_REGOLE
+[2025-08-22 21:40:17] INSERT 20 in table REGIONI
+[2025-08-22 21:40:17] INSERT 38114 in table CONTRATTO_BCK
+[2025-08-22 21:40:17] INSERT 0 in table SCHEDULATORE
+[2025-08-22 21:40:17] INSERT 0 in table SCHEDULATORE_TIPOOPERAZIONE
+[2025-08-22 21:40:17] INSERT 0 in table SPECIALIZZAZIONI
+[2025-08-22 21:40:17] INSERT 0 in table STAMPE
+[2025-08-22 21:40:17] INSERT 25 in table SISTEMA
+[2025-08-22 21:40:17] ERROR : table  MEDICI, with message: Invalid utf8mb4 character string: '"UNIT'
+[2025-08-22 21:40:17] INSERT 0 in table STAMPANTI
+[2025-08-22 21:40:17] ERROR : table  STRUTTURA, with message: Invalid utf8mb4 character string: '"VIALE CARR'
+[2025-08-22 21:40:17] INSERT 0 in table STATI_ASSISTITO
+[2025-08-22 21:40:17] INSERT 0 in table STATI_CONVENZIONE
+[2025-08-22 21:40:17] INSERT 0 in table SPESE_POSTALI
+[2025-08-22 21:40:17] INSERT 9 in table STATI_EMAIL_PRATICA
+[2025-08-22 21:40:18] INSERT 0 in table STATI_PRATICA
+[2025-08-22 21:40:18] INSERT 0 in table STRUTTURA_GRUPPI
+[2025-08-22 21:40:18] INSERT 86741 in table FATTURA_VOCE
+[2025-08-22 21:40:18] INSERT 0 in table STRUTTURA_ALTRETIPOLOGIE
+[2025-08-22 21:40:18] INSERT 0 in table STRUTTURA_DATIWEB
+[2025-08-22 21:40:18] INSERT 0 in table STRUTTURA_PRIVACY
+[2025-08-22 21:40:18] ERROR : table  PROTOCOLLO, with message: Invalid utf8mb4 character string: '"OGGETTO: Rifiutata pratica N'
+[2025-08-22 21:40:18] INSERT 0 in table STRUTTURA_SPECIALIZZAZIONI
+[2025-08-22 21:40:18] INSERT 0 in table STRUTTURA_AUTO_TARIFFARIO
+[2025-08-22 21:40:18] INSERT 0 in table STRUTTURA_CONTRATTO
+[2025-08-22 21:40:18] INSERT 229 in table STRUTTURA_EVENTI
+[2025-08-22 21:40:18] INSERT 0 in table STRUTTURE_COMPENSAZIONE
+[2025-08-22 21:40:18] INSERT 0 in table STRUTTURA_TEMP_BRANCHE
+[2025-08-22 21:40:18] INSERT 0 in table TARIFFARIO_REGIONI
+[2025-08-22 21:40:18] INSERT 0 in table STRUTTURE_EMAIL
+[2025-08-22 21:40:18] ERROR : table  STRUTTURA_ITER, with message: Invalid utf8mb4 character string: '"IL DOTTORE CHE SI OCCUPA DELLE VISITE ? IL DOTTOR LUCA GATTESCH'
+[2025-08-22 21:40:18] ERROR : table  STRUTTURA_RECAPITI, with message: Invalid utf8mb4 character string: '"2-'
+[2025-08-22 21:40:18] INSERT 0 in table TARIFFARI_REGIONE
+[2025-08-22 21:40:18] INSERT 0 in table TIPISTRUTTURA_CAUSALI
+[2025-08-22 21:40:18] INSERT 0 in table TIPI_CALCOLO
+[2025-08-22 21:40:18] INSERT 14 in table TIPI_STRUTTURA
+[2025-08-22 21:40:18] INSERT 0 in table TIPI_REPORT
+[2025-08-22 21:40:18] INSERT 26 in table TIPI_RECAPITO
+[2025-08-22 21:40:19] INSERT 724 in table TIPISTRUTTURA_SPECIALIZZAZIONI
+[2025-08-22 21:40:19] INSERT 0 in table TIPODOCUMENTOPRIVACY
+[2025-08-22 21:40:19] INSERT 0 in table UTENTI
+[2025-08-22 21:40:19] INSERT 0 in table TIPI_VALORE
+[2025-08-22 21:40:19] INSERT 0 in table UTENTI_WEB
+[2025-08-22 21:40:19] ERROR : table  VOCI, with message: Invalid utf8mb4 character string: '"MASSOTERAPIA DISTRETTUALE '
+[2025-08-22 21:40:19] INSERT 0 in table TITOLI
+[2025-08-22 21:40:19] INSERT 0 in table VOCI_PRATICA_AUDIT_BATCH
+[2025-08-22 21:40:19] INSERT 0 in table TIPO_QUOTA
+[2025-08-22 21:40:19] INSERT 0 in table TIPO_ACCREDITAMENTO
+[2025-08-22 21:40:19] INSERT 0 in table VERSIONE
+[2025-08-22 21:40:19] INSERT 0 in table WHATSAPP_CLIENTS
+[2025-08-22 21:40:19] INSERT 0 in table WHATSAPP_INTERACTIVE_MESSAGES
+[2025-08-22 21:40:19] INSERT 1 in table WHATSAPP_CONFIG
+[2025-08-22 21:40:19] INSERT 28 in table V_ALEX_VOCIESCLUDI
+[2025-08-22 21:40:19] INSERT 0 in table WHATSAPP_LABELS
+[2025-08-22 21:40:19] INSERT 0 in table WHATSAPP_MESSAGES
+[2025-08-22 21:40:19] INSERT 0 in table WHATSAPP_MESSAGGI_CODA
+[2025-08-22 21:40:19] INSERT 0 in table WHATSAPP_NOTIFICHE_PRATICHE
+[2025-08-22 21:40:19] INSERT 0 in table WHATSAPP_TEMPLATES
+[2025-08-22 21:40:20] INSERT 32809 in table PRATICHE_ASSEGNI
+[2025-08-22 21:40:20] INSERT 59936 in table MPT_COPIA_CONTRATTO_20250124
+[2025-08-22 21:40:20] INSERT 0 in table CONTRATTO
+[2025-08-22 21:40:21] INSERT 0 in table PRATICADETTAGLI
+[2025-08-22 21:40:22] INSERT 0 in table PRATICA_NOTIFICA
+[2025-08-22 21:40:22] ERROR : table  VOCI_PRATICA, with message: Invalid utf8mb4 character string: '"N'
+[2025-08-22 21:40:23] ERROR : table  VOCI_PRATICA_TMP, with message: Invalid utf8mb4 character string: '"N'
+[2025-08-22 21:40:23] INSERT 0 in table VOCIPRATICADETTAGLI
+[2025-08-22 21:40:47] INSERT 0 in table BLOCCO_VOCI_DISPONIBILI
+[2025-08-22 21:42:49] INSERT 0 in table TARIFFARI
+[2025-08-22 21:47:21] INSERT 6366143 in table T_AUDIT
+[2025-08-22 21:59:13] INSERT 0 in table MASSIMALI_VOCI
+[2025-08-22 22:00:48] INSERT 0 in table CONVENZIONI_VOCI
+[2025-08-22 22:00:48] Retrying 31 failed files...
+[2025-08-22 22:00:48] ERROR : table  CAUSALI, with message: Invalid utf8mb4 character string: '"INDENNITA'
+[2025-08-22 22:00:48] [RETRY] ? CAUSALI: ERROR - Invalid utf8mb4 character string: '"INDENNITA'
+[2025-08-22 22:00:48] ERROR : table  BRANCHE, with message: Invalid utf8mb4 character string: '"Premesse specifiche di branca Per segmenti ossei s'
+[2025-08-22 22:00:48] [RETRY] ? BRANCHE: ERROR - Invalid utf8mb4 character string: '"Premesse specifiche di branca Per segmenti ossei s'
+[2025-08-22 22:00:48] ERROR : table  DIAGNOSI, with message: Invalid utf8mb4 character string: '"Frattura esposta soltanto del corpo dell'
+[2025-08-22 22:00:48] [RETRY] ? DIAGNOSI: ERROR - Invalid utf8mb4 character string: '"Frattura esposta soltanto del corpo dell'
+[2025-08-22 22:00:48] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-22 22:00:48] [RETRY] ? ENTIWIN: ERROR - Table 'caspieown.entiwin' doesn't exist
+[2025-08-22 22:00:48] ERROR : table  ENTI_BROKER, with message: Table 'caspieown.enti_broker' doesn't exist
+[2025-08-22 22:00:48] [RETRY] ? ENTI_BROKER: ERROR - Table 'caspieown.enti_broker' doesn't exist
+[2025-08-22 22:00:48] ERROR : table  ENTI, with message: Invalid utf8mb4 character string: '"PIAZZA S.ONOFRIO N'
+[2025-08-22 22:00:48] [RETRY] ? ENTI: ERROR - Invalid utf8mb4 character string: '"PIAZZA S.ONOFRIO N'
+[2025-08-22 22:00:48] ERROR : table  ASSISTITO, with message: Invalid utf8mb4 character string: '"DAV+'
+[2025-08-22 22:00:48] [RETRY] ? ASSISTITO: ERROR - Invalid utf8mb4 character string: '"DAV+'
+[2025-08-22 22:00:49] ERROR : table  EBI_WS_INPUT, with message: Invalid utf8mb4 character string: '"CONTR'
+[2025-08-22 22:00:49] [RETRY] ? EBI_WS_INPUT: ERROR - Invalid utf8mb4 character string: '"CONTR'
+[2025-08-22 22:00:49] ERROR : table  FATTURA, with message: Invalid utf8mb4 character string: '"10xLaserterapia antalgica : 250,00'
+[2025-08-22 22:00:49] [RETRY] ? FATTURA: ERROR - Invalid utf8mb4 character string: '"10xLaserterapia antalgica : 250,00'
+[2025-08-22 22:00:49] ERROR : table  MASSIMALI, with message: Invalid utf8mb4 character string: '"INDENNIT'
+[2025-08-22 22:00:49] [RETRY] ? MASSIMALI: ERROR - Invalid utf8mb4 character string: '"INDENNIT'
+[2025-08-22 22:00:49] ERROR : table  LOCALITA, with message: Invalid utf8mb4 character string: '"ROR'
+[2025-08-22 22:00:49] [RETRY] ? LOCALITA: ERROR - Invalid utf8mb4 character string: '"ROR'
+[2025-08-22 22:00:49] ERROR : table  MD_COLUMNS, with message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRECISION = NULLIF(NULLIF(@PRECISION, 'null'), ''), SCALE = NULLIF(NULLIF(@SCALE' at line 1
+[2025-08-22 22:00:49] [RETRY] ? MD_COLUMNS: ERROR - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRECISION = NULLIF(NULLIF(@PRECISION, 'null'), ''), SCALE = NULLIF(NULLIF(@SCALE' at line 1
+[2025-08-22 22:00:49] ERROR : table  MOTIVISOSPENSIONE, with message: Invalid utf8mb4 character string: '"MANCA CERTIFICATO DI MORTE, ATTO NOTORIO, COORDINATE BANCARIE, '
+[2025-08-22 22:00:49] [RETRY] ? MOTIVISOSPENSIONE: ERROR - Invalid utf8mb4 character string: '"MANCA CERTIFICATO DI MORTE, ATTO NOTORIO, COORDINATE BANCARIE, '
+[2025-08-22 22:00:49] ERROR : table  MOTIVIRIFIUTO, with message: Invalid utf8mb4 character string: '"Dichiarazione di conformita''
+[2025-08-22 22:00:49] [RETRY] ? MOTIVIRIFIUTO: ERROR - Invalid utf8mb4 character string: '"Dichiarazione di conformita''
+[2025-08-22 22:00:49] ERROR : table  INDIRIZZO_NUCLEO, with message: Invalid utf8mb4 character string: '"VIA LIBERT'
+[2025-08-22 22:00:49] [RETRY] ? INDIRIZZO_NUCLEO: ERROR - Invalid utf8mb4 character string: '"VIA LIBERT'
+[2025-08-22 22:00:49] ERROR : table  MPT_USER_BEPROF, with message: Invalid utf8mb4 character string: '"Cant'
+[2025-08-22 22:00:49] [RETRY] ? MPT_USER_BEPROF: ERROR - Invalid utf8mb4 character string: '"Cant'
+[2025-08-22 22:00:49] ERROR : table  MPT_USER_CADIPROF, with message: Invalid utf8mb4 character string: '"VIA EMANUELE OLIVERI MANDAL'
+[2025-08-22 22:00:49] [RETRY] ? MPT_USER_CADIPROF: ERROR - Invalid utf8mb4 character string: '"VIA EMANUELE OLIVERI MANDAL'
+[2025-08-22 22:00:49] ERROR : table  MPT_UTENTI, with message: Invalid utf8mb4 character string: '"KATIA SAM'
+[2025-08-22 22:00:49] [RETRY] ? MPT_UTENTI: ERROR - Invalid utf8mb4 character string: '"KATIA SAM'
+[2025-08-22 22:00:49] ERROR : table  NUCLEO, with message: Invalid utf8mb4 character string: '"IT60M0306905142100000060365'
+[2025-08-22 22:00:49] [RETRY] ? NUCLEO: ERROR - Invalid utf8mb4 character string: '"IT60M0306905142100000060365'
+[2025-08-22 22:00:50] ERROR : table  ALEX_ESTRAZIONE, with message: Invalid utf8mb4 character string: '"APNEA OSTRUTTIVA NEL SONNO (DELL'
+[2025-08-22 22:00:50] [RETRY] ? ALEX_ESTRAZIONE: ERROR - Invalid utf8mb4 character string: '"APNEA OSTRUTTIVA NEL SONNO (DELL'
+[2025-08-22 22:00:50] ERROR : table  PRATICA, with message: Invalid utf8mb4 character string: '"CONTEGGIATO IL BOLLO NON RIMBORSABILE IMPORTO FATTURA 121.50
+2'
+[2025-08-22 22:00:50] [RETRY] ? PRATICA: ERROR - Invalid utf8mb4 character string: '"CONTEGGIATO IL BOLLO NON RIMBORSABILE IMPORTO FATTURA 121.50
+2'
+[2025-08-22 22:00:50] ERROR : table  PRATICA_AUTORIZZAZIONE, with message: Invalid utf8mb4 character string: '"FAMILIARIT'
+[2025-08-22 22:00:50] [RETRY] ? PRATICA_AUTORIZZAZIONE: ERROR - Invalid utf8mb4 character string: '"FAMILIARIT'
+[2025-08-22 22:00:50] ERROR : table  PRESTAZIONI, with message: Invalid utf8mb4 character string: '"RETTA GIORNALIERA DI DEGENZA IN REGIME DI RICOVERO NOTTURNO CON'
+[2025-08-22 22:00:50] [RETRY] ? PRESTAZIONI: ERROR - Invalid utf8mb4 character string: '"RETTA GIORNALIERA DI DEGENZA IN REGIME DI RICOVERO NOTTURNO CON'
+[2025-08-22 22:00:51] ERROR : table  MEDICI, with message: Invalid utf8mb4 character string: '"UNIT'
+[2025-08-22 22:00:51] [RETRY] ? MEDICI: ERROR - Invalid utf8mb4 character string: '"UNIT'
+[2025-08-22 22:00:51] ERROR : table  STRUTTURA, with message: Invalid utf8mb4 character string: '"VIALE CARR'
+[2025-08-22 22:00:51] [RETRY] ? STRUTTURA: ERROR - Invalid utf8mb4 character string: '"VIALE CARR'
+[2025-08-22 22:00:51] ERROR : table  PROTOCOLLO, with message: Invalid utf8mb4 character string: '"OGGETTO: Rifiutata pratica N'
+[2025-08-22 22:00:51] [RETRY] ? PROTOCOLLO: ERROR - Invalid utf8mb4 character string: '"OGGETTO: Rifiutata pratica N'
+[2025-08-22 22:00:51] ERROR : table  STRUTTURA_ITER, with message: Invalid utf8mb4 character string: '"IL DOTTORE CHE SI OCCUPA DELLE VISITE ? IL DOTTOR LUCA GATTESCH'
+[2025-08-22 22:00:51] [RETRY] ? STRUTTURA_ITER: ERROR - Invalid utf8mb4 character string: '"IL DOTTORE CHE SI OCCUPA DELLE VISITE ? IL DOTTOR LUCA GATTESCH'
+[2025-08-22 22:00:51] ERROR : table  STRUTTURA_RECAPITI, with message: Invalid utf8mb4 character string: '"2-'
+[2025-08-22 22:00:51] [RETRY] ? STRUTTURA_RECAPITI: ERROR - Invalid utf8mb4 character string: '"2-'
+[2025-08-22 22:00:51] ERROR : table  VOCI, with message: Invalid utf8mb4 character string: '"MASSOTERAPIA DISTRETTUALE '
+[2025-08-22 22:00:51] [RETRY] ? VOCI: ERROR - Invalid utf8mb4 character string: '"MASSOTERAPIA DISTRETTUALE '
+[2025-08-22 22:00:52] ERROR : table  VOCI_PRATICA, with message: Invalid utf8mb4 character string: '"N'
+[2025-08-22 22:00:52] [RETRY] ? VOCI_PRATICA: ERROR - Invalid utf8mb4 character string: '"N'
+[2025-08-22 22:00:54] ERROR : table  VOCI_PRATICA_TMP, with message: Invalid utf8mb4 character string: '"N'
+[2025-08-22 22:00:54] [RETRY] ? VOCI_PRATICA_TMP: ERROR - Invalid utf8mb4 character string: '"N'
+[2025-08-22 22:00:54] === All data loads completed ===
+[2025-08-22 22:00:54] ? Total successful: 177
+[2025-08-22 22:00:54] ? Total failed: 93
+[2025-08-24 12:58:31] === Starting parallel data load with 16 workers ===
+[2025-08-24 12:58:31] Total files to process: 208
+[2025-08-24 12:58:31] INSERT 0 in table ASSEGNI_ANNULLATI
+[2025-08-24 12:58:31] INSERT 0 in table BROKER
+[2025-08-24 12:58:32] INSERT 0 in table ASSISTITO_TMP
+[2025-08-24 12:58:32] INSERT 0 in table ACCORDI
+[2025-08-24 12:58:32] ERROR : table  BRANCHE, with message: Invalid utf8mb4 character string: '"Premesse specifiche di branca Per segmenti ossei s'
+[2025-08-24 12:58:32] ERROR : table  CAUSALI, with message: Invalid utf8mb4 character string: '"INDENNITA'
+[2025-08-24 12:58:32] INSERT 0 in table AZIENDE
+[2025-08-24 12:58:32] INSERT 23 in table CLASSI
+[2025-08-24 12:58:32] INSERT 0 in table CIRCUITISTRUTTURA
+[2025-08-24 12:58:32] INSERT 0 in table CAP
+[2025-08-24 12:58:32] INSERT 0 in table BRANCHE_TIPISTRUTTURA
+[2025-08-24 12:58:32] INSERT 4 in table CLIENTE
+[2025-08-24 12:58:32] INSERT 0 in table COMPAGNIE
+[2025-08-24 12:58:32] INSERT 0 in table CONDIZIONI_PART
+[2025-08-24 12:58:32] INSERT 17 in table CLIENTI_QUOTE_ECCEZIONI
+[2025-08-24 12:58:32] INSERT 0 in table CLIENTI_QUOTE
+[2025-08-24 12:58:32] INSERT 1 in table CONFIG_VOCI_ONESHOT
+[2025-08-24 12:58:32] INSERT 0 in table CONVENZIONI_CIRCUITISTRUTTURA
+[2025-08-24 12:58:32] INSERT 0 in table CONVENZIONI_STAMPE
+[2025-08-24 12:58:32] INSERT 0 in table CWT_PASSWORD
+[2025-08-24 12:58:32] INSERT 0 in table EBIPRO_VIDEOCONSULTI
+[2025-08-24 12:58:32] INSERT 0 in table CONVENZIONI
+[2025-08-24 12:58:32] INSERT 0 in table CWT_LOGWEB
+[2025-08-24 12:58:32] ERROR : table  DIAGNOSI, with message: Invalid utf8mb4 character string: '"Frattura esposta soltanto del corpo dell'
+[2025-08-24 12:58:32] INSERT 0 in table EBIPRO_ADESIONI
+[2025-08-24 12:58:32] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-24 12:58:32] ERROR : table  ENTI_BROKER, with message: Table 'caspieown.enti_broker' doesn't exist
+[2025-08-24 12:58:32] INSERT 0 in table CONVENZIONIDETTAGLI
+[2025-08-24 12:58:32] INSERT 1381 in table EBI_WS_DOCUMENTALE_INPUT
+[2025-08-24 12:58:32] INSERT 0 in table ETICHETTE_NUCLEI
+[2025-08-24 12:58:32] INSERT 337 in table EBI_WS_INPUT_APPO
+[2025-08-24 12:58:32] ERROR : table  EBI_WS_INPUT, with message: Invalid utf8mb4 character string: '"CONTR'
+[2025-08-24 12:58:32] ERROR : table  ASSISTITO, with message: Invalid utf8mb4 character string: '"DAV+'
+[2025-08-24 12:58:33] INSERT 0 in table GRUPPISTRUTTURA
+[2025-08-24 12:58:33] INSERT 0 in table IVA
+[2025-08-24 12:58:33] INSERT 0 in table GRUPPI_INVIO
+[2025-08-24 12:58:33] ERROR : table  ENTI, with message: Invalid utf8mb4 character string: '"PIAZZA S.ONOFRIO N'
+[2025-08-24 12:58:33] INSERT 0 in table GRUPPO_LETTERE
+[2025-08-24 12:58:33] INSERT 0 in table GERARCHIA_ENTI
+[2025-08-24 12:58:33] INSERT 1 in table INVII
+[2025-08-24 12:58:33] INSERT 0 in table LETTERE_PRATICA
+[2025-08-24 12:58:33] INSERT 0 in table MACROBRANCHE
+[2025-08-24 12:58:33] INSERT 0 in table MACROBRANCA_NOMENCLATORE
+[2025-08-24 12:58:33] INSERT 0 in table MASSIMALI_ACCORDI
+[2025-08-24 12:58:33] ERROR : table  FATTURA, with message: Invalid utf8mb4 character string: '"10xLaserterapia antalgica : 250,00'
+[2025-08-24 12:58:33] ERROR : table  MASSIMALI, with message: Invalid utf8mb4 character string: '"INDENNIT'
+[2025-08-24 12:58:33] INSERT 0 in table LETTERE
+[2025-08-24 12:58:33] ERROR : table  LOCALITA, with message: Invalid utf8mb4 character string: '"ROR'
+[2025-08-24 12:58:33] INSERT 0 in table MASSIMALI_CAUSALI
+[2025-08-24 12:58:33] INSERT 0 in table MD_CONNECTIONS
+[2025-08-24 12:58:33] INSERT 0 in table ACCORDI_NUCLEO
+[2025-08-24 12:58:33] INSERT 0 in table MD_APPLICATIONS
+[2025-08-24 12:58:33] INSERT 0 in table MD_CATALOGS
+[2025-08-24 12:58:33] INSERT 0 in table MD_APPLICATIONFILES
+[2025-08-24 12:58:33] ERROR : table  MD_COLUMNS, with message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRECISION = NULLIF(NULLIF(@PRECISION, 'null'), ''), SCALE = NULLIF(NULLIF(@SCALE' at line 1
+[2025-08-24 12:58:34] INSERT 0 in table MD_CONSTRAINT_DETAILS
+[2025-08-24 12:58:34] INSERT 0 in table MD_DERIVATIVES
+[2025-08-24 12:58:34] INSERT 0 in table MD_FILE_ARTIFACTS
+[2025-08-24 12:58:33] INSERT 0 in table MD_CONSTRAINTS
+[2025-08-24 12:58:33] INSERT 0 in table MD_ADDITIONAL_PROPERTIES
+[2025-08-24 12:58:34] INSERT 0 in table MD_INDEXES
+[2025-08-24 12:58:34] INSERT 0 in table MD_GROUPS
+[2025-08-24 12:58:34] INSERT 0 in table MD_GROUP_MEMBERS
+[2025-08-24 12:58:34] INSERT 0 in table MD_MIGR_DEPENDENCY
+[2025-08-24 12:58:34] INSERT 0 in table MD_MIGR_PARAMETER
+[2025-08-24 12:58:34] INSERT 0 in table MD_GROUP_PRIVILEGES
+[2025-08-24 12:58:34] INSERT 0 in table MD_INDEX_DETAILS
+[2025-08-24 12:58:34] ERROR : table  INDIRIZZO_NUCLEO, with message: Invalid utf8mb4 character string: '"VIA LIBERT'
+[2025-08-24 12:58:34] INSERT 0 in table MD_NUMROW$TARGET
+[2025-08-24 12:58:34] INSERT 0 in table MD_MIGR_WEAKDEP
+[2025-08-24 12:58:34] INSERT 0 in table MD_PACKAGES
+[2025-08-24 12:58:34] INSERT 0 in table MD_OTHER_OBJECTS
+[2025-08-24 12:58:34] INSERT 0 in table MD_PARTITIONS
+[2025-08-24 12:58:34] INSERT 0 in table MD_PRIVILEGES
+[2025-08-24 12:58:34] INSERT 0 in table MD_PROJECTS
+[2025-08-24 12:58:34] INSERT 0 in table MD_NUMROW$SOURCE
+[2025-08-24 12:58:34] INSERT 0 in table MD_REGISTRY
+[2025-08-24 12:58:34] INSERT 0 in table MD_TABLESPACES
+[2025-08-24 12:58:34] INSERT 0 in table MD_SYNONYMS
+[2025-08-24 12:58:34] INSERT 0 in table MD_STORED_PROGRAMS
+[2025-08-24 12:58:34] INSERT 0 in table MD_SEQUENCES
+[2025-08-24 12:58:34] INSERT 0 in table MD_TABLES
+[2025-08-24 12:58:34] INSERT 0 in table MD_REPOVERSIONS
+[2025-08-24 12:58:34] INSERT 0 in table MD_USERS
+[2025-08-24 12:58:34] INSERT 0 in table MD_USER_DEFINED_DATA_TYPES
+[2025-08-24 12:58:34] INSERT 0 in table MD_TRIGGERS
+[2025-08-24 12:58:34] INSERT 0 in table MD_VIEWS
+[2025-08-24 12:58:34] INSERT 0 in table MD_SCHEMAS
+[2025-08-24 12:58:34] INSERT 0 in table MD_USER_PRIVILEGES
+[2025-08-24 12:58:34] INSERT 0 in table MEDICI_STRUTTURE
+[2025-08-24 12:58:34] INSERT 0 in table MESSAGGI
+[2025-08-24 12:58:34] INSERT 0 in table MIGR_GENERATION_ORDER
+[2025-08-24 12:58:34] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_MAP
+[2025-08-24 12:58:34] INSERT 0 in table MIGRLOG
+[2025-08-24 12:58:34] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_RULE
+[2025-08-24 12:58:34] ERROR : table  MOTIVISOSPENSIONE, with message: Invalid utf8mb4 character string: '"MANCA CERTIFICATO DI MORTE, ATTO NOTORIO, COORDINATE BANCARIE, '
+[2025-08-24 12:58:35] ERROR : table  ALEX_ESTRAZIONE, with message: Invalid utf8mb4 character string: '"APNEA OSTRUTTIVA NEL SONNO (DELL'
+[2025-08-24 12:58:35] INSERT 2 in table MPT_ENTI
+[2025-08-24 12:58:35] INSERT 0 in table ASSEGNI
+[2025-08-24 12:58:35] ERROR : table  MOTIVIRIFIUTO, with message: Invalid utf8mb4 character string: '"Dichiarazione di conformita''
+[2025-08-24 12:58:35] ERROR : table  MEDICI, with message: Invalid utf8mb4 character string: '"UNIT'
+[2025-08-24 12:58:35] ERROR : table  MPT_USER_CADIPROF, with message: Invalid utf8mb4 character string: '"VIA EMANUELE OLIVERI MANDAL'
+[2025-08-24 12:58:35] ERROR : table  MPT_USER_BEPROF, with message: Invalid utf8mb4 character string: '"Cant'
+[2025-08-24 12:58:35] INSERT 0 in table MOTIVISOSPENSIONEPRESTAZIONE
+[2025-08-24 12:58:35] INSERT 13 in table MPT_USER_EPK
+[2025-08-24 12:58:35] INSERT 0 in table NOMENCLATORE
+[2025-08-24 12:58:35] INSERT 0 in table NOTE
+[2025-08-24 12:58:35] INSERT 0 in table PARTI_CORPO
+[2025-08-24 12:58:35] INSERT 0 in table PAGAMENTI
+[2025-08-24 12:58:35] INSERT 0 in table NOTE_ASSISTITO
+[2025-08-24 12:58:35] ERROR : table  NUCLEO, with message: Invalid utf8mb4 character string: '"IT60M0306905142100000060365'
+[2025-08-24 12:58:35] INSERT 38114 in table CONTRATTO_BCK
+[2025-08-24 12:58:35] ERROR : table  MPT_UTENTI, with message: Invalid utf8mb4 character string: '"KATIA SAM'
+[2025-08-24 12:58:35] ERROR : table  PRATICA_AUTORIZZAZIONE, with message: Invalid utf8mb4 character string: '"FAMILIARIT'
+[2025-08-24 12:58:35] INSERT 0 in table PRATICA_AUDIT_BATCH
+[2025-08-24 12:58:35] INSERT 0 in table PRATICA_LOCK
+[2025-08-24 12:58:35] INSERT 0 in table PARENTELA
+[2025-08-24 12:58:35] INSERT 0 in table PRATOF
+[2025-08-24 12:58:35] INSERT 0 in table PRATOF_QUADRATURE
+[2025-08-24 12:58:36] INSERT 0 in table PRATICA_PREVISIONI
+[2025-08-24 12:58:36] INSERT 0 in table PATTI_SPECIALI
+[2025-08-24 12:58:36] INSERT 0 in table POLIZZE
+[2025-08-24 12:58:36] INSERT 0 in table PRIVILEGI_PROFILI
+[2025-08-24 12:58:36] ERROR : table  PRESTAZIONI, with message: Invalid utf8mb4 character string: '"RETTA GIORNALIERA DI DEGENZA IN REGIME DI RICOVERO NOTTURNO CON'
+[2025-08-24 12:58:36] INSERT 1501 in table PRATICA_DOCUMENTAZIONE
+[2025-08-24 12:58:36] ERROR : table  PRATICA, with message: Invalid utf8mb4 character string: '"CONTEGGIATO IL BOLLO NON RIMBORSABILE IMPORTO FATTURA 121.50
+2'
+[2025-08-24 12:58:36] INSERT 0 in table PROTOCOLLO_VALORI
+[2025-08-24 12:58:36] INSERT 0 in table PROFILI
+[2025-08-24 12:58:36] INSERT 0 in table PRIVILEGI
+[2025-08-24 12:58:36] INSERT 0 in table PROVIDER_ENTI
+[2025-08-24 12:58:36] INSERT 0 in table QUALIFICHE_CONVENZIONI
+[2025-08-24 12:58:36] INSERT 0 in table QUOTE_ACCORDO
+[2025-08-24 12:58:36] INSERT 0 in table PROVIDER_STRUTTURA
+[2025-08-24 12:58:36] INSERT 0 in table QUALIFICA
+[2025-08-24 12:58:36] INSERT 0 in table PROVIDER
+[2025-08-24 12:58:36] INSERT 107 in table PROVINCIA
+[2025-08-24 12:58:36] INSERT 0 in table REPORTS
+[2025-08-24 12:58:36] INSERT 0 in table REPORTS_REGOLE
+[2025-08-24 12:58:36] INSERT 20 in table REGIONI
+[2025-08-24 12:58:36] INSERT 0 in table RATE
+[2025-08-24 12:58:36] INSERT 0 in table RITORNI
+[2025-08-24 12:58:36] INSERT 0 in table SCHEDULATORE
+[2025-08-24 12:58:36] INSERT 25 in table SISTEMA
+[2025-08-24 12:58:36] INSERT 0 in table STAMPE
+[2025-08-24 12:58:36] INSERT 0 in table SCHEDULATORE_TIPOOPERAZIONE
+[2025-08-24 12:58:36] INSERT 0 in table SPECIALIZZAZIONI
+[2025-08-24 12:58:36] INSERT 0 in table SPESE_POSTALI
+[2025-08-24 12:58:37] INSERT 0 in table STAMPANTI
+[2025-08-24 12:58:37] ERROR : table  STRUTTURA, with message: Invalid utf8mb4 character string: '"VIALE CARR'
+[2025-08-24 12:58:37] INSERT 0 in table STATI_CONVENZIONE
+[2025-08-24 12:58:37] INSERT 0 in table STATI_ASSISTITO
+[2025-08-24 12:58:37] INSERT 9 in table STATI_EMAIL_PRATICA
+[2025-08-24 12:58:37] INSERT 0 in table STATI_PRATICA
+[2025-08-24 12:58:37] INSERT 0 in table STRUTTURA_GRUPPI
+[2025-08-24 12:58:37] INSERT 0 in table STRUTTURA_CONTRATTO
+[2025-08-24 12:58:37] INSERT 0 in table STRUTTURA_DATIWEB
+[2025-08-24 12:58:37] INSERT 0 in table STRUTTURA_ALTRETIPOLOGIE
+[2025-08-24 12:58:37] INSERT 0 in table STRUTTURA_AUTO_TARIFFARIO
+[2025-08-24 12:58:37] ERROR : table  PROTOCOLLO, with message: Invalid utf8mb4 character string: '"OGGETTO: Rifiutata pratica N'
+[2025-08-24 12:58:37] INSERT 229 in table STRUTTURA_EVENTI
+[2025-08-24 12:58:37] INSERT 0 in table STRUTTURA_PRIVACY
+[2025-08-24 12:58:37] INSERT 0 in table STRUTTURA_SPECIALIZZAZIONI
+[2025-08-24 12:58:37] INSERT 0 in table TARIFFARIO_REGIONI
+[2025-08-24 12:58:37] INSERT 0 in table STRUTTURE_COMPENSAZIONE
+[2025-08-24 12:58:37] INSERT 0 in table STRUTTURE_EMAIL
+[2025-08-24 12:58:37] ERROR : table  STRUTTURA_ITER, with message: Invalid utf8mb4 character string: '"IL DOTTORE CHE SI OCCUPA DELLE VISITE ? IL DOTTOR LUCA GATTESCH'
+[2025-08-24 12:58:37] ERROR : table  STRUTTURA_RECAPITI, with message: Invalid utf8mb4 character string: '"2-'
+[2025-08-24 12:58:37] INSERT 0 in table STRUTTURA_TEMP_BRANCHE
+[2025-08-24 12:58:38] INSERT 0 in table TIPI_REPORT
+[2025-08-24 12:58:38] INSERT 26 in table TIPI_RECAPITO
+[2025-08-24 12:58:38] INSERT 724 in table TIPISTRUTTURA_SPECIALIZZAZIONI
+[2025-08-24 12:58:38] INSERT 0 in table TIPISTRUTTURA_CAUSALI
+[2025-08-24 12:58:38] INSERT 0 in table TARIFFARI_REGIONE
+[2025-08-24 12:58:38] INSERT 0 in table TIPI_CALCOLO
+[2025-08-24 12:58:38] INSERT 0 in table TIPI_VALORE
+[2025-08-24 12:58:38] INSERT 0 in table TIPODOCUMENTOPRIVACY
+[2025-08-24 12:58:38] INSERT 0 in table TIPI_STRUTTURA
+[2025-08-24 12:58:38] INSERT 0 in table TIPO_ACCREDITAMENTO
+[2025-08-24 12:58:38] INSERT 0 in table UTENTI_WEB
+[2025-08-24 12:58:38] INSERT 0 in table UTENTI
+[2025-08-24 12:58:38] INSERT 0 in table TITOLI
+[2025-08-24 12:58:38] INSERT 0 in table TIPO_QUOTA
+[2025-08-24 12:58:38] INSERT 86741 in table FATTURA_VOCE
+[2025-08-24 12:58:38] ERROR : table  VOCI, with message: Invalid utf8mb4 character string: '"MASSOTERAPIA DISTRETTUALE '
+[2025-08-24 12:58:38] INSERT 0 in table VERSIONE
+[2025-08-24 12:58:38] INSERT 0 in table WHATSAPP_CLIENTS
+[2025-08-24 12:58:38] INSERT 0 in table VOCI_PRATICA_AUDIT_BATCH
+[2025-08-24 12:58:38] INSERT 0 in table WHATSAPP_INTERACTIVE_MESSAGES
+[2025-08-24 12:58:38] INSERT 28 in table V_ALEX_VOCIESCLUDI
+[2025-08-24 12:58:38] INSERT 0 in table WHATSAPP_LABELS
+[2025-08-24 12:58:38] INSERT 1 in table WHATSAPP_CONFIG
+[2025-08-24 12:58:38] INSERT 0 in table WHATSAPP_MESSAGES
+[2025-08-24 12:58:38] INSERT 0 in table WHATSAPP_MESSAGGI_CODA
+[2025-08-24 12:58:38] INSERT 0 in table WHATSAPP_NOTIFICHE_PRATICHE
+[2025-08-24 12:58:38] INSERT 0 in table WHATSAPP_TEMPLATES
+[2025-08-24 12:58:39] INSERT 0 in table CONTRATTO
+[2025-08-24 12:58:39] INSERT 32809 in table PRATICHE_ASSEGNI
+[2025-08-24 12:58:40] INSERT 0 in table PRATICADETTAGLI
+[2025-08-24 12:58:40] INSERT 59936 in table MPT_COPIA_CONTRATTO_20250124
+[2025-08-24 12:58:41] INSERT 0 in table PRATICA_NOTIFICA
+[2025-08-24 12:58:42] ERROR : table  VOCI_PRATICA, with message: Invalid utf8mb4 character string: '"N'
+[2025-08-24 12:58:43] ERROR : table  VOCI_PRATICA_TMP, with message: Invalid utf8mb4 character string: '"N'
+[2025-08-24 12:58:43] INSERT 0 in table VOCIPRATICADETTAGLI
+[2025-08-24 12:58:56] INSERT 0 in table BLOCCO_VOCI_DISPONIBILI
+[2025-08-24 13:00:58] INSERT 0 in table TARIFFARI
+[2025-08-24 13:05:30] INSERT 6366143 in table T_AUDIT
+[2025-08-24 13:17:59] INSERT 0 in table MASSIMALI_VOCI
+[2025-08-24 13:19:49] INSERT 0 in table CONVENZIONI_VOCI
+[2025-08-24 13:19:49] Retrying 31 failed files...
+[2025-08-24 13:19:50] ERROR : table  CAUSALI, with message: Invalid utf8mb4 character string: '"INDENNITA'
+[2025-08-24 13:19:50] [RETRY] ? CAUSALI: ERROR - Invalid utf8mb4 character string: '"INDENNITA'
+[2025-08-24 13:19:50] ERROR : table  BRANCHE, with message: Invalid utf8mb4 character string: '"Premesse specifiche di branca Per segmenti ossei s'
+[2025-08-24 13:19:50] [RETRY] ? BRANCHE: ERROR - Invalid utf8mb4 character string: '"Premesse specifiche di branca Per segmenti ossei s'
+[2025-08-24 13:19:50] ERROR : table  DIAGNOSI, with message: Invalid utf8mb4 character string: '"Frattura esposta soltanto del corpo dell'
+[2025-08-24 13:19:50] [RETRY] ? DIAGNOSI: ERROR - Invalid utf8mb4 character string: '"Frattura esposta soltanto del corpo dell'
+[2025-08-24 13:19:50] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-24 13:19:50] [RETRY] ? ENTIWIN: ERROR - Table 'caspieown.entiwin' doesn't exist
+[2025-08-24 13:19:50] ERROR : table  ENTI_BROKER, with message: Table 'caspieown.enti_broker' doesn't exist
+[2025-08-24 13:19:50] [RETRY] ? ENTI_BROKER: ERROR - Table 'caspieown.enti_broker' doesn't exist
+[2025-08-24 13:19:50] ERROR : table  EBI_WS_INPUT, with message: Invalid utf8mb4 character string: '"CONTR'
+[2025-08-24 13:19:50] [RETRY] ? EBI_WS_INPUT: ERROR - Invalid utf8mb4 character string: '"CONTR'
+[2025-08-24 13:19:50] ERROR : table  ASSISTITO, with message: Invalid utf8mb4 character string: '"DAV+'
+[2025-08-24 13:19:50] [RETRY] ? ASSISTITO: ERROR - Invalid utf8mb4 character string: '"DAV+'
+[2025-08-24 13:19:50] ERROR : table  ENTI, with message: Invalid utf8mb4 character string: '"PIAZZA S.ONOFRIO N'
+[2025-08-24 13:19:50] [RETRY] ? ENTI: ERROR - Invalid utf8mb4 character string: '"PIAZZA S.ONOFRIO N'
+[2025-08-24 13:19:50] ERROR : table  FATTURA, with message: Invalid utf8mb4 character string: '"10xLaserterapia antalgica : 250,00'
+[2025-08-24 13:19:50] [RETRY] ? FATTURA: ERROR - Invalid utf8mb4 character string: '"10xLaserterapia antalgica : 250,00'
+[2025-08-24 13:19:50] ERROR : table  MASSIMALI, with message: Invalid utf8mb4 character string: '"INDENNIT'
+[2025-08-24 13:19:50] [RETRY] ? MASSIMALI: ERROR - Invalid utf8mb4 character string: '"INDENNIT'
+[2025-08-24 13:19:50] ERROR : table  LOCALITA, with message: Invalid utf8mb4 character string: '"ROR'
+[2025-08-24 13:19:50] [RETRY] ? LOCALITA: ERROR - Invalid utf8mb4 character string: '"ROR'
+[2025-08-24 13:19:50] ERROR : table  MD_COLUMNS, with message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRECISION = NULLIF(NULLIF(@PRECISION, 'null'), ''), SCALE = NULLIF(NULLIF(@SCALE' at line 1
+[2025-08-24 13:19:50] [RETRY] ? MD_COLUMNS: ERROR - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRECISION = NULLIF(NULLIF(@PRECISION, 'null'), ''), SCALE = NULLIF(NULLIF(@SCALE' at line 1
+[2025-08-24 13:19:50] ERROR : table  INDIRIZZO_NUCLEO, with message: Invalid utf8mb4 character string: '"VIA LIBERT'
+[2025-08-24 13:19:50] [RETRY] ? INDIRIZZO_NUCLEO: ERROR - Invalid utf8mb4 character string: '"VIA LIBERT'
+[2025-08-24 13:19:50] ERROR : table  MOTIVISOSPENSIONE, with message: Invalid utf8mb4 character string: '"MANCA CERTIFICATO DI MORTE, ATTO NOTORIO, COORDINATE BANCARIE, '
+[2025-08-24 13:19:50] [RETRY] ? MOTIVISOSPENSIONE: ERROR - Invalid utf8mb4 character string: '"MANCA CERTIFICATO DI MORTE, ATTO NOTORIO, COORDINATE BANCARIE, '
+[2025-08-24 13:19:51] ERROR : table  ALEX_ESTRAZIONE, with message: Invalid utf8mb4 character string: '"APNEA OSTRUTTIVA NEL SONNO (DELL'
+[2025-08-24 13:19:51] [RETRY] ? ALEX_ESTRAZIONE: ERROR - Invalid utf8mb4 character string: '"APNEA OSTRUTTIVA NEL SONNO (DELL'
+[2025-08-24 13:19:51] ERROR : table  MOTIVIRIFIUTO, with message: Invalid utf8mb4 character string: '"Dichiarazione di conformita''
+[2025-08-24 13:19:51] [RETRY] ? MOTIVIRIFIUTO: ERROR - Invalid utf8mb4 character string: '"Dichiarazione di conformita''
+[2025-08-24 13:19:51] ERROR : table  MPT_USER_BEPROF, with message: Invalid utf8mb4 character string: '"Cant'
+[2025-08-24 13:19:51] [RETRY] ? MPT_USER_BEPROF: ERROR - Invalid utf8mb4 character string: '"Cant'
+[2025-08-24 13:19:51] ERROR : table  MPT_USER_CADIPROF, with message: Invalid utf8mb4 character string: '"VIA EMANUELE OLIVERI MANDAL'
+[2025-08-24 13:19:51] [RETRY] ? MPT_USER_CADIPROF: ERROR - Invalid utf8mb4 character string: '"VIA EMANUELE OLIVERI MANDAL'
+[2025-08-24 13:19:51] ERROR : table  MEDICI, with message: Invalid utf8mb4 character string: '"UNIT'
+[2025-08-24 13:19:51] [RETRY] ? MEDICI: ERROR - Invalid utf8mb4 character string: '"UNIT'
+[2025-08-24 13:19:51] ERROR : table  NUCLEO, with message: Invalid utf8mb4 character string: '"IT60M0306905142100000060365'
+[2025-08-24 13:19:51] [RETRY] ? NUCLEO: ERROR - Invalid utf8mb4 character string: '"IT60M0306905142100000060365'
+[2025-08-24 13:19:51] ERROR : table  MPT_UTENTI, with message: Invalid utf8mb4 character string: '"KATIA SAM'
+[2025-08-24 13:19:51] [RETRY] ? MPT_UTENTI: ERROR - Invalid utf8mb4 character string: '"KATIA SAM'
+[2025-08-24 13:19:51] ERROR : table  PRATICA_AUTORIZZAZIONE, with message: Invalid utf8mb4 character string: '"FAMILIARIT'
+[2025-08-24 13:19:51] [RETRY] ? PRATICA_AUTORIZZAZIONE: ERROR - Invalid utf8mb4 character string: '"FAMILIARIT'
+[2025-08-24 13:19:51] ERROR : table  PRESTAZIONI, with message: Invalid utf8mb4 character string: '"RETTA GIORNALIERA DI DEGENZA IN REGIME DI RICOVERO NOTTURNO CON'
+[2025-08-24 13:19:51] [RETRY] ? PRESTAZIONI: ERROR - Invalid utf8mb4 character string: '"RETTA GIORNALIERA DI DEGENZA IN REGIME DI RICOVERO NOTTURNO CON'
+[2025-08-24 13:19:52] ERROR : table  PRATICA, with message: Invalid utf8mb4 character string: '"CONTEGGIATO IL BOLLO NON RIMBORSABILE IMPORTO FATTURA 121.50
+2'
+[2025-08-24 13:19:52] [RETRY] ? PRATICA: ERROR - Invalid utf8mb4 character string: '"CONTEGGIATO IL BOLLO NON RIMBORSABILE IMPORTO FATTURA 121.50
+2'
+[2025-08-24 13:19:52] ERROR : table  STRUTTURA, with message: Invalid utf8mb4 character string: '"VIALE CARR'
+[2025-08-24 13:19:52] [RETRY] ? STRUTTURA: ERROR - Invalid utf8mb4 character string: '"VIALE CARR'
+[2025-08-24 13:19:52] ERROR : table  PROTOCOLLO, with message: Invalid utf8mb4 character string: '"OGGETTO: Rifiutata pratica N'
+[2025-08-24 13:19:52] [RETRY] ? PROTOCOLLO: ERROR - Invalid utf8mb4 character string: '"OGGETTO: Rifiutata pratica N'
+[2025-08-24 13:19:52] ERROR : table  STRUTTURA_RECAPITI, with message: Invalid utf8mb4 character string: '"2-'
+[2025-08-24 13:19:52] [RETRY] ? STRUTTURA_RECAPITI: ERROR - Invalid utf8mb4 character string: '"2-'
+[2025-08-24 13:19:52] ERROR : table  STRUTTURA_ITER, with message: Invalid utf8mb4 character string: '"IL DOTTORE CHE SI OCCUPA DELLE VISITE ? IL DOTTOR LUCA GATTESCH'
+[2025-08-24 13:19:52] [RETRY] ? STRUTTURA_ITER: ERROR - Invalid utf8mb4 character string: '"IL DOTTORE CHE SI OCCUPA DELLE VISITE ? IL DOTTOR LUCA GATTESCH'
+[2025-08-24 13:19:52] ERROR : table  VOCI, with message: Invalid utf8mb4 character string: '"MASSOTERAPIA DISTRETTUALE '
+[2025-08-24 13:19:52] [RETRY] ? VOCI: ERROR - Invalid utf8mb4 character string: '"MASSOTERAPIA DISTRETTUALE '
+[2025-08-24 13:19:53] ERROR : table  VOCI_PRATICA, with message: Invalid utf8mb4 character string: '"N'
+[2025-08-24 13:19:53] [RETRY] ? VOCI_PRATICA: ERROR - Invalid utf8mb4 character string: '"N'
+[2025-08-24 13:19:55] ERROR : table  VOCI_PRATICA_TMP, with message: Invalid utf8mb4 character string: '"N'
+[2025-08-24 13:19:55] [RETRY] ? VOCI_PRATICA_TMP: ERROR - Invalid utf8mb4 character string: '"N'
+[2025-08-24 13:19:55] === All data loads completed ===
+[2025-08-24 13:19:55] ? Total successful: 177
+[2025-08-24 13:19:55] ? Total failed: 93
+[2025-08-24 20:59:31] === Starting parallel data load with 16 workers ===
+[2025-08-24 20:59:31] Total files to process: 1
+[2025-08-24 20:59:32] ERROR : table  PRATICA, with message: Invalid utf8mb4 character string: '"CONTEGGIATO IL BOLLO NON RIMBORSABILE IMPORTO FATTURA 121.50
+2'
+[2025-08-24 20:59:32] Retrying 1 failed files...
+[2025-08-24 20:59:32] ERROR : table  PRATICA, with message: Invalid utf8mb4 character string: '"CONTEGGIATO IL BOLLO NON RIMBORSABILE IMPORTO FATTURA 121.50
+2'
+[2025-08-24 20:59:32] [RETRY] ? PRATICA: ERROR - Invalid utf8mb4 character string: '"CONTEGGIATO IL BOLLO NON RIMBORSABILE IMPORTO FATTURA 121.50
+2'
+[2025-08-24 20:59:32] === All data loads completed ===
+[2025-08-24 20:59:32] ? Total successful: 0
+[2025-08-24 20:59:32] ? Total failed: 3
+[2025-08-24 21:27:01] === Starting parallel data load with 16 workers ===
+[2025-08-24 21:27:01] Total files to process: 208
+[2025-08-24 21:27:01] INSERT 0 in table ASSISTITO_TMP
+[2025-08-24 21:27:01] INSERT 0 in table BROKER
+[2025-08-24 21:27:01] INSERT 0 in table ASSEGNI_ANNULLATI
+[2025-08-24 21:27:01] INSERT 0 in table BRANCHE
+[2025-08-24 21:27:01] INSERT 0 in table ACCORDI
+[2025-08-24 21:27:01] INSERT 23 in table CLASSI
+[2025-08-24 21:27:01] INSERT 0 in table CAUSALI
+[2025-08-24 21:27:02] INSERT 0 in table CIRCUITISTRUTTURA
+[2025-08-24 21:27:02] INSERT 0 in table AZIENDE
+[2025-08-24 21:27:02] INSERT 0 in table BRANCHE_TIPISTRUTTURA
+[2025-08-24 21:27:02] INSERT 4 in table CLIENTE
+[2025-08-24 21:27:02] INSERT 0 in table CONDIZIONI_PART
+[2025-08-24 21:27:02] INSERT 0 in table CONVENZIONI_CIRCUITISTRUTTURA
+[2025-08-24 21:27:02] INSERT 0 in table CONVENZIONI_STAMPE
+[2025-08-24 21:27:02] INSERT 1 in table CONFIG_VOCI_ONESHOT
+[2025-08-24 21:27:02] INSERT 0 in table CLIENTI_QUOTE
+[2025-08-24 21:27:02] INSERT 0 in table COMPAGNIE
+[2025-08-24 21:27:02] INSERT 0 in table CWT_LOGWEB
+[2025-08-24 21:27:02] INSERT 17 in table CLIENTI_QUOTE_ECCEZIONI
+[2025-08-24 21:27:02] INSERT 0 in table EBIPRO_ADESIONI
+[2025-08-24 21:27:02] INSERT 0 in table CWT_PASSWORD
+[2025-08-24 21:27:02] INSERT 0 in table EBIPRO_VIDEOCONSULTI
+[2025-08-24 21:27:02] INSERT 0 in table ENTI
+[2025-08-24 21:27:02] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-24 21:27:02] ERROR : table  ENTI_BROKER, with message: Table 'caspieown.enti_broker' doesn't exist
+[2025-08-24 21:27:02] INSERT 0 in table CONVENZIONIDETTAGLI
+[2025-08-24 21:27:02] INSERT 0 in table ETICHETTE_NUCLEI
+[2025-08-24 21:27:02] INSERT 0 in table CAP
+[2025-08-24 21:27:02] INSERT 0 in table CONVENZIONI
+[2025-08-24 21:27:02] INSERT 0 in table GERARCHIA_ENTI
+[2025-08-24 21:27:02] INSERT 337 in table EBI_WS_INPUT_APPO
+[2025-08-24 21:27:02] INSERT 0 in table GRUPPI_INVIO
+[2025-08-24 21:27:02] INSERT 0 in table GRUPPISTRUTTURA
+[2025-08-24 21:27:02] INSERT 0 in table GRUPPO_LETTERE
+[2025-08-24 21:27:02] INSERT 1381 in table EBI_WS_DOCUMENTALE_INPUT
+[2025-08-24 21:27:02] INSERT 0 in table IVA
+[2025-08-24 21:27:02] INSERT 1 in table INVII
+[2025-08-24 21:27:02] INSERT 0 in table LETTERE_PRATICA
+[2025-08-24 21:27:03] INSERT 0 in table LETTERE
+[2025-08-24 21:27:03] INSERT 0 in table MACROBRANCA_NOMENCLATORE
+[2025-08-24 21:27:03] INSERT 0 in table MACROBRANCHE
+[2025-08-24 21:27:03] INSERT 0 in table MASSIMALI
+[2025-08-24 21:27:03] INSERT 0 in table MASSIMALI_CAUSALI
+[2025-08-24 21:27:03] INSERT 0 in table MASSIMALI_ACCORDI
+[2025-08-24 21:27:03] INSERT 1811 in table EBI_WS_INPUT
+[2025-08-24 21:27:03] INSERT 0 in table MD_ADDITIONAL_PROPERTIES
+[2025-08-24 21:27:03] INSERT 0 in table MD_APPLICATIONFILES
+[2025-08-24 21:27:03] INSERT 16215 in table DIAGNOSI
+[2025-08-24 21:27:03] ERROR : table  MD_COLUMNS, with message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRECISION = NULLIF(NULLIF(@PRECISION, 'null'), ''), SCALE = NULLIF(NULLIF(@SCALE' at line 1
+[2025-08-24 21:27:03] INSERT 7904 in table LOCALITA
+[2025-08-24 21:27:04] INSERT 0 in table MD_APPLICATIONS
+[2025-08-24 21:27:04] INSERT 0 in table MD_CATALOGS
+[2025-08-24 21:27:04] INSERT 0 in table MD_CONNECTIONS
+[2025-08-24 21:27:04] INSERT 0 in table MD_CONSTRAINTS
+[2025-08-24 21:27:04] INSERT 0 in table MD_GROUPS
+[2025-08-24 21:27:04] INSERT 0 in table MD_CONSTRAINT_DETAILS
+[2025-08-24 21:27:04] INSERT 0 in table MD_DERIVATIVES
+[2025-08-24 21:27:04] INSERT 0 in table MD_FILE_ARTIFACTS
+[2025-08-24 21:27:04] INSERT 0 in table MD_GROUP_MEMBERS
+[2025-08-24 21:27:04] INSERT 0 in table MD_GROUP_PRIVILEGES
+[2025-08-24 21:27:04] INSERT 0 in table MD_INDEXES
+[2025-08-24 21:27:04] INSERT 0 in table MD_INDEX_DETAILS
+[2025-08-24 21:27:04] INSERT 0 in table MD_MIGR_PARAMETER
+[2025-08-24 21:27:04] INSERT 0 in table MD_MIGR_WEAKDEP
+[2025-08-24 21:27:04] INSERT 0 in table MD_MIGR_DEPENDENCY
+[2025-08-24 21:27:04] INSERT 0 in table MD_PACKAGES
+[2025-08-24 21:27:04] INSERT 0 in table MD_NUMROW$TARGET
+[2025-08-24 21:27:04] INSERT 0 in table MD_NUMROW$SOURCE
+[2025-08-24 21:27:04] INSERT 0 in table MD_OTHER_OBJECTS
+[2025-08-24 21:27:05] INSERT 0 in table MD_PROJECTS
+[2025-08-24 21:27:05] INSERT 0 in table MD_PRIVILEGES
+[2025-08-24 21:27:05] INSERT 0 in table MD_REGISTRY
+[2025-08-24 21:27:05] INSERT 0 in table MD_PARTITIONS
+[2025-08-24 21:27:05] INSERT 0 in table MD_SCHEMAS
+[2025-08-24 21:27:05] INSERT 0 in table MD_SEQUENCES
+[2025-08-24 21:27:05] INSERT 0 in table MD_REPOVERSIONS
+[2025-08-24 21:27:05] INSERT 0 in table MD_SYNONYMS
+[2025-08-24 21:27:05] INSERT 0 in table MD_STORED_PROGRAMS
+[2025-08-24 21:27:05] INSERT 0 in table MD_TABLESPACES
+[2025-08-24 21:27:05] INSERT 0 in table MD_TABLES
+[2025-08-24 21:27:05] INSERT 0 in table ACCORDI_NUCLEO
+[2025-08-24 21:27:05] INSERT 0 in table MD_TRIGGERS
+[2025-08-24 21:27:05] INSERT 0 in table MD_USERS
+[2025-08-24 21:27:05] INSERT 0 in table MD_VIEWS
+[2025-08-24 21:27:05] INSERT 0 in table MD_USER_PRIVILEGES
+[2025-08-24 21:27:05] INSERT 0 in table MD_USER_DEFINED_DATA_TYPES
+[2025-08-24 21:27:05] INSERT 0 in table MIGRLOG
+[2025-08-24 21:27:05] INSERT 0 in table MEDICI_STRUTTURE
+[2025-08-24 21:27:05] INSERT 0 in table MESSAGGI
+[2025-08-24 21:27:05] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_MAP
+[2025-08-24 21:27:05] INSERT 0 in table MIGR_GENERATION_ORDER
+[2025-08-24 21:27:05] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_RULE
+[2025-08-24 21:27:05] INSERT 0 in table MOTIVISOSPENSIONE
+[2025-08-24 21:27:05] INSERT 0 in table MOTIVISOSPENSIONEPRESTAZIONE
+[2025-08-24 21:27:05] INSERT 83 in table MOTIVIRIFIUTO
+[2025-08-24 21:27:05] INSERT 0 in table ASSEGNI
+[2025-08-24 21:27:05] INSERT 2 in table MPT_ENTI
+[2025-08-24 21:27:05] INSERT 13 in table MPT_USER_EPK
+[2025-08-24 21:27:05] INSERT 0 in table NOMENCLATORE
+[2025-08-24 21:27:05] INSERT 546 in table MPT_USER_BEPROF
+[2025-08-24 21:27:06] INSERT 0 in table NOTE
+[2025-08-24 21:27:06] INSERT 0 in table NOTE_ASSISTITO
+[2025-08-24 21:27:06] INSERT 307 in table INDIRIZZO_NUCLEO
+[2025-08-24 21:27:06] INSERT 0 in table PAGAMENTI
+[2025-08-24 21:27:06] INSERT 0 in table PARTI_CORPO
+[2025-08-24 21:27:06] INSERT 0 in table PARENTELA
+[2025-08-24 21:27:06] INSERT 6235 in table MPT_USER_CADIPROF
+[2025-08-24 21:27:06] INSERT 0 in table PATTI_SPECIALI
+[2025-08-24 21:27:06] INSERT 0 in table POLIZZE
+[2025-08-24 21:27:06] INSERT 7535 in table MPT_UTENTI
+[2025-08-24 21:27:06] INSERT 0 in table PRATICA_AUDIT_BATCH
+[2025-08-24 21:27:06] INSERT 38114 in table CONTRATTO_BCK
+[2025-08-24 21:27:06] INSERT 0 in table PRATICA_LOCK
+[2025-08-24 21:27:06] INSERT 1501 in table PRATICA_DOCUMENTAZIONE
+[2025-08-24 21:27:07] INSERT 0 in table PRATICA_PREVISIONI
+[2025-08-24 21:27:07] INSERT 86741 in table FATTURA_VOCE
+[2025-08-24 21:27:07] INSERT 0 in table PRATOF
+[2025-08-24 21:27:07] INSERT 0 in table PRATOF_QUADRATURE
+[2025-08-24 21:27:07] INSERT 0 in table PRESTAZIONI
+[2025-08-24 21:27:08] INSERT 0 in table PRIVILEGI
+[2025-08-24 21:27:08] INSERT 0 in table PRIVILEGI_PROFILI
+[2025-08-24 21:27:08] INSERT 0 in table PROFILI
+[2025-08-24 21:27:08] INSERT 15563 in table PRATICA_AUTORIZZAZIONE
+[2025-08-24 21:27:08] INSERT 0 in table PROTOCOLLO_VALORI
+[2025-08-24 21:27:08] INSERT 0 in table ASSISTITO
+[2025-08-24 21:27:08] INSERT 0 in table PROVIDER_ENTI
+[2025-08-24 21:27:08] INSERT 0 in table PROVIDER_STRUTTURA
+[2025-08-24 21:27:08] INSERT 0 in table PROVIDER
+[2025-08-24 21:27:08] INSERT 0 in table QUALIFICA
+[2025-08-24 21:27:08] INSERT 107 in table PROVINCIA
+[2025-08-24 21:27:09] INSERT 0 in table QUOTE_ACCORDO
+[2025-08-24 21:27:09] INSERT 0 in table RATE
+[2025-08-24 21:27:09] INSERT 0 in table QUALIFICHE_CONVENZIONI
+[2025-08-24 21:27:09] INSERT 20 in table REGIONI
+[2025-08-24 21:27:09] INSERT 0 in table REPORTS_REGOLE
+[2025-08-24 21:27:09] INSERT 0 in table REPORTS
+[2025-08-24 21:27:09] INSERT 0 in table RITORNI
+[2025-08-24 21:27:09] INSERT 0 in table SCHEDULATORE
+[2025-08-24 21:27:09] INSERT 0 in table SCHEDULATORE_TIPOOPERAZIONE
+[2025-08-24 21:27:09] INSERT 0 in table SPECIALIZZAZIONI
+[2025-08-24 21:27:09] INSERT 25 in table SISTEMA
+[2025-08-24 21:27:09] INSERT 0 in table SPESE_POSTALI
+[2025-08-24 21:27:09] INSERT 0 in table STAMPE
+[2025-08-24 21:27:09] INSERT 11939 in table NUCLEO
+[2025-08-24 21:27:09] INSERT 0 in table STAMPANTI
+[2025-08-24 21:27:09] INSERT 0 in table STATI_ASSISTITO
+[2025-08-24 21:27:09] INSERT 9 in table STATI_EMAIL_PRATICA
+[2025-08-24 21:27:09] INSERT 0 in table STATI_CONVENZIONE
+[2025-08-24 21:27:09] INSERT 0 in table STATI_PRATICA
+[2025-08-24 21:27:09] INSERT 0 in table STRUTTURA_AUTO_TARIFFARIO
+[2025-08-24 21:27:09] INSERT 0 in table STRUTTURA_ALTRETIPOLOGIE
+[2025-08-24 21:27:09] INSERT 0 in table STRUTTURA_CONTRATTO
+[2025-08-24 21:27:09] INSERT 0 in table FATTURA
+[2025-08-24 21:27:10] INSERT 0 in table STRUTTURA_GRUPPI
+[2025-08-24 21:27:10] INSERT 229 in table STRUTTURA_EVENTI
+[2025-08-24 21:27:10] INSERT 0 in table STRUTTURA_PRIVACY
+[2025-08-24 21:27:10] INSERT 0 in table STRUTTURA_DATIWEB
+[2025-08-24 21:27:10] INSERT 0 in table STRUTTURA_SPECIALIZZAZIONI
+[2025-08-24 21:27:10] INSERT 59936 in table MPT_COPIA_CONTRATTO_20250124
+[2025-08-24 21:27:10] INSERT 0 in table STRUTTURE_COMPENSAZIONE
+[2025-08-24 21:27:10] INSERT 2422 in table STRUTTURA_ITER
+[2025-08-24 21:27:10] INSERT 0 in table STRUTTURE_EMAIL
+[2025-08-24 21:27:10] INSERT 0 in table TARIFFARIO_REGIONI
+[2025-08-24 21:27:10] INSERT 0 in table STRUTTURA_TEMP_BRANCHE
+[2025-08-24 21:27:10] INSERT 0 in table TARIFFARI_REGIONE
+[2025-08-24 21:27:10] INSERT 0 in table TIPISTRUTTURA_CAUSALI
+[2025-08-24 21:27:10] INSERT 0 in table TIPI_CALCOLO
+[2025-08-24 21:27:10] INSERT 26 in table TIPI_RECAPITO
+[2025-08-24 21:27:10] INSERT 0 in table STRUTTURA
+[2025-08-24 21:27:10] INSERT 724 in table TIPISTRUTTURA_SPECIALIZZAZIONI
+[2025-08-24 21:27:10] INSERT 0 in table TIPI_STRUTTURA
+[2025-08-24 21:27:10] INSERT 0 in table TIPI_VALORE
+[2025-08-24 21:27:10] INSERT 0 in table TIPI_REPORT
+[2025-08-24 21:27:10] INSERT 0 in table TIPO_ACCREDITAMENTO
+[2025-08-24 21:27:10] INSERT 0 in table TIPO_QUOTA
+[2025-08-24 21:27:10] INSERT 0 in table TIPODOCUMENTOPRIVACY
+[2025-08-24 21:27:10] INSERT 0 in table UTENTI
+[2025-08-24 21:27:10] INSERT 0 in table UTENTI_WEB
+[2025-08-24 21:27:11] INSERT 0 in table TITOLI
+[2025-08-24 21:27:11] INSERT 0 in table VERSIONE
+[2025-08-24 21:27:11] INSERT 30942 in table STRUTTURA_RECAPITI
+[2025-08-24 21:27:11] INSERT 0 in table PRATICADETTAGLI
+[2025-08-24 21:27:11] INSERT 0 in table CONTRATTO
+[2025-08-24 21:27:11] INSERT 0 in table VOCI_PRATICA_AUDIT_BATCH
+[2025-08-24 21:27:12] INSERT 28 in table V_ALEX_VOCIESCLUDI
+[2025-08-24 21:27:12] INSERT 0 in table WHATSAPP_CLIENTS
+[2025-08-24 21:27:12] INSERT 1 in table WHATSAPP_CONFIG
+[2025-08-24 21:27:12] INSERT 0 in table WHATSAPP_INTERACTIVE_MESSAGES
+[2025-08-24 21:27:12] INSERT 0 in table WHATSAPP_LABELS
+[2025-08-24 21:27:12] INSERT 0 in table WHATSAPP_MESSAGES
+[2025-08-24 21:27:12] INSERT 0 in table WHATSAPP_MESSAGGI_CODA
+[2025-08-24 21:27:12] INSERT 0 in table WHATSAPP_NOTIFICHE_PRATICHE
+[2025-08-24 21:27:12] INSERT 0 in table WHATSAPP_TEMPLATES
+[2025-08-24 21:27:12] INSERT 0 in table VOCI
+[2025-08-24 21:27:12] INSERT 0 in table MEDICI
+[2025-08-24 21:27:13] INSERT 32809 in table PRATICHE_ASSEGNI
+[2025-08-24 21:27:14] INSERT 0 in table PRATICA_NOTIFICA
+[2025-08-24 21:27:18] INSERT 0 in table VOCIPRATICADETTAGLI
+[2025-08-24 21:27:20] INSERT 0 in table PROTOCOLLO
+[2025-08-24 21:27:21] INSERT 0 in table PRATICA
+[2025-08-24 21:27:25] INSERT 0 in table VOCI_PRATICA
+[2025-08-24 21:27:31] INSERT 93253 in table ALEX_ESTRAZIONE
+[2025-08-24 21:27:39] INSERT 0 in table BLOCCO_VOCI_DISPONIBILI
+[2025-08-24 21:27:52] INSERT 0 in table VOCI_PRATICA_TMP
+[2025-08-24 21:29:45] INSERT 0 in table TARIFFARI
+[2025-08-24 21:35:07] INSERT 6366143 in table T_AUDIT
+[2025-08-24 21:45:58] INSERT 0 in table MASSIMALI_VOCI
+[2025-08-24 21:47:24] INSERT 0 in table CONVENZIONI_VOCI
+[2025-08-24 21:47:24] Retrying 3 failed files...
+[2025-08-24 21:47:24] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-24 21:47:24] [RETRY] ? ENTIWIN: ERROR - Table 'caspieown.entiwin' doesn't exist
+[2025-08-24 21:47:24] ERROR : table  ENTI_BROKER, with message: Table 'caspieown.enti_broker' doesn't exist
+[2025-08-24 21:47:24] [RETRY] ? ENTI_BROKER: ERROR - Table 'caspieown.enti_broker' doesn't exist
+[2025-08-24 21:47:24] ERROR : table  MD_COLUMNS, with message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRECISION = NULLIF(NULLIF(@PRECISION, 'null'), ''), SCALE = NULLIF(NULLIF(@SCALE' at line 1
+[2025-08-24 21:47:24] [RETRY] ? MD_COLUMNS: ERROR - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRECISION = NULLIF(NULLIF(@PRECISION, 'null'), ''), SCALE = NULLIF(NULLIF(@SCALE' at line 1
+[2025-08-24 21:47:24] === All data loads completed ===
+[2025-08-24 21:47:24] ? Total successful: 205
+[2025-08-24 21:47:24] ? Total failed: 9
+[2025-08-24 22:24:43] === Starting parallel data load with 16 workers ===
+[2025-08-24 22:24:43] Total files to process: 208
+[2025-08-24 22:24:44] INSERT 0 in table ASSISTITO_TMP
+[2025-08-24 22:24:44] INSERT 0 in table BROKER
+[2025-08-24 22:24:44] INSERT 0 in table ASSEGNI_ANNULLATI
+[2025-08-24 22:24:44] INSERT 153 in table BRANCHE
+[2025-08-24 22:24:44] INSERT 195 in table ACCORDI
+[2025-08-24 22:24:44] INSERT 684 in table BRANCHE_TIPISTRUTTURA
+[2025-08-24 22:24:44] INSERT 23 in table CLASSI
+[2025-08-24 22:24:44] INSERT 3 in table CIRCUITISTRUTTURA
+[2025-08-24 22:24:44] INSERT 50 in table CAUSALI
+[2025-08-24 22:24:44] INSERT 1 in table AZIENDE
+[2025-08-24 22:24:45] INSERT 4 in table CLIENTE
+[2025-08-24 22:24:45] INSERT 7 in table CONVENZIONI_CIRCUITISTRUTTURA
+[2025-08-24 22:24:45] INSERT 1964 in table CONVENZIONI
+[2025-08-24 22:24:45] INSERT 5 in table COMPAGNIE
+[2025-08-24 22:24:45] INSERT 3 in table CLIENTI_QUOTE
+[2025-08-24 22:24:45] INSERT 17 in table CLIENTI_QUOTE_ECCEZIONI
+[2025-08-24 22:24:45] INSERT 8466 in table CAP
+[2025-08-24 22:24:45] INSERT 1 in table CONFIG_VOCI_ONESHOT
+[2025-08-24 22:24:45] INSERT 5 in table CONDIZIONI_PART
+[2025-08-24 22:24:45] INSERT 0 in table CONVENZIONI_STAMPE
+[2025-08-24 22:24:45] INSERT 1953 in table CONVENZIONIDETTAGLI
+[2025-08-24 22:24:45] INSERT 0 in table CWT_PASSWORD
+[2025-08-24 22:24:45] INSERT 0 in table EBIPRO_ADESIONI
+[2025-08-24 22:24:45] INSERT 0 in table CWT_LOGWEB
+[2025-08-24 22:24:45] INSERT 0 in table EBIPRO_VIDEOCONSULTI
+[2025-08-24 22:24:46] ERROR : table  ENTI_BROKER, with message: Table 'caspieown.enti_broker' doesn't exist
+[2025-08-24 22:24:46] INSERT 0 in table ETICHETTE_NUCLEI
+[2025-08-24 22:24:46] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-24 22:24:46] INSERT 1381 in table EBI_WS_DOCUMENTALE_INPUT
+[2025-08-24 22:24:47] INSERT 79 in table GERARCHIA_ENTI
+[2025-08-24 22:24:47] INSERT 79 in table ENTI
+[2025-08-24 22:24:47] INSERT 16215 in table DIAGNOSI
+[2025-08-24 22:24:47] INSERT 1811 in table EBI_WS_INPUT
+[2025-08-24 22:24:47] INSERT 337 in table EBI_WS_INPUT_APPO
+[2025-08-24 22:24:47] INSERT 0 in table IVA
+[2025-08-24 22:24:47] INSERT 22 in table GRUPPISTRUTTURA
+[2025-08-24 22:24:47] INSERT 1 in table INVII
+[2025-08-24 22:24:47] INSERT 7 in table GRUPPI_INVIO
+[2025-08-24 22:24:47] INSERT 1 in table LETTERE_PRATICA
+[2025-08-24 22:24:47] INSERT 115 in table LETTERE
+[2025-08-24 22:24:47] INSERT 36445 in table ACCORDI_NUCLEO
+[2025-08-24 22:24:47] INSERT 0 in table MACROBRANCHE
+[2025-08-24 22:24:47] INSERT 12 in table GRUPPO_LETTERE
+[2025-08-24 22:24:47] INSERT 0 in table MACROBRANCA_NOMENCLATORE
+[2025-08-24 22:24:48] INSERT 0 in table MD_ADDITIONAL_PROPERTIES
+[2025-08-24 22:24:48] INSERT 0 in table MASSIMALI_CAUSALI
+[2025-08-24 22:24:48] INSERT 38114 in table CONTRATTO_BCK
+[2025-08-24 22:24:48] INSERT 383 in table MASSIMALI
+[2025-08-24 22:24:48] INSERT 0 in table MD_APPLICATIONS
+[2025-08-24 22:24:48] INSERT 0 in table MD_COLUMNS
+[2025-08-24 22:24:48] INSERT 0 in table MD_CATALOGS
+[2025-08-24 22:24:48] INSERT 0 in table MD_APPLICATIONFILES
+[2025-08-24 22:24:48] INSERT 0 in table MD_CONSTRAINTS
+[2025-08-24 22:24:48] INSERT 0 in table MD_CONNECTIONS
+[2025-08-24 22:24:48] INSERT 0 in table MD_CONSTRAINT_DETAILS
+[2025-08-24 22:24:48] INSERT 0 in table MD_DERIVATIVES
+[2025-08-24 22:24:49] INSERT 7904 in table LOCALITA
+[2025-08-24 22:24:49] INSERT 0 in table MD_GROUPS
+[2025-08-24 22:24:49] INSERT 0 in table MD_FILE_ARTIFACTS
+[2025-08-24 22:24:49] INSERT 0 in table MD_INDEXES
+[2025-08-24 22:24:49] INSERT 0 in table MD_GROUP_MEMBERS
+[2025-08-24 22:24:49] INSERT 0 in table MD_GROUP_PRIVILEGES
+[2025-08-24 22:24:49] INSERT 0 in table MD_NUMROW$SOURCE
+[2025-08-24 22:24:49] INSERT 0 in table MD_MIGR_DEPENDENCY
+[2025-08-24 22:24:49] INSERT 0 in table MD_INDEX_DETAILS
+[2025-08-24 22:24:49] INSERT 0 in table MD_MIGR_PARAMETER
+[2025-08-24 22:24:49] INSERT 0 in table MD_MIGR_WEAKDEP
+[2025-08-24 22:24:49] INSERT 4122 in table MASSIMALI_ACCORDI
+[2025-08-24 22:24:49] INSERT 0 in table MD_NUMROW$TARGET
+[2025-08-24 22:24:49] INSERT 0 in table MD_PACKAGES
+[2025-08-24 22:24:49] INSERT 0 in table MD_PROJECTS
+[2025-08-24 22:24:49] INSERT 0 in table MD_PRIVILEGES
+[2025-08-24 22:24:49] INSERT 0 in table MD_REPOVERSIONS
+[2025-08-24 22:24:49] INSERT 0 in table MD_OTHER_OBJECTS
+[2025-08-24 22:24:49] INSERT 0 in table MD_PARTITIONS
+[2025-08-24 22:24:49] INSERT 0 in table MD_SCHEMAS
+[2025-08-24 22:24:49] INSERT 0 in table MD_REGISTRY
+[2025-08-24 22:24:49] INSERT 23507 in table INDIRIZZO_NUCLEO
+[2025-08-24 22:24:49] INSERT 0 in table MD_TRIGGERS
+[2025-08-24 22:24:49] INSERT 0 in table MD_STORED_PROGRAMS
+[2025-08-24 22:24:49] INSERT 0 in table MD_USERS
+[2025-08-24 22:24:49] INSERT 0 in table MD_SEQUENCES
+[2025-08-24 22:24:49] INSERT 0 in table MD_SYNONYMS
+[2025-08-24 22:24:49] INSERT 0 in table MD_TABLES
+[2025-08-24 22:24:49] INSERT 0 in table MD_TABLESPACES
+[2025-08-24 22:24:49] INSERT 0 in table MD_VIEWS
+[2025-08-24 22:24:49] INSERT 0 in table MD_USER_DEFINED_DATA_TYPES
+[2025-08-24 22:24:49] INSERT 0 in table MD_USER_PRIVILEGES
+[2025-08-24 22:24:50] INSERT 0 in table MIGR_GENERATION_ORDER
+[2025-08-24 22:24:50] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_MAP
+[2025-08-24 22:24:50] INSERT 0 in table MIGRLOG
+[2025-08-24 22:24:50] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_RULE
+[2025-08-24 22:24:50] INSERT 0 in table MESSAGGI
+[2025-08-24 22:24:50] INSERT 88 in table MOTIVIRIFIUTO
+[2025-08-24 22:24:50] INSERT 345 in table MEDICI_STRUTTURE
+[2025-08-24 22:24:50] INSERT 4 in table MOTIVISOSPENSIONEPRESTAZIONE
+[2025-08-24 22:24:50] INSERT 2 in table MPT_ENTI
+[2025-08-24 22:24:50] INSERT 89 in table MOTIVISOSPENSIONE
+[2025-08-24 22:24:50] INSERT 1 in table NOMENCLATORE
+[2025-08-24 22:24:50] INSERT 13 in table MPT_USER_EPK
+[2025-08-24 22:24:50] INSERT 546 in table MPT_USER_BEPROF
+[2025-08-24 22:24:50] INSERT 86741 in table FATTURA_VOCE
+[2025-08-24 22:24:51] INSERT 0 in table NOTE
+[2025-08-24 22:24:51] INSERT 0 in table PAGAMENTI
+[2025-08-24 22:24:51] INSERT 0 in table PARTI_CORPO
+[2025-08-24 22:24:51] INSERT 20 in table PARENTELA
+[2025-08-24 22:24:51] INSERT 808 in table POLIZZE
+[2025-08-24 22:24:52] INSERT 13 in table PATTI_SPECIALI
+[2025-08-24 22:24:52] INSERT 6235 in table MPT_USER_CADIPROF
+[2025-08-24 22:24:52] INSERT 7535 in table MPT_UTENTI
+[2025-08-24 22:24:52] INSERT 3145 in table NOTE_ASSISTITO
+[2025-08-24 22:24:52] INSERT 0 in table PRATICA_AUDIT_BATCH
+[2025-08-24 22:24:52] INSERT 0 in table PRATICA_LOCK
+[2025-08-24 22:24:52] INSERT 1501 in table PRATICA_DOCUMENTAZIONE
+[2025-08-24 22:24:53] INSERT 0 in table PRATICA_PREVISIONI
+[2025-08-24 22:24:55] INSERT 15563 in table PRATICA_AUTORIZZAZIONE
+[2025-08-24 22:24:55] INSERT 0 in table PRATOF
+[2025-08-24 22:24:56] INSERT 0 in table PRATOF_QUADRATURE
+[2025-08-24 22:24:56] INSERT 32809 in table ASSEGNI
+[2025-08-24 22:24:56] INSERT 23547 in table NUCLEO
+[2025-08-24 22:24:56] INSERT 3293 in table PRESTAZIONI
+[2025-08-24 22:24:56] INSERT 89 in table PRIVILEGI
+[2025-08-24 22:24:56] INSERT 21 in table PROFILI
+[2025-08-24 22:24:56] INSERT 1042 in table PRIVILEGI_PROFILI
+[2025-08-24 22:24:57] INSERT 0 in table PROTOCOLLO_VALORI
+[2025-08-24 22:24:57] INSERT 0 in table PROVIDER_ENTI
+[2025-08-24 22:24:57] INSERT 8 in table PROVIDER
+[2025-08-24 22:24:57] INSERT 107 in table PROVINCIA
+[2025-08-24 22:24:57] INSERT 5537 in table PROVIDER_STRUTTURA
+[2025-08-24 22:24:57] INSERT 22 in table QUALIFICA
+[2025-08-24 22:24:58] INSERT 295 in table QUOTE_ACCORDO
+[2025-08-24 22:24:58] INSERT 32809 in table PRATICHE_ASSEGNI
+[2025-08-24 22:24:58] INSERT 462 in table RATE
+[2025-08-24 22:24:58] INSERT 59936 in table MPT_COPIA_CONTRATTO_20250124
+[2025-08-24 22:24:58] INSERT 64292 in table FATTURA
+[2025-08-24 22:24:58] INSERT 4 in table REPORTS
+[2025-08-24 22:24:58] INSERT 20 in table REGIONI
+[2025-08-24 22:24:58] INSERT 0 in table RITORNI
+[2025-08-24 22:24:58] INSERT 1 in table SCHEDULATORE_TIPOOPERAZIONE
+[2025-08-24 22:24:58] INSERT 2 in table SCHEDULATORE
+[2025-08-24 22:24:58] INSERT 4 in table REPORTS_REGOLE
+[2025-08-24 22:24:58] INSERT 1964 in table QUALIFICHE_CONVENZIONI
+[2025-08-24 22:24:58] INSERT 45 in table STAMPE
+[2025-08-24 22:24:59] INSERT 131 in table SPECIALIZZAZIONI
+[2025-08-24 22:24:59] INSERT 30 in table STAMPANTI
+[2025-08-24 22:24:59] INSERT 25 in table SISTEMA
+[2025-08-24 22:24:59] INSERT 7 in table SPESE_POSTALI
+[2025-08-24 22:24:59] INSERT 11 in table STATI_ASSISTITO
+[2025-08-24 22:24:59] INSERT 22 in table STATI_PRATICA
+[2025-08-24 22:24:59] INSERT 10 in table STATI_CONVENZIONE
+[2025-08-24 22:24:59] INSERT 9 in table STATI_EMAIL_PRATICA
+[2025-08-24 22:24:59] INSERT 1476 in table STRUTTURA_ALTRETIPOLOGIE
+[2025-08-24 22:24:59] INSERT 10 in table STRUTTURA_AUTO_TARIFFARIO
+[2025-08-24 22:24:59] INSERT 0 in table STRUTTURA_GRUPPI
+[2025-08-24 22:24:59] INSERT 7 in table STRUTTURA_CONTRATTO
+[2025-08-24 22:24:59] INSERT 229 in table STRUTTURA_EVENTI
+[2025-08-24 22:24:59] INSERT 61449 in table PRATICADETTAGLI
+[2025-08-24 22:24:59] INSERT 69393 in table MEDICI
+[2025-08-24 22:25:00] INSERT 12 in table STRUTTURA_PRIVACY
+[2025-08-24 22:25:00] INSERT 46 in table STRUTTURA_SPECIALIZZAZIONI
+[2025-08-24 22:25:00] INSERT 0 in table STRUTTURE_COMPENSAZIONE
+[2025-08-24 22:25:00] INSERT 5307 in table STRUTTURA_DATIWEB
+[2025-08-24 22:25:00] INSERT 0 in table STRUTTURE_EMAIL
+[2025-08-24 22:25:00] INSERT 199 in table STRUTTURA_TEMP_BRANCHE
+[2025-08-24 22:25:00] INSERT 2422 in table STRUTTURA_ITER
+[2025-08-24 22:25:00] INSERT 0 in table TARIFFARIO_REGIONI
+[2025-08-24 22:25:00] INSERT 724 in table TIPISTRUTTURA_SPECIALIZZAZIONI
+[2025-08-24 22:25:00] INSERT 150 in table TIPISTRUTTURA_CAUSALI
+[2025-08-24 22:25:00] INSERT 2 in table TIPI_CALCOLO
+[2025-08-24 22:25:00] INSERT 26 in table TIPI_RECAPITO
+[2025-08-24 22:25:00] INSERT 1660 in table TARIFFARI_REGIONE
+[2025-08-24 22:25:01] INSERT 7 in table TIPI_VALORE
+[2025-08-24 22:25:01] INSERT 1 in table TIPODOCUMENTOPRIVACY
+[2025-08-24 22:25:01] INSERT 15 in table TIPI_STRUTTURA
+[2025-08-24 22:25:01] INSERT 2 in table TIPI_REPORT
+[2025-08-24 22:25:01] INSERT 5 in table TITOLI
+[2025-08-24 22:25:01] INSERT 34 in table TIPO_QUOTA
+[2025-08-24 22:25:01] INSERT 4 in table TIPO_ACCREDITAMENTO
+[2025-08-24 22:25:01] INSERT 20 in table UTENTI
+[2025-08-24 22:25:01] INSERT 8 in table UTENTI_WEB
+[2025-08-24 22:25:01] INSERT 28 in table VERSIONE
+[2025-08-24 22:25:02] INSERT 30942 in table STRUTTURA_RECAPITI
+[2025-08-24 22:25:02] INSERT 0 in table VOCI_PRATICA_AUDIT_BATCH
+[2025-08-24 22:25:02] INSERT 5606 in table STRUTTURA
+[2025-08-24 22:25:02] INSERT 38740 in table ASSISTITO
+[2025-08-24 22:25:02] INSERT 28 in table V_ALEX_VOCIESCLUDI
+[2025-08-24 22:25:02] INSERT 1 in table WHATSAPP_CONFIG
+[2025-08-24 22:25:02] INSERT 0 in table WHATSAPP_CLIENTS
+[2025-08-24 22:25:02] INSERT 0 in table WHATSAPP_INTERACTIVE_MESSAGES
+[2025-08-24 22:25:03] INSERT 0 in table WHATSAPP_LABELS
+[2025-08-24 22:25:03] INSERT 0 in table WHATSAPP_MESSAGES
+[2025-08-24 22:25:03] INSERT 70002 in table PRATICA_NOTIFICA
+[2025-08-24 22:25:03] INSERT 0 in table WHATSAPP_TEMPLATES
+[2025-08-24 22:25:03] INSERT 24 in table WHATSAPP_NOTIFICHE_PRATICHE
+[2025-08-24 22:25:03] INSERT 0 in table WHATSAPP_MESSAGGI_CODA
+[2025-08-24 22:25:07] INSERT 45521 in table VOCI
+[2025-08-24 22:25:10] INSERT 100025 in table VOCIPRATICADETTAGLI
+[2025-08-24 22:25:13] INSERT 68139 in table CONTRATTO
+[2025-08-24 22:25:16] INSERT 71072 in table PROTOCOLLO
+[2025-08-24 22:25:24] INSERT 93253 in table ALEX_ESTRAZIONE
+[2025-08-24 22:25:54] INSERT 100036 in table VOCI_PRATICA
+[2025-08-24 22:26:10] INSERT 1679614 in table BLOCCO_VOCI_DISPONIBILI
+[2025-08-24 22:26:13] INSERT 62405 in table PRATICA
+[2025-08-24 22:26:23] INSERT 574371 in table VOCI_PRATICA_TMP
+[2025-08-24 22:28:46] INSERT 3734070 in table TARIFFARI
+[2025-08-24 22:34:20] INSERT 6366143 in table T_AUDIT
+[2025-08-24 23:12:10] INSERT 57594951 in table MASSIMALI_VOCI
+[2025-08-25 00:30:23] INSERT 33796447 in table CONVENZIONI_VOCI
+[2025-08-25 00:30:23] Retrying 2 failed files...
+[2025-08-25 00:30:23] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-25 00:30:23] [RETRY] ? ENTIWIN: ERROR - Table 'caspieown.entiwin' doesn't exist
+[2025-08-25 00:30:23] ERROR : table  ENTI_BROKER, with message: Table 'caspieown.enti_broker' doesn't exist
+[2025-08-25 00:30:23] [RETRY] ? ENTI_BROKER: ERROR - Table 'caspieown.enti_broker' doesn't exist
+[2025-08-25 00:30:23] === All data loads completed ===
+[2025-08-25 00:30:23] ? Total successful: 206
+[2025-08-25 00:30:23] ? Total failed: 6
+[2025-08-25 09:19:27] === Starting parallel data load with 16 workers ===
+[2025-08-25 09:19:27] Total files to process: 208
+[2025-08-25 09:19:28] INSERT 0 in table BROKER
+[2025-08-25 09:19:28] INSERT 0 in table BRANCHE
+[2025-08-25 09:19:28] INSERT 0 in table ACCORDI
+[2025-08-25 09:19:28] INSERT 0 in table ASSEGNI_ANNULLATI
+[2025-08-25 09:19:28] INSERT 0 in table ASSISTITO_TMP
+[2025-08-25 09:19:28] INSERT 0 in table CIRCUITISTRUTTURA
+[2025-08-25 09:19:28] INSERT 0 in table BRANCHE_TIPISTRUTTURA
+[2025-08-25 09:19:28] INSERT 0 in table CAUSALI
+[2025-08-25 09:19:28] INSERT 0 in table CAP
+[2025-08-25 09:19:28] INSERT 23 in table CLASSI
+[2025-08-25 09:19:28] INSERT 0 in table AZIENDE
+[2025-08-25 09:19:28] INSERT 0 in table CONVENZIONI_CIRCUITISTRUTTURA
+[2025-08-25 09:19:28] INSERT 0 in table CONVENZIONI_STAMPE
+[2025-08-25 09:19:28] INSERT 0 in table CONVENZIONI
+[2025-08-25 09:19:28] INSERT 0 in table CLIENTI_QUOTE
+[2025-08-25 09:19:28] INSERT 0 in table CWT_LOGWEB
+[2025-08-25 09:19:28] INSERT 1 in table CONFIG_VOCI_ONESHOT
+[2025-08-25 09:19:28] INSERT 0 in table CWT_PASSWORD
+[2025-08-25 09:19:28] INSERT 0 in table EBIPRO_ADESIONI
+[2025-08-25 09:19:28] INSERT 0 in table EBIPRO_VIDEOCONSULTI
+[2025-08-25 09:19:28] INSERT 0 in table COMPAGNIE
+[2025-08-25 09:19:28] INSERT 0 in table CONDIZIONI_PART
+[2025-08-25 09:19:28] INSERT 17 in table CLIENTI_QUOTE_ECCEZIONI
+[2025-08-25 09:19:28] INSERT 4 in table CLIENTE
+[2025-08-25 09:19:28] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-25 09:19:28] ERROR : table  ENTI_BROKER, with message: Table 'caspieown.enti_broker' doesn't exist
+[2025-08-25 09:19:28] INSERT 0 in table CONVENZIONIDETTAGLI
+[2025-08-25 09:19:28] INSERT 0 in table ETICHETTE_NUCLEI
+[2025-08-25 09:19:29] INSERT 1381 in table EBI_WS_DOCUMENTALE_INPUT
+[2025-08-25 09:19:29] INSERT 0 in table ENTI
+[2025-08-25 09:19:29] INSERT 337 in table EBI_WS_INPUT_APPO
+[2025-08-25 09:19:29] INSERT 1811 in table EBI_WS_INPUT
+[2025-08-25 09:19:29] INSERT 0 in table GERARCHIA_ENTI
+[2025-08-25 09:19:29] INSERT 0 in table GRUPPI_INVIO
+[2025-08-25 09:19:29] INSERT 0 in table GRUPPISTRUTTURA
+[2025-08-25 09:19:29] INSERT 0 in table GRUPPO_LETTERE
+[2025-08-25 09:19:29] INSERT 0 in table LETTERE
+[2025-08-25 09:19:29] INSERT 0 in table IVA
+[2025-08-25 09:19:29] INSERT 0 in table LETTERE_PRATICA
+[2025-08-25 09:19:29] INSERT 1 in table INVII
+[2025-08-25 09:19:29] INSERT 0 in table MACROBRANCA_NOMENCLATORE
+[2025-08-25 09:19:29] INSERT 0 in table MACROBRANCHE
+[2025-08-25 09:19:29] INSERT 0 in table MASSIMALI_CAUSALI
+[2025-08-25 09:19:29] INSERT 0 in table MASSIMALI_ACCORDI
+[2025-08-25 09:19:29] INSERT 0 in table MASSIMALI
+[2025-08-25 09:19:29] INSERT 16215 in table DIAGNOSI
+[2025-08-25 09:19:30] INSERT 0 in table MD_ADDITIONAL_PROPERTIES
+[2025-08-25 09:19:30] INSERT 0 in table MD_APPLICATIONS
+[2025-08-25 09:19:30] INSERT 0 in table MD_APPLICATIONFILES
+[2025-08-25 09:19:30] INSERT 0 in table MD_CONNECTIONS
+[2025-08-25 09:19:30] INSERT 0 in table MD_COLUMNS
+[2025-08-25 09:19:30] INSERT 0 in table MD_CATALOGS
+[2025-08-25 09:19:30] INSERT 0 in table MD_CONSTRAINTS
+[2025-08-25 09:19:30] INSERT 0 in table MD_CONSTRAINT_DETAILS
+[2025-08-25 09:19:30] INSERT 0 in table MD_FILE_ARTIFACTS
+[2025-08-25 09:19:30] INSERT 0 in table MD_DERIVATIVES
+[2025-08-25 09:19:30] INSERT 7904 in table LOCALITA
+[2025-08-25 09:19:30] INSERT 0 in table MD_GROUPS
+[2025-08-25 09:19:30] INSERT 0 in table MD_GROUP_PRIVILEGES
+[2025-08-25 09:19:30] INSERT 0 in table MD_INDEXES
+[2025-08-25 09:19:30] INSERT 0 in table MD_GROUP_MEMBERS
+[2025-08-25 09:19:30] INSERT 0 in table MD_INDEX_DETAILS
+[2025-08-25 09:19:30] INSERT 0 in table ACCORDI_NUCLEO
+[2025-08-25 09:19:31] INSERT 0 in table MD_NUMROW$SOURCE
+[2025-08-25 09:19:31] INSERT 0 in table MD_NUMROW$TARGET
+[2025-08-25 09:19:31] INSERT 0 in table MD_MIGR_WEAKDEP
+[2025-08-25 09:19:31] INSERT 0 in table MD_MIGR_PARAMETER
+[2025-08-25 09:19:31] INSERT 0 in table MD_PARTITIONS
+[2025-08-25 09:19:31] INSERT 0 in table MD_PACKAGES
+[2025-08-25 09:19:31] INSERT 0 in table MD_PRIVILEGES
+[2025-08-25 09:19:31] INSERT 0 in table MD_MIGR_DEPENDENCY
+[2025-08-25 09:19:31] INSERT 0 in table MD_OTHER_OBJECTS
+[2025-08-25 09:19:31] INSERT 0 in table MD_REGISTRY
+[2025-08-25 09:19:31] INSERT 0 in table MD_PROJECTS
+[2025-08-25 09:19:31] INSERT 0 in table MD_REPOVERSIONS
+[2025-08-25 09:19:31] INSERT 0 in table MD_SEQUENCES
+[2025-08-25 09:19:31] INSERT 0 in table MD_SCHEMAS
+[2025-08-25 09:19:31] INSERT 0 in table MD_TABLESPACES
+[2025-08-25 09:19:31] INSERT 0 in table MD_TABLES
+[2025-08-25 09:19:31] INSERT 0 in table MD_SYNONYMS
+[2025-08-25 09:19:31] INSERT 0 in table MD_STORED_PROGRAMS
+[2025-08-25 09:19:31] INSERT 0 in table MD_TRIGGERS
+[2025-08-25 09:19:31] INSERT 0 in table MD_USERS
+[2025-08-25 09:19:31] INSERT 0 in table MD_USER_DEFINED_DATA_TYPES
+[2025-08-25 09:19:31] INSERT 0 in table MD_USER_PRIVILEGES
+[2025-08-25 09:19:31] INSERT 0 in table MESSAGGI
+[2025-08-25 09:19:31] INSERT 0 in table MEDICI_STRUTTURE
+[2025-08-25 09:19:31] INSERT 0 in table MD_VIEWS
+[2025-08-25 09:19:31] INSERT 0 in table MIGRLOG
+[2025-08-25 09:19:31] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_MAP
+[2025-08-25 09:19:31] INSERT 0 in table MIGR_GENERATION_ORDER
+[2025-08-25 09:19:31] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_RULE
+[2025-08-25 09:19:31] INSERT 0 in table ASSEGNI
+[2025-08-25 09:19:32] INSERT 0 in table INDIRIZZO_NUCLEO
+[2025-08-25 09:19:32] INSERT 0 in table MOTIVISOSPENSIONEPRESTAZIONE
+[2025-08-25 09:19:32] INSERT 38114 in table CONTRATTO_BCK
+[2025-08-25 09:19:32] INSERT 0 in table MOTIVIRIFIUTO
+[2025-08-25 09:19:32] INSERT 0 in table MOTIVISOSPENSIONE
+[2025-08-25 09:19:32] INSERT 2 in table MPT_ENTI
+[2025-08-25 09:19:32] INSERT 0 in table NOTE
+[2025-08-25 09:19:32] INSERT 0 in table NOTE_ASSISTITO
+[2025-08-25 09:19:32] INSERT 86741 in table FATTURA_VOCE
+[2025-08-25 09:19:32] INSERT 0 in table NOMENCLATORE
+[2025-08-25 09:19:32] INSERT 546 in table MPT_USER_BEPROF
+[2025-08-25 09:19:32] INSERT 13 in table MPT_USER_EPK
+[2025-08-25 09:19:32] INSERT 0 in table PARTI_CORPO
+[2025-08-25 09:19:32] INSERT 0 in table PAGAMENTI
+[2025-08-25 09:19:33] INSERT 0 in table PATTI_SPECIALI
+[2025-08-25 09:19:33] INSERT 7535 in table MPT_UTENTI
+[2025-08-25 09:19:33] INSERT 0 in table PARENTELA
+[2025-08-25 09:19:33] INSERT 0 in table PRATICA_AUDIT_BATCH
+[2025-08-25 09:19:33] INSERT 0 in table ASSISTITO
+[2025-08-25 09:19:33] INSERT 0 in table PRATICA_LOCK
+[2025-08-25 09:19:33] INSERT 0 in table POLIZZE
+[2025-08-25 09:19:33] INSERT 6235 in table MPT_USER_CADIPROF
+[2025-08-25 09:19:33] INSERT 0 in table PRATICA_PREVISIONI
+[2025-08-25 09:19:33] INSERT 0 in table PRATOF
+[2025-08-25 09:19:33] INSERT 0 in table PRATOF_QUADRATURE
+[2025-08-25 09:19:33] INSERT 1501 in table PRATICA_DOCUMENTAZIONE
+[2025-08-25 09:19:33] INSERT 0 in table FATTURA
+[2025-08-25 09:19:34] INSERT 0 in table PRIVILEGI_PROFILI
+[2025-08-25 09:19:34] INSERT 0 in table PRESTAZIONI
+[2025-08-25 09:19:34] INSERT 0 in table PROFILI
+[2025-08-25 09:19:34] INSERT 0 in table PRIVILEGI
+[2025-08-25 09:19:34] INSERT 0 in table NUCLEO
+[2025-08-25 09:19:34] INSERT 0 in table PROTOCOLLO_VALORI
+[2025-08-25 09:19:34] INSERT 0 in table PROVIDER_ENTI
+[2025-08-25 09:19:35] INSERT 0 in table PROVIDER
+[2025-08-25 09:19:35] INSERT 0 in table PROVIDER_STRUTTURA
+[2025-08-25 09:19:35] INSERT 107 in table PROVINCIA
+[2025-08-25 09:19:35] INSERT 15563 in table PRATICA_AUTORIZZAZIONE
+[2025-08-25 09:19:35] INSERT 0 in table QUOTE_ACCORDO
+[2025-08-25 09:19:35] INSERT 0 in table QUALIFICHE_CONVENZIONI
+[2025-08-25 09:19:35] INSERT 0 in table REPORTS
+[2025-08-25 09:19:35] INSERT 0 in table REPORTS_REGOLE
+[2025-08-25 09:19:35] INSERT 0 in table RITORNI
+[2025-08-25 09:19:35] INSERT 0 in table QUALIFICA
+[2025-08-25 09:19:35] INSERT 0 in table RATE
+[2025-08-25 09:19:35] INSERT 20 in table REGIONI
+[2025-08-25 09:19:35] INSERT 0 in table SCHEDULATORE_TIPOOPERAZIONE
+[2025-08-25 09:19:35] INSERT 0 in table SCHEDULATORE
+[2025-08-25 09:19:35] INSERT 25 in table SISTEMA
+[2025-08-25 09:19:35] INSERT 0 in table STAMPE
+[2025-08-25 09:19:35] INSERT 0 in table SPESE_POSTALI
+[2025-08-25 09:19:35] INSERT 0 in table STAMPANTI
+[2025-08-25 09:19:36] INSERT 0 in table CONTRATTO
+[2025-08-25 09:19:36] INSERT 0 in table SPECIALIZZAZIONI
+[2025-08-25 09:19:36] INSERT 0 in table STATI_ASSISTITO
+[2025-08-25 09:19:36] INSERT 0 in table STATI_PRATICA
+[2025-08-25 09:19:36] INSERT 0 in table STATI_CONVENZIONE
+[2025-08-25 09:19:36] INSERT 9 in table STATI_EMAIL_PRATICA
+[2025-08-25 09:19:36] INSERT 0 in table STRUTTURA_AUTO_TARIFFARIO
+[2025-08-25 09:19:36] INSERT 0 in table STRUTTURA_DATIWEB
+[2025-08-25 09:19:36] INSERT 0 in table STRUTTURA_ALTRETIPOLOGIE
+[2025-08-25 09:19:36] INSERT 0 in table STRUTTURA_GRUPPI
+[2025-08-25 09:19:36] INSERT 0 in table STRUTTURA_CONTRATTO
+[2025-08-25 09:19:36] INSERT 0 in table STRUTTURA_PRIVACY
+[2025-08-25 09:19:36] INSERT 0 in table STRUTTURA_SPECIALIZZAZIONI
+[2025-08-25 09:19:36] INSERT 229 in table STRUTTURA_EVENTI
+[2025-08-25 09:19:36] INSERT 0 in table STRUTTURE_COMPENSAZIONE
+[2025-08-25 09:19:36] INSERT 0 in table STRUTTURA_TEMP_BRANCHE
+[2025-08-25 09:19:36] INSERT 0 in table STRUTTURE_EMAIL
+[2025-08-25 09:19:37] INSERT 0 in table TARIFFARIO_REGIONI
+[2025-08-25 09:19:37] INSERT 0 in table STRUTTURA
+[2025-08-25 09:19:37] INSERT 59936 in table MPT_COPIA_CONTRATTO_20250124
+[2025-08-25 09:19:37] INSERT 0 in table TIPISTRUTTURA_CAUSALI
+[2025-08-25 09:19:37] INSERT 2422 in table STRUTTURA_ITER
+[2025-08-25 09:19:37] INSERT 0 in table TARIFFARI_REGIONE
+[2025-08-25 09:19:37] INSERT 0 in table TIPI_CALCOLO
+[2025-08-25 09:19:37] INSERT 0 in table PRATICADETTAGLI
+[2025-08-25 09:19:37] INSERT 26 in table TIPI_RECAPITO
+[2025-08-25 09:19:37] INSERT 724 in table TIPISTRUTTURA_SPECIALIZZAZIONI
+[2025-08-25 09:19:37] INSERT 0 in table TIPI_REPORT
+[2025-08-25 09:19:37] INSERT 0 in table TIPI_STRUTTURA
+[2025-08-25 09:19:37] INSERT 0 in table TIPI_VALORE
+[2025-08-25 09:19:37] INSERT 0 in table MEDICI
+[2025-08-25 09:19:37] INSERT 0 in table TIPO_ACCREDITAMENTO
+[2025-08-25 09:19:37] INSERT 0 in table TIPODOCUMENTOPRIVACY
+[2025-08-25 09:19:37] INSERT 0 in table UTENTI
+[2025-08-25 09:19:37] INSERT 0 in table UTENTI_WEB
+[2025-08-25 09:19:37] INSERT 0 in table TIPO_QUOTA
+[2025-08-25 09:19:37] INSERT 0 in table VERSIONE
+[2025-08-25 09:19:37] INSERT 0 in table TITOLI
+[2025-08-25 09:19:37] INSERT 0 in table VOCI_PRATICA_AUDIT_BATCH
+[2025-08-25 09:19:38] INSERT 32809 in table PRATICHE_ASSEGNI
+[2025-08-25 09:19:38] INSERT 0 in table WHATSAPP_CLIENTS
+[2025-08-25 09:19:38] INSERT 28 in table V_ALEX_VOCIESCLUDI
+[2025-08-25 09:19:38] INSERT 0 in table WHATSAPP_INTERACTIVE_MESSAGES
+[2025-08-25 09:19:38] INSERT 0 in table WHATSAPP_LABELS
+[2025-08-25 09:19:38] INSERT 1 in table WHATSAPP_CONFIG
+[2025-08-25 09:19:38] INSERT 0 in table WHATSAPP_MESSAGES
+[2025-08-25 09:19:38] INSERT 0 in table WHATSAPP_MESSAGGI_CODA
+[2025-08-25 09:19:38] INSERT 0 in table WHATSAPP_NOTIFICHE_PRATICHE
+[2025-08-25 09:19:38] INSERT 0 in table WHATSAPP_TEMPLATES
+[2025-08-25 09:19:38] INSERT 30942 in table STRUTTURA_RECAPITI
+[2025-08-25 09:19:39] INSERT 0 in table VOCI
+[2025-08-25 09:19:39] INSERT 0 in table PRATICA_NOTIFICA
+[2025-08-25 09:19:42] INSERT 0 in table PROTOCOLLO
+[2025-08-25 09:19:43] INSERT 0 in table VOCIPRATICADETTAGLI
+[2025-08-25 09:19:45] INSERT 0 in table PRATICA
+[2025-08-25 09:19:49] INSERT 0 in table VOCI_PRATICA
+[2025-08-25 09:20:00] INSERT 93253 in table ALEX_ESTRAZIONE
+[2025-08-25 09:20:05] INSERT 0 in table BLOCCO_VOCI_DISPONIBILI
+[2025-08-25 09:20:28] INSERT 0 in table VOCI_PRATICA_TMP
+[2025-08-25 09:54:27] === Starting parallel data load with 16 workers ===
+[2025-08-25 09:54:27] Total files to process: 208
+[2025-08-25 09:54:28] INSERT 0 in table ASSISTITO_TMP
+[2025-08-25 09:54:28] INSERT 0 in table BROKER
+[2025-08-25 09:54:28] INSERT 0 in table ASSEGNI_ANNULLATI
+[2025-08-25 09:54:28] INSERT 0 in table BRANCHE
+[2025-08-25 09:54:28] INSERT 0 in table ACCORDI
+[2025-08-25 09:54:29] INSERT 0 in table AZIENDE
+[2025-08-25 09:54:29] INSERT 23 in table CLASSI
+[2025-08-25 09:54:29] INSERT 0 in table CAUSALI
+[2025-08-25 09:54:29] INSERT 0 in table CIRCUITISTRUTTURA
+[2025-08-25 09:54:29] INSERT 0 in table CONVENZIONI
+[2025-08-25 09:54:29] INSERT 0 in table BRANCHE_TIPISTRUTTURA
+[2025-08-25 09:54:29] INSERT 0 in table CLIENTI_QUOTE
+[2025-08-25 09:54:29] INSERT 0 in table CONVENZIONI_CIRCUITISTRUTTURA
+[2025-08-25 09:54:29] INSERT 1 in table CONFIG_VOCI_ONESHOT
+[2025-08-25 09:54:29] INSERT 4 in table CLIENTE
+[2025-08-25 09:54:29] INSERT 0 in table CONDIZIONI_PART
+[2025-08-25 09:54:29] INSERT 0 in table CONVENZIONI_STAMPE
+[2025-08-25 09:54:29] INSERT 0 in table COMPAGNIE
+[2025-08-25 09:54:29] INSERT 0 in table CWT_PASSWORD
+[2025-08-25 09:54:29] INSERT 0 in table CAP
+[2025-08-25 09:54:29] INSERT 0 in table CWT_LOGWEB
+[2025-08-25 09:54:29] INSERT 17 in table CLIENTI_QUOTE_ECCEZIONI
+[2025-08-25 09:54:29] INSERT 0 in table ASSEGNI
+[2025-08-25 09:54:29] INSERT 0 in table EBIPRO_ADESIONI
+[2025-08-25 09:54:29] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-25 09:54:29] INSERT 0 in table EBIPRO_VIDEOCONSULTI
+[2025-08-25 09:54:29] ERROR : table  ENTI_BROKER, with message: Table 'caspieown.enti_broker' doesn't exist
+[2025-08-25 09:54:29] INSERT 0 in table ETICHETTE_NUCLEI
+[2025-08-25 09:54:29] INSERT 0 in table CONVENZIONIDETTAGLI
+[2025-08-25 09:54:30] INSERT 0 in table GRUPPI_INVIO
+[2025-08-25 09:54:30] INSERT 0 in table GERARCHIA_ENTI
+[2025-08-25 09:54:30] INSERT 0 in table GRUPPISTRUTTURA
+[2025-08-25 09:54:30] INSERT 0 in table ENTI
+[2025-08-25 09:54:30] INSERT 337 in table EBI_WS_INPUT_APPO
+[2025-08-25 09:54:30] INSERT 1381 in table EBI_WS_DOCUMENTALE_INPUT
+[2025-08-25 09:54:30] INSERT 0 in table GRUPPO_LETTERE
+[2025-08-25 09:54:30] INSERT 0 in table IVA
+[2025-08-25 09:54:30] INSERT 0 in table LETTERE_PRATICA
+[2025-08-25 09:54:30] INSERT 1 in table INVII
+[2025-08-25 09:54:30] INSERT 0 in table LETTERE
+[2025-08-25 09:54:30] INSERT 0 in table MACROBRANCA_NOMENCLATORE
+[2025-08-25 09:54:30] INSERT 0 in table MACROBRANCHE
+[2025-08-25 09:54:30] INSERT 0 in table ACCORDI_NUCLEO
+[2025-08-25 09:54:30] INSERT 0 in table MASSIMALI_ACCORDI
+[2025-08-25 09:54:31] INSERT 0 in table MASSIMALI
+[2025-08-25 09:54:31] INSERT 16215 in table DIAGNOSI
+[2025-08-25 09:54:31] INSERT 1811 in table EBI_WS_INPUT
+[2025-08-25 09:54:31] INSERT 0 in table MD_APPLICATIONS
+[2025-08-25 09:54:31] INSERT 0 in table MD_CONNECTIONS
+[2025-08-25 09:54:31] INSERT 0 in table MD_CATALOGS
+[2025-08-25 09:54:31] INSERT 0 in table MD_COLUMNS
+[2025-08-25 09:54:31] INSERT 0 in table MD_APPLICATIONFILES
+[2025-08-25 09:54:31] INSERT 0 in table MD_ADDITIONAL_PROPERTIES
+[2025-08-25 09:54:31] INSERT 0 in table MASSIMALI_CAUSALI
+[2025-08-25 09:54:31] INSERT 0 in table MD_DERIVATIVES
+[2025-08-25 09:54:31] INSERT 0 in table MD_GROUP_MEMBERS
+[2025-08-25 09:54:31] INSERT 7904 in table LOCALITA
+[2025-08-25 09:54:31] INSERT 0 in table MD_MIGR_DEPENDENCY
+[2025-08-25 09:54:31] INSERT 0 in table MD_FILE_ARTIFACTS
+[2025-08-25 09:54:31] INSERT 0 in table MD_CONSTRAINT_DETAILS
+[2025-08-25 09:54:31] INSERT 0 in table MD_INDEX_DETAILS
+[2025-08-25 09:54:31] INSERT 0 in table MD_GROUPS
+[2025-08-25 09:54:31] INSERT 0 in table MD_INDEXES
+[2025-08-25 09:54:31] INSERT 0 in table MD_CONSTRAINTS
+[2025-08-25 09:54:31] INSERT 0 in table MD_GROUP_PRIVILEGES
+[2025-08-25 09:54:31] INSERT 0 in table MD_NUMROW$TARGET
+[2025-08-25 09:54:31] INSERT 0 in table MD_NUMROW$SOURCE
+[2025-08-25 09:54:31] INSERT 0 in table MD_MIGR_WEAKDEP
+[2025-08-25 09:54:31] INSERT 0 in table MD_MIGR_PARAMETER
+[2025-08-25 09:54:32] INSERT 0 in table MD_OTHER_OBJECTS
+[2025-08-25 09:54:32] INSERT 0 in table MD_REGISTRY
+[2025-08-25 09:54:32] INSERT 0 in table MD_PARTITIONS
+[2025-08-25 09:54:32] INSERT 0 in table MD_PACKAGES
+[2025-08-25 09:54:32] INSERT 0 in table MD_REPOVERSIONS
+[2025-08-25 09:54:32] INSERT 0 in table MD_PROJECTS
+[2025-08-25 09:54:32] INSERT 0 in table MD_SCHEMAS
+[2025-08-25 09:54:32] INSERT 0 in table MD_PRIVILEGES
+[2025-08-25 09:54:32] INSERT 0 in table MD_STORED_PROGRAMS
+[2025-08-25 09:54:32] INSERT 0 in table MD_TRIGGERS
+[2025-08-25 09:54:32] INSERT 0 in table MD_TABLESPACES
+[2025-08-25 09:54:32] INSERT 0 in table MD_TABLES
+[2025-08-25 09:54:32] INSERT 0 in table MD_SEQUENCES
+[2025-08-25 09:54:32] INSERT 0 in table MD_SYNONYMS
+[2025-08-25 09:54:32] INSERT 0 in table MD_USERS
+[2025-08-25 09:54:32] INSERT 0 in table MD_USER_PRIVILEGES
+[2025-08-25 09:54:32] INSERT 0 in table MD_VIEWS
+[2025-08-25 09:54:32] INSERT 0 in table MD_USER_DEFINED_DATA_TYPES
+[2025-08-25 09:54:32] INSERT 0 in table MESSAGGI
+[2025-08-25 09:54:32] INSERT 0 in table MIGRLOG
+[2025-08-25 09:54:32] INSERT 0 in table MEDICI_STRUTTURE
+[2025-08-25 09:54:32] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_RULE
+[2025-08-25 09:54:32] INSERT 0 in table MIGR_GENERATION_ORDER
+[2025-08-25 09:54:32] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_MAP
+[2025-08-25 09:54:32] INSERT 0 in table MOTIVISOSPENSIONE
+[2025-08-25 09:54:32] INSERT 0 in table MOTIVIRIFIUTO
+[2025-08-25 09:54:32] INSERT 0 in table MOTIVISOSPENSIONEPRESTAZIONE
+[2025-08-25 09:54:33] INSERT 0 in table INDIRIZZO_NUCLEO
+[2025-08-25 09:54:33] INSERT 0 in table NOTE
+[2025-08-25 09:54:33] INSERT 0 in table NOMENCLATORE
+[2025-08-25 09:54:33] INSERT 2 in table MPT_ENTI
+[2025-08-25 09:54:33] INSERT 13 in table MPT_USER_EPK
+[2025-08-25 09:54:33] INSERT 546 in table MPT_USER_BEPROF
+[2025-08-25 09:54:33] INSERT 0 in table NOTE_ASSISTITO
+[2025-08-25 09:54:33] INSERT 0 in table PARTI_CORPO
+[2025-08-25 09:54:33] INSERT 0 in table PAGAMENTI
+[2025-08-25 09:54:33] INSERT 0 in table PATTI_SPECIALI
+[2025-08-25 09:54:34] INSERT 6235 in table MPT_USER_CADIPROF
+[2025-08-25 09:54:34] INSERT 0 in table PARENTELA
+[2025-08-25 09:54:34] INSERT 0 in table POLIZZE
+[2025-08-25 09:54:34] INSERT 38114 in table CONTRATTO_BCK
+[2025-08-25 09:54:34] INSERT 0 in table PRATICA_LOCK
+[2025-08-25 09:54:34] INSERT 0 in table PRATICA_AUDIT_BATCH
+[2025-08-25 09:54:34] INSERT 0 in table PRATICA_PREVISIONI
+[2025-08-25 09:54:34] INSERT 1501 in table PRATICA_DOCUMENTAZIONE
+[2025-08-25 09:54:34] INSERT 0 in table PRATOF
+[2025-08-25 09:54:34] INSERT 0 in table PRATOF_QUADRATURE
+[2025-08-25 09:54:34] INSERT 7535 in table MPT_UTENTI
+[2025-08-25 09:54:35] INSERT 0 in table PRIVILEGI
+[2025-08-25 09:54:35] INSERT 0 in table PRIVILEGI_PROFILI
+[2025-08-25 09:54:35] INSERT 0 in table PRESTAZIONI
+[2025-08-25 09:54:35] INSERT 0 in table ASSISTITO
+[2025-08-25 09:54:35] INSERT 0 in table PROTOCOLLO_VALORI
+[2025-08-25 09:54:35] INSERT 0 in table PROFILI
+[2025-08-25 09:54:35] INSERT 0 in table PROVIDER
+[2025-08-25 09:54:35] INSERT 0 in table PROVIDER_ENTI
+[2025-08-25 09:54:36] INSERT 0 in table NUCLEO
+[2025-08-25 09:54:36] INSERT 0 in table PROVIDER_STRUTTURA
+[2025-08-25 09:54:36] INSERT 0 in table QUALIFICA
+[2025-08-25 09:54:36] INSERT 0 in table QUOTE_ACCORDO
+[2025-08-25 09:54:36] INSERT 107 in table PROVINCIA
+[2025-08-25 09:54:36] INSERT 0 in table QUALIFICHE_CONVENZIONI
+[2025-08-25 09:54:36] INSERT 0 in table REPORTS
+[2025-08-25 09:54:36] INSERT 0 in table RATE
+[2025-08-25 09:54:36] INSERT 0 in table RITORNI
+[2025-08-25 09:54:36] INSERT 0 in table REPORTS_REGOLE
+[2025-08-25 09:54:36] INSERT 20 in table REGIONI
+[2025-08-25 09:54:36] INSERT 0 in table SCHEDULATORE
+[2025-08-25 09:54:36] INSERT 0 in table SCHEDULATORE_TIPOOPERAZIONE
+[2025-08-25 09:54:36] INSERT 86741 in table FATTURA_VOCE
+[2025-08-25 09:54:37] INSERT 0 in table SPECIALIZZAZIONI
+[2025-08-25 09:54:37] INSERT 0 in table STAMPANTI
+[2025-08-25 09:54:37] INSERT 0 in table SPESE_POSTALI
+[2025-08-25 09:54:37] INSERT 0 in table STAMPE
+[2025-08-25 09:54:37] INSERT 25 in table SISTEMA
+[2025-08-25 09:54:37] INSERT 15563 in table PRATICA_AUTORIZZAZIONE
+[2025-08-25 09:54:37] INSERT 0 in table STATI_CONVENZIONE
+[2025-08-25 09:54:37] INSERT 0 in table STATI_ASSISTITO
+[2025-08-25 09:54:37] INSERT 9 in table STATI_EMAIL_PRATICA
+[2025-08-25 09:54:37] INSERT 0 in table STRUTTURA_AUTO_TARIFFARIO
+[2025-08-25 09:54:37] INSERT 0 in table STRUTTURA_ALTRETIPOLOGIE
+[2025-08-25 09:54:37] INSERT 0 in table STATI_PRATICA
+[2025-08-25 09:54:37] INSERT 0 in table STRUTTURA_GRUPPI
+[2025-08-25 09:54:37] INSERT 0 in table STRUTTURA_CONTRATTO
+[2025-08-25 09:54:37] INSERT 0 in table STRUTTURA_DATIWEB
+[2025-08-25 09:54:37] INSERT 0 in table STRUTTURA_PRIVACY
+[2025-08-25 09:54:37] INSERT 0 in table STRUTTURA_SPECIALIZZAZIONI
+[2025-08-25 09:54:37] INSERT 229 in table STRUTTURA_EVENTI
+[2025-08-25 09:54:37] INSERT 0 in table STRUTTURE_COMPENSAZIONE
+[2025-08-25 09:54:38] INSERT 0 in table STRUTTURA_TEMP_BRANCHE
+[2025-08-25 09:54:38] INSERT 0 in table TARIFFARIO_REGIONI
+[2025-08-25 09:54:38] INSERT 0 in table STRUTTURE_EMAIL
+[2025-08-25 09:54:38] INSERT 0 in table FATTURA
+[2025-08-25 09:54:38] INSERT 0 in table TIPISTRUTTURA_CAUSALI
+[2025-08-25 09:54:38] INSERT 0 in table TARIFFARI_REGIONE
+[2025-08-25 09:54:38] INSERT 2422 in table STRUTTURA_ITER
+[2025-08-25 09:54:38] INSERT 0 in table STRUTTURA
+[2025-08-25 09:54:38] INSERT 0 in table TIPI_CALCOLO
+[2025-08-25 09:54:38] INSERT 0 in table TIPI_STRUTTURA
+[2025-08-25 09:54:38] INSERT 0 in table TIPI_REPORT
+[2025-08-25 09:54:38] INSERT 0 in table CONTRATTO
+[2025-08-25 09:54:38] INSERT 26 in table TIPI_RECAPITO
+[2025-08-25 09:54:39] INSERT 724 in table TIPISTRUTTURA_SPECIALIZZAZIONI
+[2025-08-25 09:54:39] INSERT 0 in table TIPODOCUMENTOPRIVACY
+[2025-08-25 09:54:39] INSERT 0 in table TIPI_VALORE
+[2025-08-25 09:54:39] INSERT 0 in table PRATICADETTAGLI
+[2025-08-25 09:54:39] INSERT 0 in table UTENTI_WEB
+[2025-08-25 09:54:39] INSERT 0 in table UTENTI
+[2025-08-25 09:54:39] INSERT 0 in table TIPO_QUOTA
+[2025-08-25 09:54:39] INSERT 0 in table TITOLI
+[2025-08-25 09:54:39] INSERT 0 in table TIPO_ACCREDITAMENTO
+[2025-08-25 09:54:39] INSERT 0 in table VERSIONE
+[2025-08-25 09:54:39] INSERT 59936 in table MPT_COPIA_CONTRATTO_20250124
+[2025-08-25 09:54:39] INSERT 0 in table WHATSAPP_CLIENTS
+[2025-08-25 09:54:39] INSERT 0 in table VOCI_PRATICA_AUDIT_BATCH
+[2025-08-25 09:54:39] INSERT 0 in table WHATSAPP_INTERACTIVE_MESSAGES
+[2025-08-25 09:54:39] INSERT 0 in table WHATSAPP_LABELS
+[2025-08-25 09:54:39] INSERT 0 in table WHATSAPP_MESSAGES
+[2025-08-25 09:54:39] INSERT 0 in table WHATSAPP_MESSAGGI_CODA
+[2025-08-25 09:54:39] INSERT 1 in table WHATSAPP_CONFIG
+[2025-08-25 09:54:39] INSERT 0 in table WHATSAPP_NOTIFICHE_PRATICHE
+[2025-08-25 09:54:39] INSERT 0 in table WHATSAPP_TEMPLATES
+[2025-08-25 09:54:39] INSERT 28 in table V_ALEX_VOCIESCLUDI
+[2025-08-25 09:54:40] INSERT 30942 in table STRUTTURA_RECAPITI
+[2025-08-25 09:54:40] INSERT 32809 in table PRATICHE_ASSEGNI
+[2025-08-25 09:54:41] INSERT 0 in table MEDICI
+[2025-08-25 09:54:41] INSERT 0 in table VOCI
+[2025-08-25 09:54:42] INSERT 0 in table PRATICA_NOTIFICA
+[2025-08-25 09:54:44] INSERT 0 in table PROTOCOLLO
+[2025-08-25 09:54:45] INSERT 0 in table VOCIPRATICADETTAGLI
+[2025-08-25 09:54:47] INSERT 0 in table PRATICA
+[2025-08-25 09:54:49] INSERT 0 in table VOCI_PRATICA
+[2025-08-25 09:55:00] INSERT 93253 in table ALEX_ESTRAZIONE
+[2025-08-25 09:55:05] INSERT 0 in table BLOCCO_VOCI_DISPONIBILI
+[2025-08-25 09:55:09] INSERT 0 in table VOCI_PRATICA_TMP
+[2025-08-25 09:55:09] Retrying 2 failed files...
+[2025-08-25 09:55:09] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-25 09:55:09] [RETRY] ? ENTIWIN: ERROR - Table 'caspieown.entiwin' doesn't exist
+[2025-08-25 09:55:09] ERROR : table  ENTI_BROKER, with message: Table 'caspieown.enti_broker' doesn't exist
+[2025-08-25 09:55:09] [RETRY] ? ENTI_BROKER: ERROR - Table 'caspieown.enti_broker' doesn't exist
+[2025-08-25 09:55:09] === All data loads completed ===
+[2025-08-25 09:55:09] ? Total successful: 202
+[2025-08-25 09:55:09] ? Total failed: 6
+[2025-08-25 11:39:33] === Starting parallel data load with 16 workers ===
+[2025-08-25 11:39:33] Total files to process: 208
+[2025-08-25 11:39:33] INSERT 0 in table BROKER
+[2025-08-25 11:39:33] INSERT 0 in table ASSEGNI_ANNULLATI
+[2025-08-25 11:39:33] INSERT 0 in table ACCORDI
+[2025-08-25 11:39:33] INSERT 0 in table BRANCHE
+[2025-08-25 11:39:34] INSERT 0 in table ASSISTITO_TMP
+[2025-08-25 11:39:34] INSERT 0 in table AZIENDE
+[2025-08-25 11:39:34] INSERT 0 in table CIRCUITISTRUTTURA
+[2025-08-25 11:39:34] INSERT 4 in table CLIENTE
+[2025-08-25 11:39:34] INSERT 17 in table CLIENTI_QUOTE_ECCEZIONI
+[2025-08-25 11:39:34] INSERT 23 in table CLASSI
+[2025-08-25 11:39:34] INSERT 0 in table CONVENZIONI
+[2025-08-25 11:39:34] INSERT 0 in table CAUSALI
+[2025-08-25 11:39:34] INSERT 0 in table CONVENZIONI_CIRCUITISTRUTTURA
+[2025-08-25 11:39:34] INSERT 0 in table BRANCHE_TIPISTRUTTURA
+[2025-08-25 11:39:34] INSERT 0 in table CONVENZIONI_STAMPE
+[2025-08-25 11:39:34] INSERT 0 in table CONDIZIONI_PART
+[2025-08-25 11:39:34] INSERT 0 in table CWT_LOGWEB
+[2025-08-25 11:39:34] INSERT 0 in table COMPAGNIE
+[2025-08-25 11:39:34] INSERT 0 in table CWT_PASSWORD
+[2025-08-25 11:39:34] INSERT 0 in table EBIPRO_ADESIONI
+[2025-08-25 11:39:34] INSERT 0 in table CAP
+[2025-08-25 11:39:34] INSERT 0 in table CLIENTI_QUOTE
+[2025-08-25 11:39:34] INSERT 0 in table EBIPRO_VIDEOCONSULTI
+[2025-08-25 11:39:34] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-25 11:39:34] ERROR : table  ENTI_BROKER, with message: Table 'caspieown.enti_broker' doesn't exist
+[2025-08-25 11:39:34] INSERT 1 in table CONFIG_VOCI_ONESHOT
+[2025-08-25 11:39:34] INSERT 0 in table CONVENZIONIDETTAGLI
+[2025-08-25 11:39:34] INSERT 0 in table ENTI
+[2025-08-25 11:39:34] INSERT 0 in table ETICHETTE_NUCLEI
+[2025-08-25 11:39:35] INSERT 0 in table GERARCHIA_ENTI
+[2025-08-25 11:39:35] INSERT 0 in table GRUPPISTRUTTURA
+[2025-08-25 11:39:35] INSERT 337 in table EBI_WS_INPUT_APPO
+[2025-08-25 11:39:35] INSERT 0 in table GRUPPI_INVIO
+[2025-08-25 11:39:35] INSERT 1381 in table EBI_WS_DOCUMENTALE_INPUT
+[2025-08-25 11:39:35] INSERT 0 in table IVA
+[2025-08-25 11:39:35] INSERT 0 in table GRUPPO_LETTERE
+[2025-08-25 11:39:35] INSERT 0 in table LETTERE_PRATICA
+[2025-08-25 11:39:35] INSERT 1 in table INVII
+[2025-08-25 11:39:35] INSERT 0 in table LETTERE
+[2025-08-25 11:39:35] INSERT 0 in table MACROBRANCA_NOMENCLATORE
+[2025-08-25 11:39:35] INSERT 0 in table MACROBRANCHE
+[2025-08-25 11:39:35] INSERT 0 in table MASSIMALI
+[2025-08-25 11:39:35] INSERT 0 in table MASSIMALI_CAUSALI
+[2025-08-25 11:39:35] INSERT 0 in table MASSIMALI_ACCORDI
+[2025-08-25 11:39:35] INSERT 0 in table ACCORDI_NUCLEO
+[2025-08-25 11:39:35] INSERT 0 in table MD_ADDITIONAL_PROPERTIES
+[2025-08-25 11:39:35] INSERT 0 in table MD_APPLICATIONFILES
+[2025-08-25 11:39:35] INSERT 0 in table MD_APPLICATIONS
+[2025-08-25 11:39:35] INSERT 0 in table MD_COLUMNS
+[2025-08-25 11:39:35] INSERT 1811 in table EBI_WS_INPUT
+[2025-08-25 11:39:35] INSERT 0 in table MD_CONNECTIONS
+[2025-08-25 11:39:35] INSERT 0 in table MD_CONSTRAINTS
+[2025-08-25 11:39:35] INSERT 0 in table MD_CONSTRAINT_DETAILS
+[2025-08-25 11:39:35] INSERT 0 in table MD_CATALOGS
+[2025-08-25 11:39:35] INSERT 0 in table MD_DERIVATIVES
+[2025-08-25 11:39:35] INSERT 0 in table MD_GROUPS
+[2025-08-25 11:39:35] INSERT 0 in table MD_GROUP_MEMBERS
+[2025-08-25 11:39:35] INSERT 0 in table MD_FILE_ARTIFACTS
+[2025-08-25 11:39:35] INSERT 0 in table MD_GROUP_PRIVILEGES
+[2025-08-25 11:39:35] INSERT 0 in table MD_INDEXES
+[2025-08-25 11:39:35] INSERT 0 in table MD_INDEX_DETAILS
+[2025-08-25 11:39:35] INSERT 0 in table MD_MIGR_DEPENDENCY
+[2025-08-25 11:39:35] INSERT 0 in table MD_MIGR_PARAMETER
+[2025-08-25 11:39:35] INSERT 0 in table MD_MIGR_WEAKDEP
+[2025-08-25 11:39:36] INSERT 0 in table MD_NUMROW$SOURCE
+[2025-08-25 11:39:36] INSERT 0 in table MD_NUMROW$TARGET
+[2025-08-25 11:39:36] INSERT 0 in table MD_OTHER_OBJECTS
+[2025-08-25 11:39:36] INSERT 0 in table MD_PACKAGES
+[2025-08-25 11:39:36] INSERT 0 in table MD_PRIVILEGES
+[2025-08-25 11:39:36] INSERT 0 in table MD_PARTITIONS
+[2025-08-25 11:39:36] INSERT 0 in table MD_PROJECTS
+[2025-08-25 11:39:36] INSERT 0 in table MD_REGISTRY
+[2025-08-25 11:39:36] INSERT 0 in table MD_REPOVERSIONS
+[2025-08-25 11:39:36] INSERT 0 in table MD_SCHEMAS
+[2025-08-25 11:39:36] INSERT 0 in table MD_SEQUENCES
+[2025-08-25 11:39:36] INSERT 0 in table MD_STORED_PROGRAMS
+[2025-08-25 11:39:36] INSERT 0 in table MD_TABLES
+[2025-08-25 11:39:36] INSERT 0 in table MD_SYNONYMS
+[2025-08-25 11:39:36] INSERT 0 in table MD_TABLESPACES
+[2025-08-25 11:39:36] INSERT 0 in table MD_USERS
+[2025-08-25 11:39:36] INSERT 0 in table MD_TRIGGERS
+[2025-08-25 11:39:36] INSERT 0 in table MD_USER_PRIVILEGES
+[2025-08-25 11:39:36] INSERT 0 in table MD_USER_DEFINED_DATA_TYPES
+[2025-08-25 11:39:36] INSERT 0 in table MD_VIEWS
+[2025-08-25 11:39:36] INSERT 0 in table MESSAGGI
+[2025-08-25 11:39:36] INSERT 0 in table MEDICI_STRUTTURE
+[2025-08-25 11:39:36] INSERT 0 in table MIGRLOG
+[2025-08-25 11:39:36] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_MAP
+[2025-08-25 11:39:36] INSERT 0 in table MIGR_DATATYPE_TRANSFORM_RULE
+[2025-08-25 11:39:36] INSERT 16215 in table DIAGNOSI
+[2025-08-25 11:39:36] INSERT 0 in table MOTIVISOSPENSIONE
+[2025-08-25 11:39:36] INSERT 0 in table MIGR_GENERATION_ORDER
+[2025-08-25 11:39:36] INSERT 0 in table MOTIVIRIFIUTO
+[2025-08-25 11:39:36] INSERT 0 in table MOTIVISOSPENSIONEPRESTAZIONE
+[2025-08-25 11:39:36] INSERT 2 in table MPT_ENTI
+[2025-08-25 11:39:37] INSERT 0 in table ASSEGNI
+[2025-08-25 11:39:37] INSERT 7904 in table LOCALITA
+[2025-08-25 11:39:37] INSERT 13 in table MPT_USER_EPK
+[2025-08-25 11:39:37] INSERT 0 in table NOMENCLATORE
+[2025-08-25 11:39:37] INSERT 0 in table NOTE
+[2025-08-25 11:39:37] INSERT 546 in table MPT_USER_BEPROF
+[2025-08-25 11:39:38] INSERT 38114 in table CONTRATTO_BCK
+[2025-08-25 11:39:38] INSERT 0 in table NOTE_ASSISTITO
+[2025-08-25 11:39:38] INSERT 0 in table PAGAMENTI
+[2025-08-25 11:39:38] INSERT 0 in table PARENTELA
+[2025-08-25 11:39:38] INSERT 0 in table PARTI_CORPO
+[2025-08-25 11:39:38] INSERT 0 in table POLIZZE
+[2025-08-25 11:39:38] INSERT 0 in table PATTI_SPECIALI
+[2025-08-25 11:39:38] INSERT 6235 in table MPT_USER_CADIPROF
+[2025-08-25 11:39:38] INSERT 0 in table PRATICA_AUDIT_BATCH
+[2025-08-25 11:39:38] INSERT 7535 in table MPT_UTENTI
+[2025-08-25 11:39:39] INSERT 1501 in table PRATICA_DOCUMENTAZIONE
+[2025-08-25 11:39:39] INSERT 0 in table PRATICA_LOCK
+[2025-08-25 11:39:39] INSERT 0 in table INDIRIZZO_NUCLEO
+[2025-08-25 11:39:39] INSERT 0 in table PRATICA_PREVISIONI
+[2025-08-25 11:39:40] INSERT 0 in table ASSISTITO
+[2025-08-25 11:39:40] INSERT 0 in table PRATOF
+[2025-08-25 11:39:40] INSERT 0 in table PRATOF_QUADRATURE
+[2025-08-25 11:39:40] INSERT 86741 in table FATTURA_VOCE
+[2025-08-25 11:39:40] INSERT 0 in table NUCLEO
+[2025-08-25 11:39:40] INSERT 0 in table PRIVILEGI
+[2025-08-25 11:39:40] INSERT 0 in table PRIVILEGI_PROFILI
+[2025-08-25 11:39:40] INSERT 0 in table PROFILI
+[2025-08-25 11:39:40] INSERT 0 in table PROTOCOLLO_VALORI
+[2025-08-25 11:39:40] INSERT 0 in table PRESTAZIONI
+[2025-08-25 11:39:40] INSERT 0 in table PROVIDER_ENTI
+[2025-08-25 11:39:40] INSERT 0 in table PROVIDER
+[2025-08-25 11:39:40] INSERT 0 in table PROVIDER_STRUTTURA
+[2025-08-25 11:39:41] INSERT 107 in table PROVINCIA
+[2025-08-25 11:39:41] INSERT 59936 in table MPT_COPIA_CONTRATTO_20250124
+[2025-08-25 11:39:41] INSERT 0 in table QUALIFICA
+[2025-08-25 11:39:41] INSERT 0 in table QUOTE_ACCORDO
+[2025-08-25 11:39:41] INSERT 0 in table QUALIFICHE_CONVENZIONI
+[2025-08-25 11:39:41] INSERT 0 in table RATE
+[2025-08-25 11:39:41] INSERT 0 in table REPORTS
+[2025-08-25 11:39:41] INSERT 20 in table REGIONI
+[2025-08-25 11:39:41] INSERT 0 in table REPORTS_REGOLE
+[2025-08-25 11:39:41] INSERT 0 in table RITORNI
+[2025-08-25 11:39:41] INSERT 0 in table SCHEDULATORE
+[2025-08-25 11:39:41] INSERT 0 in table SCHEDULATORE_TIPOOPERAZIONE
+[2025-08-25 11:39:41] INSERT 25 in table SISTEMA
+[2025-08-25 11:39:41] INSERT 0 in table SPECIALIZZAZIONI
+[2025-08-25 11:39:41] INSERT 0 in table SPESE_POSTALI
+[2025-08-25 11:39:41] INSERT 0 in table STAMPANTI
+[2025-08-25 11:39:41] INSERT 0 in table STAMPE
+[2025-08-25 11:39:41] INSERT 0 in table STATI_ASSISTITO
+[2025-08-25 11:39:41] INSERT 0 in table STATI_CONVENZIONE
+[2025-08-25 11:39:41] INSERT 0 in table STATI_PRATICA
+[2025-08-25 11:39:41] INSERT 0 in table STRUTTURA_ALTRETIPOLOGIE
+[2025-08-25 11:39:41] INSERT 9 in table STATI_EMAIL_PRATICA
+[2025-08-25 11:39:41] INSERT 0 in table STRUTTURA_AUTO_TARIFFARIO
+[2025-08-25 11:39:41] INSERT 0 in table STRUTTURA_CONTRATTO
+[2025-08-25 11:39:41] INSERT 229 in table STRUTTURA_EVENTI
+[2025-08-25 11:39:41] INSERT 0 in table STRUTTURA_GRUPPI
+[2025-08-25 11:39:41] INSERT 0 in table STRUTTURA_DATIWEB
+[2025-08-25 11:39:41] INSERT 0 in table STRUTTURA_PRIVACY
+[2025-08-25 11:39:42] INSERT 2422 in table STRUTTURA_ITER
+[2025-08-25 11:39:42] INSERT 0 in table STRUTTURA_SPECIALIZZAZIONI
+[2025-08-25 11:39:42] INSERT 15563 in table PRATICA_AUTORIZZAZIONE
+[2025-08-25 11:39:42] INSERT 0 in table STRUTTURA
+[2025-08-25 11:39:42] INSERT 0 in table STRUTTURE_COMPENSAZIONE
+[2025-08-25 11:39:42] INSERT 0 in table STRUTTURE_EMAIL
+[2025-08-25 11:39:42] INSERT 0 in table STRUTTURA_TEMP_BRANCHE
+[2025-08-25 11:39:42] INSERT 0 in table TARIFFARIO_REGIONI
+[2025-08-25 11:39:42] INSERT 0 in table TIPISTRUTTURA_CAUSALI
+[2025-08-25 11:39:42] INSERT 0 in table TARIFFARI_REGIONE
+[2025-08-25 11:39:42] INSERT 0 in table TIPI_CALCOLO
+[2025-08-25 11:39:42] INSERT 724 in table TIPISTRUTTURA_SPECIALIZZAZIONI
+[2025-08-25 11:39:42] INSERT 0 in table TIPI_REPORT
+[2025-08-25 11:39:42] INSERT 26 in table TIPI_RECAPITO
+[2025-08-25 11:39:43] INSERT 0 in table TIPI_VALORE
+[2025-08-25 11:39:43] INSERT 0 in table TIPI_STRUTTURA
+[2025-08-25 11:39:43] INSERT 0 in table TIPO_ACCREDITAMENTO
+[2025-08-25 11:39:43] INSERT 0 in table TIPODOCUMENTOPRIVACY
+[2025-08-25 11:39:43] INSERT 0 in table FATTURA
+[2025-08-25 11:39:43] INSERT 0 in table PRATICADETTAGLI
+[2025-08-25 11:39:43] INSERT 0 in table UTENTI
+[2025-08-25 11:39:43] INSERT 0 in table UTENTI_WEB
+[2025-08-25 11:39:43] INSERT 0 in table TITOLI
+[2025-08-25 11:39:43] INSERT 0 in table TIPO_QUOTA
+[2025-08-25 11:39:43] INSERT 0 in table VERSIONE
+[2025-08-25 11:39:43] INSERT 30942 in table STRUTTURA_RECAPITI
+[2025-08-25 11:39:43] INSERT 0 in table VOCI_PRATICA_AUDIT_BATCH
+[2025-08-25 11:39:44] INSERT 0 in table CONTRATTO
+[2025-08-25 11:39:44] INSERT 28 in table V_ALEX_VOCIESCLUDI
+[2025-08-25 11:39:44] INSERT 0 in table WHATSAPP_CLIENTS
+[2025-08-25 11:39:44] INSERT 1 in table WHATSAPP_CONFIG
+[2025-08-25 11:39:44] INSERT 0 in table WHATSAPP_INTERACTIVE_MESSAGES
+[2025-08-25 11:39:44] INSERT 0 in table WHATSAPP_LABELS
+[2025-08-25 11:39:44] INSERT 0 in table WHATSAPP_MESSAGES
+[2025-08-25 11:39:44] INSERT 0 in table WHATSAPP_MESSAGGI_CODA
+[2025-08-25 11:39:44] INSERT 0 in table WHATSAPP_NOTIFICHE_PRATICHE
+[2025-08-25 11:39:44] INSERT 0 in table WHATSAPP_TEMPLATES
+[2025-08-25 11:39:45] INSERT 0 in table MEDICI
+[2025-08-25 11:39:45] INSERT 0 in table VOCI
+[2025-08-25 11:39:45] INSERT 32809 in table PRATICHE_ASSEGNI
+[2025-08-25 11:39:48] INSERT 0 in table PRATICA_NOTIFICA
+[2025-08-25 11:39:50] INSERT 0 in table VOCIPRATICADETTAGLI
+[2025-08-25 11:39:52] INSERT 0 in table PROTOCOLLO
+[2025-08-25 11:39:54] INSERT 0 in table PRATICA
+[2025-08-25 11:39:57] INSERT 0 in table VOCI_PRATICA
+[2025-08-25 11:40:10] INSERT 93253 in table ALEX_ESTRAZIONE
+[2025-08-25 11:40:12] INSERT 0 in table BLOCCO_VOCI_DISPONIBILI
+[2025-08-25 11:40:27] INSERT 0 in table VOCI_PRATICA_TMP
+[2025-08-25 11:42:23] INSERT 0 in table TARIFFARI
+[2025-08-25 11:46:36] INSERT 6366143 in table T_AUDIT
+[2025-08-25 11:59:28] INSERT 0 in table MASSIMALI_VOCI
+[2025-08-25 12:00:27] INSERT 0 in table CONVENZIONI_VOCI
+[2025-08-25 12:00:27] Retrying 2 failed files...
+[2025-08-25 12:00:27] ERROR : table  ENTIWIN, with message: Table 'caspieown.entiwin' doesn't exist
+[2025-08-25 12:00:27] [RETRY] ? ENTIWIN: ERROR - Table 'caspieown.entiwin' doesn't exist
+[2025-08-25 12:00:27] ERROR : table  ENTI_BROKER, with message: Table 'caspieown.enti_broker' doesn't exist
+[2025-08-25 12:00:27] [RETRY] ? ENTI_BROKER: ERROR - Table 'caspieown.enti_broker' doesn't exist
+[2025-08-25 12:00:27] === All data loads completed ===
+[2025-08-25 12:00:27] ? Total successful: 206
+[2025-08-25 12:00:27] ? Total failed: 6
