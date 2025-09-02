@@ -1,7 +1,7 @@
 .class
 
-/target*
+/target/*
 
-/src/resources/csv*
+/src/main/resources/csv/*
 
 .prefs
