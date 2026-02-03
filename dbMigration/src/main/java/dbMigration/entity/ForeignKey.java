@@ -8,8 +8,8 @@ public class ForeignKey {
     List<String> fkColumns;
     String fkTable;
     List<String> fkReferenceColumns;
-    short updateRule;
-    short deleteRule;
+    String updateRule;
+    String deleteRule;
 
 
     public String getFkName() {
@@ -30,7 +30,7 @@ public class ForeignKey {
     public void setFkTable(String fkTable) {
         this.fkTable = fkTable;
     }
-    public short getUpdateRule() {
+    public String getUpdateRule() {
         return updateRule;
     }
     public List<String> getFkReferenceColumns() {
@@ -39,15 +39,14 @@ public class ForeignKey {
     public void setFkReferenceColumns(List<String> fkReferenceColumns) {
         this.fkReferenceColumns = fkReferenceColumns;
     }
-    public void setUpdateRule(short updateRule) {
+    public void setUpdateRule(String updateRule) {
         this.updateRule = updateRule;
     }
-    public short getDeleteRule() {
+    public String getDeleteRule() {
         return deleteRule;
     }
-    public void setDeleteRule(short deleteRule) {
+    public void setDeleteRule(String deleteRule) {
         this.deleteRule = deleteRule;
     }
 
-    
 }

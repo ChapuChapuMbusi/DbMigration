@@ -29,7 +29,7 @@ public class MigrationApp {
     static Config config;
     static String LOG_FILE = "src/resources/load_data_log.txt";
 
-    private static final Logger logger = LogManager.getLogger(MigrationApp.class);
+    private static final Logger logger =    LogManager.getLogger(MigrationApp.class);
 
     public static void main(String[] args) throws Exception {
 
@@ -67,7 +67,7 @@ public class MigrationApp {
             return;
         }
 
-        // importUtils.importDataIntoCsv(config);
+        importUtils.importDataIntoCsv(config);
 
         FileManager.splitFiles(new File(config.data_dir), 10000000L);
 
@@ -84,7 +84,7 @@ public class MigrationApp {
         Map<String, TableMeta> tableMetaMaps = Collections.synchronizedMap(new HashMap<>());
         // creare mappa di index che vengono eliminati dal DB e toglil controlli per FK
         // e Index
-        try (Connection conn = getConnectionTarget()) {
+        try (Connection conn = getConnectionTarget(false)) {
             tableMetaMaps = csvTableMap.entrySet().stream().collect(Collectors.toMap(k -> k.getKey(), v -> {
                 try {
                     removeForeignKeyChecks(conn);
@@ -103,7 +103,8 @@ public class MigrationApp {
         ExecutorService executor = Executors.newFixedThreadPool(config.max_workers);
         List<Future<String>> futures = new ArrayList<>();
         for (Map.Entry<String, String> entry : csvTableMap.entrySet()) {
-            futures.add(executor.submit(() -> loadSingleCsv(entry, completed, failed, skipped)));
+            futures.add(executor.submit(() -> loadSingleCsv(entry, completed, failed,
+                    skipped)));
         }
         int done = 0;
         for (Future<String> future : futures) {
@@ -111,7 +112,7 @@ public class MigrationApp {
             printProgress(++done, totalFiles);
         }
         executor.shutdown();
-        executor.awaitTermination(1, TimeUnit.MINUTES);
+        executor.awaitTermination(5, TimeUnit.MINUTES);
         // Remove lock files
         removeLocks(config.data_dir + "\\TMP");
 
@@ -131,7 +132,7 @@ public class MigrationApp {
             completed.addAll(retrySuccess);
             failed.remove(retrySuccess);
         }
-        try (Connection conn = getConnectionTarget()) {
+        try (Connection conn = getConnectionTarget(false)) {
             restoreIndexes(tableMetaMaps, conn);
             restoreForeignKeyChecks(conn);
         }
@@ -152,12 +153,12 @@ public class MigrationApp {
         List<Map<String, String>> mapping = new ArrayList<>();
         Map<String, String> map = new HashMap<>();
         try (Stream<Path> paths = Files.list(Paths.get(dataDir))) {
-            paths.filter(p -> p.toString().toLowerCase().endsWith(".csv")).forEach(p -> {
+            paths.filter(p -> p.toString().endsWith(".csv")).forEach(p -> {
                 String filename = p.getFileName().toString();
                 String table = filename;
 
                 // remove .csv
-                if (table.toLowerCase().endsWith(".csv")) {
+                if (table.endsWith(".csv")) {
                     table = table.substring(0, table.length() - 4);
                 }
 
@@ -190,7 +191,7 @@ public class MigrationApp {
             return table + ": ERROR - " + e.getMessage();
         }
 
-        try (Connection conn = getConnectionTarget()) {
+        try (Connection conn = getConnectionTarget(false)) {
             try (Statement stmt = conn.createStatement()) {
 
                 int before = countRows(stmt, table);
@@ -221,7 +222,7 @@ public class MigrationApp {
                 // stmt.execute("COMMIT;");
 
                 completed.add(table);
-                // log(String.format("INSERT %s in table %s", inserted, table));
+                log(String.format("INSERT %s in table %s", inserted, table));
                 return "OK >> " + table + ": " + inserted + " rows inserted";
             }
         } catch (Exception e) {
@@ -234,8 +235,8 @@ public class MigrationApp {
         }
     }
 
-    static Connection getConnectionTarget() throws SQLException {
-        DbConfig db = config.db_config_target;
+    static Connection getConnectionTarget(boolean source) throws SQLException {
+        DbConfig db = source ? config.db_config_source : config.db_config_target;
         String url = String.format(
                 "jdbc:mysql://%s/%s?allowLoadLocalInfile=%s",
                 db.host, db.database, db.allow_local_infile);
@@ -293,7 +294,7 @@ public class MigrationApp {
     }
 
     private static boolean checkConnections(Config conf) {
-        try (Connection conn = getConnectionTarget()) {
+        try (Connection conn = getConnectionTarget(false)) {
 
             logger.info("-----------------------------------");
             logger.info("CONNECTION TARGET");
@@ -306,15 +307,14 @@ public class MigrationApp {
             e.printStackTrace();
             return false;
         }
-        try (Connection conn = DriverManager.getConnection(conf.db_config_source.host, conf.db_config_source.user,
-                conf.db_config_source.password)) {
+       try (Connection conn = getConnectionTarget(true, config)){
             logger.info("-----------------------------------");
             logger.info("CONNECTION SOURCE");
             logger.info("HOST: ".concat(conf.db_config_source.host));
             logger.info("USER: ".concat(conf.db_config_source.user));
             logger.info("DATABASE: ".concat(conn.getMetaData().getDatabaseProductName()));
             logger.info("-----------------------------------");
-        } catch (SQLException e) {
+        }catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
@@ -354,6 +354,7 @@ public class MigrationApp {
                     if (indexName.contains("PRIMARY")) {
                         continue;
                     } else if (indexName.contains("FK_")) {
+                        stmt.addBatch(String.format("ALTER TABLE `%s` DROP INDEX `%s`", table, indexName));
                         continue;
                     } else {
                         stmt.addBatch(String.format("ALTER TABLE `%s` DROP INDEX `%s`", table, indexName));
@@ -383,8 +384,8 @@ public class MigrationApp {
                     String fkColumn = fk.getString("FKCOLUMN_NAME");
                     String pkTable = fk.getString("PKTABLE_NAME");
                     String pkColumn = fk.getString("PKCOLUMN_NAME");
-                    short updateRule = fk.getShort("UPDATE_RULE");
-                    short deleteRule = fk.getShort("DELETE_RULE");
+                    String updateRule = fkRuleToString(fk.getShort("UPDATE_RULE"));
+                    String deleteRule = fkRuleToString(fk.getShort("DELETE_RULE"));
 
                     stmt.addBatch(String.format("ALTER TABLE `%s` DROP FOREIGN KEY `%s`", table, fkName));
 
@@ -449,7 +450,7 @@ public class MigrationApp {
                         try {
                             stm.addBatch(
                                     String.format(
-                                            "ALTER TABLE `%s` ADD FOREIGN KEY (`%s`) REFERENCES `%s`(`%s`), ON UPDATE=%d, ON DELETE=%d%n\"",
+                                            "ALTER TABLE `%s` ADD FOREIGN KEY (`%s`) REFERENCES `%s`(`%s`), ON UPDATE=%s, ON DELETE=%s%n\"",
                                             table,
                                             fk.getFkColumns().stream()
                                                     .collect(Collectors.joining(",")),
@@ -473,6 +474,7 @@ public class MigrationApp {
         try (Statement stmt = conn.createStatement()) {
             // Disabled checks for FK errors and performance
             stmt.execute("SET FOREIGN_KEY_CHECKS=0");
+            stmt.execute("SET sql_log_bin = 0");
             stmt.execute("SET GLOBAL local_infile = 'ON'");
             stmt.execute("SET unique_checks=0 ");
             stmt.execute("SET autocommit=1");
@@ -487,4 +489,26 @@ public class MigrationApp {
             // stmt.execute("SET autocommit=1");
         }
     }
+
+    private static String fkRuleToString(short rule) {
+        return switch (rule) {
+            case DatabaseMetaData.importedKeyCascade -> "CASCADE";
+            case DatabaseMetaData.importedKeySetNull -> "SET NULL";
+            case DatabaseMetaData.importedKeySetDefault -> "SET DEFAULT";
+            case DatabaseMetaData.importedKeyRestrict -> "RESTRICT";
+            case DatabaseMetaData.importedKeyNoAction -> "NO ACTION";
+            default -> "";
+        };
+    }
+
+    static Connection getConnectionTarget(boolean source, Config config) throws SQLException {
+        DbConfig db = source ? config.db_config_source : config.db_config_target;
+        // Using Oracle service name format
+        String url = String.format("jdbc:oracle:thin:@//%s:1521/%s", db.host, db.database);
+        Properties props = new Properties();
+        props.setProperty("user", db.user);
+        props.setProperty("password", db.password);
+        return DriverManager.getConnection(url, props);
+    }
+
 }
