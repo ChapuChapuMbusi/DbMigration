@@ -199,7 +199,7 @@ public class MigrationApp {
                 removeForeignKeyChecks(conn);
                 // Get columns
                 List<String> columns = new ArrayList<>();
-                ResultSet rs = stmt.executeQuery("SHOW COLUMNS FROM " + table);
+                ResultSet rs = stmt.executeQuery("SHOW COLUMNS FROM `" + table + "`");
                 while (rs.next())
                     columns.add(rs.getString(1));
 
@@ -209,7 +209,7 @@ public class MigrationApp {
                         .map(c -> "`" + c + "`" + " = NULLIF(NULLIF(@" + c + ", 'null'), '')")
                         .collect(Collectors.joining(", "));
                 String sql = String.format(
-                        "LOAD DATA LOCAL INFILE '%s' INTO TABLE %s FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\\n' IGNORE 1 LINES (%s) SET %s;",
+                        "LOAD DATA LOCAL INFILE '%s' INTO TABLE `%s` FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\\n' IGNORE 1 LINES (%s) SET %s;",
                         csvPath.replace("\\", "\\\\"), table, colMapping, setClause);
 
                 stmt.execute(sql);
@@ -248,7 +248,7 @@ public class MigrationApp {
     }
 
     static int countRows(Statement stmt, String table) throws SQLException {
-        ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM " + table);
+        ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM `" + table + "`");
         rs.next();
         return rs.getInt(1);
     }
