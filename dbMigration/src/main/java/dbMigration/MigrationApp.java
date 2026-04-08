@@ -1,8 +1,6 @@
 package dbMigration;
 
-import com.google.gson.*;
 import com.mysql.cj.jdbc.AbandonedConnectionCleanupThread;
-import com.mysql.cj.xdevapi.Table;
 
 import java.io.*;
 import java.nio.file.*;
@@ -19,8 +17,10 @@ import dbMigration.config.*;
 import dbMigration.entity.ForeignKey;
 import dbMigration.entity.Index;
 import dbMigration.entity.TableMeta;
+import dbMigration.utils.DbConnectionFactory;
 import dbMigration.utils.FileManager;
 import dbMigration.utils.Import;
+import dbMigration.utils.OutputPathResolver;
 
 public class MigrationApp {
 
@@ -67,13 +67,18 @@ public class MigrationApp {
             return;
         }
 
+        Path outputDir = OutputPathResolver.resolveOutputDirectory(config.data_dir);
         importUtils.importDataIntoCsv(config);
 
-        FileManager.splitFiles(new File(config.data_dir), 10000000L);
+        FileManager.splitFiles(outputDir.toFile(), 10000000L);
 
         logger.info("files splitted");
 
-        Map<String, String> csvTableMap = buildCsvTableMap(config.data_dir + "\\TMP");
+        Path tmpDir = outputDir.resolve("TMP");
+        Map<String, String> csvTableMap = buildCsvTableMap(tmpDir.toString());
+        try (Connection conn = DbConnectionFactory.openTargetConnection(config)) {
+            csvTableMap = filterCsvTableMapByTargetTables(csvTableMap, conn);
+        }
         int totalFiles = csvTableMap.size();
         log("=== Starting parallel data load with " + config.max_workers + " workers ===");
         log("Total files to process: " + totalFiles);
@@ -84,7 +89,7 @@ public class MigrationApp {
         Map<String, TableMeta> tableMetaMaps = Collections.synchronizedMap(new HashMap<>());
         // creare mappa di index che vengono eliminati dal DB e toglil controlli per FK
         // e Index
-        try (Connection conn = getConnectionTarget(false)) {
+        try (Connection conn = DbConnectionFactory.openTargetConnection(config)) {
             tableMetaMaps = csvTableMap.entrySet().stream().collect(Collectors.toMap(k -> k.getKey(), v -> {
                 try {
                     removeForeignKeyChecks(conn);
@@ -114,7 +119,7 @@ public class MigrationApp {
         executor.shutdown();
         executor.awaitTermination(5, TimeUnit.MINUTES);
         // Remove lock files
-        removeLocks(config.data_dir + "\\TMP");
+        removeLocks(tmpDir.toString());
 
         // Retry failed
         if (!failed.isEmpty()) {
@@ -132,7 +137,7 @@ public class MigrationApp {
             completed.addAll(retrySuccess);
             failed.remove(retrySuccess);
         }
-        try (Connection conn = getConnectionTarget(false)) {
+        try (Connection conn = DbConnectionFactory.openTargetConnection(config)) {
             restoreIndexes(tableMetaMaps, conn);
             restoreForeignKeyChecks(conn);
         }
@@ -143,14 +148,13 @@ public class MigrationApp {
         // for (Map<String, String> item : failed) {
         // log(" ❌ " + item.get("table") + " failed permanently.");
         // }
-        FileManager.eliminateTmpFiles(new File(config.data_dir));
-        removeLocks(config.data_dir);
+        FileManager.eliminateTmpFiles(outputDir.toFile());
+        removeLocks(outputDir.toString());
     }
 
     static Map<String, String> buildCsvTableMap(String dataDir) throws IOException {
 
         logger.info("building csv-table map");
-        List<Map<String, String>> mapping = new ArrayList<>();
         Map<String, String> map = new HashMap<>();
         try (Stream<Path> paths = Files.list(Paths.get(dataDir))) {
             paths.filter(p -> p.toString().endsWith(".csv")).forEach(p -> {
@@ -166,10 +170,70 @@ public class MigrationApp {
                 table = table.replaceAll("\\.part\\d+$", "");
 
                 map.put(p.toString(), table);
-                mapping.add(map);
             });
         }
         return map;
+    }
+
+    static Map<String, String> filterCsvTableMapByTargetTables(Map<String, String> csvTableMap, Connection conn)
+            throws SQLException {
+        Set<String> targetTables = getTargetTableNames(conn);
+        Map<String, String> filtered = new LinkedHashMap<>();
+        List<String> skipped = new ArrayList<>();
+
+        for (Map.Entry<String, String> entry : csvTableMap.entrySet()) {
+            String table = entry.getValue();
+            if (targetTables.contains(normalizeTableName(table))) {
+                filtered.put(entry.getKey(), table);
+            } else {
+                skipped.add(table + " <- " + entry.getKey());
+            }
+        }
+
+        if (!skipped.isEmpty()) {
+            log("Skipping " + skipped.size() + " CSV files with no matching target table");
+            for (String item : skipped) {
+                log("[SKIP] Missing target table for CSV: " + item);
+            }
+        }
+
+        return filtered;
+    }
+
+    static Set<String> getTargetTableNames(Connection conn) throws SQLException {
+        DatabaseMetaData metaData = conn.getMetaData();
+        Set<String> tableNames = new HashSet<>();
+        String catalog = config.db_config_target.database;
+        String schema = config.db_config_target.schema;
+
+        collectTableNames(metaData, catalog, schema, tableNames);
+        if (tableNames.isEmpty() && catalog != null) {
+            collectTableNames(metaData, catalog, null, tableNames);
+        }
+        if (tableNames.isEmpty() && schema != null) {
+            collectTableNames(metaData, null, schema, tableNames);
+        }
+        if (tableNames.isEmpty()) {
+            collectTableNames(metaData, null, null, tableNames);
+        }
+
+        return tableNames;
+    }
+
+    static void collectTableNames(DatabaseMetaData metaData, String catalog, String schema, Set<String> tableNames)
+            throws SQLException {
+        try (ResultSet rs = metaData.getTables(catalog, schema, "%", null)) {
+            while (rs.next()) {
+                String tableName = rs.getString("TABLE_NAME");
+                if (tableName != null && !tableName.isBlank()) {
+                    tableNames.add(normalizeTableName(tableName));
+                }
+            }
+        }
+    }
+
+    static String normalizeTableName(String tableName) {
+        return tableName == null ? "" : tableName.trim().toUpperCase(Locale.ROOT);
     }
 
     static String loadSingleCsv(Map.Entry<String, String> item, List<String> completed, Map<String, String> failed,
@@ -191,22 +255,19 @@ public class MigrationApp {
             return table + ": ERROR - " + e.getMessage();
         }
 
-        try (Connection conn = getConnectionTarget(false)) {
+        try (Connection conn = DbConnectionFactory.openTargetConnection(config)) {
             try (Statement stmt = conn.createStatement()) {
 
                 int before = countRows(stmt, table);
 
                 removeForeignKeyChecks(conn);
-                // Get columns
-                List<String> columns = new ArrayList<>();
-                ResultSet rs = stmt.executeQuery("SHOW COLUMNS FROM `" + table + "`");
-                while (rs.next())
-                    columns.add(rs.getString(1));
+                List<TargetColumn> columns = getTargetColumns(conn, table);
 
-                // Build LOAD DATA SQL
-                String colMapping = columns.stream().map(c -> "@" + c).collect(Collectors.joining(", "));
+                String colMapping = columns.stream()
+                        .map(TargetColumn::userVariable)
+                        .collect(Collectors.joining(", "));
                 String setClause = columns.stream()
-                        .map(c -> "`" + c + "`" + " = NULLIF(NULLIF(@" + c + ", 'null'), '')")
+                        .map(MigrationApp::buildLoadAssignment)
                         .collect(Collectors.joining(", "));
                 String sql = String.format(
                         "LOAD DATA LOCAL INFILE '%s' INTO TABLE `%s` FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\\n' IGNORE 1 LINES (%s) SET %s;",
@@ -233,18 +294,6 @@ public class MigrationApp {
         } finally {
             lockFile.delete();
         }
-    }
-
-    static Connection getConnectionTarget(boolean source) throws SQLException {
-        DbConfig db = source ? config.db_config_source : config.db_config_target;
-        String url = String.format(
-                "jdbc:mysql://%s/%s?allowLoadLocalInfile=%s",
-                db.host, db.database, db.allow_local_infile);
-        Properties props = new Properties();
-        props.setProperty("user", db.user);
-        props.setProperty("password", db.password);
-        props.setProperty("allowLoadLocalInfile", String.valueOf(db.allow_local_infile));
-        return DriverManager.getConnection(url, props);
     }
 
     static int countRows(Statement stmt, String table) throws SQLException {
@@ -277,6 +326,9 @@ public class MigrationApp {
         dbSource.password = props.getProperty("db_config_source.password");
         dbSource.host = props.getProperty("db_config_source.host");
         dbSource.database = props.getProperty("db_config_source.database");
+        dbSource.schema = props.getProperty("db_config_source.schema");
+        dbSource.jdbc_url = props.getProperty("db_config_source.jdbc_url");
+        dbSource.dialect = props.getProperty("db_config_source.dialect");
         dbSource.allow_local_infile = Boolean
                 .parseBoolean(props.getProperty("db_config_source.allow_local_infile", "false"));
         cfg.db_config_source = dbSource;
@@ -285,21 +337,44 @@ public class MigrationApp {
         dbTarget.password = props.getProperty("db_config_target.password");
         dbTarget.host = props.getProperty("db_config_target.host");
         dbTarget.database = props.getProperty("db_config_target.database");
+        dbTarget.schema = props.getProperty("db_config_target.schema");
+        dbTarget.jdbc_url = props.getProperty("db_config_target.jdbc_url");
+        dbTarget.dialect = props.getProperty("db_config_target.dialect");
         dbTarget.allow_local_infile = Boolean
                 .parseBoolean(props.getProperty("db_config_target.allow_local_infile", "false"));
         cfg.db_config_target = dbTarget;
+        LightModeConfig lightMode = new LightModeConfig();
+        lightMode.enabled = Boolean.parseBoolean(props.getProperty("light_mode.enabled", "false"));
+        lightMode.dry_run = Boolean.parseBoolean(props.getProperty("light_mode.dry_run", "false"));
+        lightMode.report_enabled = Boolean.parseBoolean(props.getProperty("light_mode.report_enabled", "true"));
+        lightMode.report_file = props.getProperty("light_mode.report_file", "light_export_report.csv");
+        lightMode.cod_acc = props.getProperty("light_mode.cod_acc");
+        lightMode.max_rows_per_table = Integer.parseInt(props.getProperty("light_mode.max_rows_per_table", "50"));
+        lightMode.relation_search_depth = Integer.parseInt(props.getProperty("light_mode.relation_search_depth", "6"));
+        props.stringPropertyNames().stream()
+                .filter(name -> name.startsWith("light_mode.manual_filter."))
+                .forEach(name -> lightMode.manual_filters.put(
+                        name.substring("light_mode.manual_filter.".length()).toUpperCase(Locale.ROOT),
+                        props.getProperty(name)));
+        props.stringPropertyNames().stream()
+                .filter(name -> name.startsWith("light_mode.manual_order_by."))
+                .forEach(name -> lightMode.manual_order_by.put(
+                        name.substring("light_mode.manual_order_by.".length()).toUpperCase(Locale.ROOT),
+                        props.getProperty(name)));
+        cfg.light_mode = lightMode;
         cfg.data_dir = props.getProperty("data_dir");
         cfg.max_workers = Integer.parseInt(props.getProperty("max_workers"));
         return cfg;
     }
 
     private static boolean checkConnections(Config conf) {
-        try (Connection conn = getConnectionTarget(false)) {
+        try (Connection conn = DbConnectionFactory.openTargetConnection(conf)) {
 
             logger.info("-----------------------------------");
             logger.info("CONNECTION TARGET");
             logger.info("HOST: {}", conf.db_config_target.host);
             logger.info("USER: ".concat(conf.db_config_target.user));
+            logger.info("DIALECT: {}", DbConnectionFactory.getTargetDialect(conf));
             logger.info("DATABASE: ".concat(conn.getMetaData().getDatabaseProductName()));
             logger.info("-----------------------------------");
 
@@ -307,11 +382,12 @@ public class MigrationApp {
             e.printStackTrace();
             return false;
         }
-       try (Connection conn = getConnectionTarget(true, config)){
+       try (Connection conn = DbConnectionFactory.openSourceConnection(conf)){
             logger.info("-----------------------------------");
             logger.info("CONNECTION SOURCE");
             logger.info("HOST: ".concat(conf.db_config_source.host));
             logger.info("USER: ".concat(conf.db_config_source.user));
+            logger.info("DIALECT: {}", DbConnectionFactory.getSourceDialect(conf));
             logger.info("DATABASE: ".concat(conn.getMetaData().getDatabaseProductName()));
             logger.info("-----------------------------------");
         }catch (SQLException e) {
@@ -478,6 +554,7 @@ public class MigrationApp {
             stmt.execute("SET GLOBAL local_infile = 'ON'");
             stmt.execute("SET unique_checks=0 ");
             stmt.execute("SET autocommit=1");
+            stmt.execute("SET time_zone = '+00:00'");
         }
     }
 
@@ -501,14 +578,51 @@ public class MigrationApp {
         };
     }
 
-    static Connection getConnectionTarget(boolean source, Config config) throws SQLException {
-        DbConfig db = source ? config.db_config_source : config.db_config_target;
-        // Using Oracle service name format
-        String url = String.format("jdbc:oracle:thin:@//%s:1521/%s", db.host, db.database);
-        Properties props = new Properties();
-        props.setProperty("user", db.user);
-        props.setProperty("password", db.password);
-        return DriverManager.getConnection(url, props);
+    private static List<TargetColumn> getTargetColumns(Connection conn, String table) throws SQLException {
+        List<TargetColumn> columns = new ArrayList<>();
+        DatabaseMetaData metaData = conn.getMetaData();
+        try (ResultSet rs = metaData.getColumns(config.db_config_target.database, null, table, null)) {
+            while (rs.next()) {
+                columns.add(new TargetColumn(
+                        rs.getInt("ORDINAL_POSITION"),
+                        rs.getString("COLUMN_NAME"),
+                        rs.getInt("DATA_TYPE")));
+            }
+        }
+        columns.sort(Comparator.comparingInt(TargetColumn::ordinalPosition));
+        if (columns.isEmpty()) {
+            throw new SQLException("No target columns found for table " + table);
+        }
+        return columns;
     }
 
+    private static String buildLoadAssignment(TargetColumn column) {
+        String rawValue = normalizeNullableValue(column.userVariable());
+        String expression = isBinaryType(column.dataType())
+                ? String.format(
+                        "IF(%s IS NULL OR %s = '' OR LOWER(%s) = 'null', NULL, FROM_BASE64(%s))",
+                        column.userVariable(),
+                        column.userVariable(),
+                        column.userVariable(),
+                        column.userVariable())
+                : rawValue;
+        return String.format("`%s` = %s", column.name(), expression);
+    }
+
+    private static String normalizeNullableValue(String userVariable) {
+        return String.format("NULLIF(NULLIF(%s, 'null'), '')", userVariable);
+    }
+
+    private static boolean isBinaryType(int dataType) {
+        return switch (dataType) {
+            case Types.BINARY, Types.VARBINARY, Types.LONGVARBINARY, Types.BLOB -> true;
+            default -> false;
+        };
+    }
+
+    private record TargetColumn(int ordinalPosition, String name, int dataType) {
+        private String userVariable() {
+            return "@v" + ordinalPosition;
+        }
+    }
 }

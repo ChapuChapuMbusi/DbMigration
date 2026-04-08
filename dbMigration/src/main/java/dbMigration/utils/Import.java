@@ -2,131 +2,186 @@ package dbMigration.utils;
 
 import com.opencsv.CSVWriter;
 import dbMigration.config.Config;
+import dbMigration.config.DatabaseDialect;
 import dbMigration.config.DbConfig;
+import dbMigration.config.LightModeConfig;
+import dbMigration.entity.SourceTableRef;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.sql.*;
 import java.util.*;
 import java.util.concurrent.*;
 
 public class Import {
 
-    /**
-     * Export all tables from Oracle database to CSV files in the given output directory.
-     */
     public void importDataIntoCsv(Config config) {
-        String outputDir = config.data_dir;
+        Path outputDir;
         int THREADS = config.max_workers;
         DbConfig dbConfig = config.db_config_source;
+        DatabaseDialect sourceDialect = DbConnectionFactory.getSourceDialect(config);
+        LightModeConfig lightMode = config.light_mode;
 
         ExecutorService executor = Executors.newFixedThreadPool(THREADS);
 
-        try (Connection conn = getConnectionTarget(true, config)) {
-            System.out.println("Connected to Oracle Source Database");
+        try (Connection conn = DbConnectionFactory.openSourceConnection(config)) {
+            System.out.println("Connected to Source Database: " + sourceDialect);
+            outputDir = OutputPathResolver.resolveOutputDirectory(config.data_dir);
 
-            // Create output directory if it doesn't exist
-            File dir = new File(outputDir);
-            if (!dir.exists()) dir.mkdirs();
+            List<SourceTableRef> tables = getTableRefs(conn, dbConfig, sourceDialect);
+            LightExportPlanner lightExportPlanner = isLightModeEnabled(lightMode)
+                ? LightExportPlanner.create(conn, tables, sourceDialect, lightMode)
+                : null;
 
-            // Fetch all table names for the given schema
-            List<String> tables = getTableNames(conn, dbConfig.user);
-
-            List<Future<?>> futures = new ArrayList<>();
-            for (String table : tables) {
+            List<Future<ExportReportEntry>> futures = new ArrayList<>();
+            for (SourceTableRef table : tables) {
                 futures.add(
                     executor.submit(() -> {
                         try (
-                            Connection threadConn = getConnectionTarget(
-                                true,
-                                config
-                            )
+                                Connection threadConn = DbConnectionFactory.openSourceConnection(config)
                         ) {
-                            exportTableToCSV(threadConn, table, outputDir);
+                            return exportTableToCSV(
+                                threadConn,
+                                table,
+                                outputDir,
+                                sourceDialect,
+                                lightMode,
+                                lightExportPlanner
+                            );
                         } catch (SQLException e) {
                             System.err.println(
                                 "Connection error for table " +
-                                    table +
+                                    table.getTableName() +
                                     ": " +
                                     e.getMessage()
                             );
+                            return ExportReportEntry.error(table.getTableName(), e.getMessage());
                         } catch (IOException e) {
                             e.printStackTrace();
+                            return ExportReportEntry.error(table.getTableName(), e.getMessage());
                         }
                     })
                 );
             }
 
-            // Wait for all threads to finish
-            for (Future<?> f : futures) {
+            List<ExportReportEntry> reportEntries = new ArrayList<>();
+            for (Future<ExportReportEntry> f : futures) {
                 try {
-                    f.get();
+                    reportEntries.add(f.get());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
+            if (sourceDialect == DatabaseDialect.ORACLE) {
+                try {
+                    exportSequencesToCSV(conn, resolveSchema(dbConfig, sourceDialect), outputDir, lightMode, reportEntries);
+                } catch (IOException e) {
+                    throw new UncheckedIOException("Failed to export sequences", e);
+                }
+            }
 
-            try {
-                exportSequencesToCSV(conn, dbConfig.user, outputDir);
-            } catch (IOException e) {
-                throw new UncheckedIOException("Failed to export sequences", e);
+            if (shouldProduceLightModeReport(lightMode)) {
+                try {
+                    writeLightModeReport(outputDir, lightMode, reportEntries);
+                } catch (IOException e) {
+                    throw new UncheckedIOException("Failed to write light mode report", e);
+                }
             }
 
             System.out.println(
-                "All exports finished. Files in: " + dir.getAbsolutePath()
+                "All exports finished. Files in: " + outputDir.toAbsolutePath()
             );
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            throw new UncheckedIOException("Failed to prepare output directory", e);
         } finally {
             executor.shutdown();
         }
     }
 
-    /**
-     * Get all table names for the given Oracle schema.
-     */
-    private static List<String> getTableNames(Connection conn, String schema)
+    private static List<SourceTableRef> getTableRefs(Connection conn, DbConfig dbConfig, DatabaseDialect dialect)
         throws SQLException {
-        List<String> tableNames = new ArrayList<>();
-        String sql = "SELECT table_name FROM all_tables WHERE owner = ?";
-        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, schema.toUpperCase());
-            try (ResultSet rs = stmt.executeQuery()) {
-                while (rs.next()) {
-                    tableNames.add(rs.getString("table_name"));
-                }
+        List<SourceTableRef> tableRefs = new ArrayList<>();
+        DatabaseMetaData metaData = conn.getMetaData();
+        String catalog = dialect == DatabaseDialect.MYSQL || dialect == DatabaseDialect.SQLSERVER
+            ? dbConfig.database
+            : null;
+        String schema = resolveSchema(dbConfig, dialect);
+
+        try (ResultSet rs = metaData.getTables(catalog, schema, "%", new String[] { "TABLE" })) {
+            while (rs.next()) {
+                tableRefs.add(
+                    new SourceTableRef(
+                        rs.getString("TABLE_CAT"),
+                        rs.getString("TABLE_SCHEM"),
+                        rs.getString("TABLE_NAME")
+                    )
+                );
             }
         }
-        return tableNames;
+        tableRefs.sort(
+            Comparator
+                .comparing(SourceTableRef::getCatalog, Comparator.nullsFirst(String::compareTo))
+                .thenComparing(SourceTableRef::getSchema, Comparator.nullsFirst(String::compareTo))
+                .thenComparing(SourceTableRef::getTableName)
+        );
+        validateUniqueFileNames(tableRefs);
+        return tableRefs;
     }
 
     /**
      * Export a single table to a CSV file using streaming to avoid high memory usage.
      */
-    private static void exportTableToCSV(
+    private static ExportReportEntry exportTableToCSV(
         Connection conn,
-        String tableName,
-        String outputDir
-    ) throws SQLException, IOException {
-        String outputFile = outputDir + File.separator + tableName + ".csv";
+        SourceTableRef table,
+        Path outputDir,
+        DatabaseDialect sourceDialect,
+        LightModeConfig lightMode,
+        LightExportPlanner lightExportPlanner)
+        throws SQLException, IOException {
+        Path outputFile = outputDir.resolve(table.getFileStem() + ".csv");
+        String qualifiedTableName = buildQualifiedTableName(conn, table);
         System.out.println(
-            "[" + Thread.currentThread().getName() + "] Exporting: " + tableName
+            "[" + Thread.currentThread().getName() + "] Exporting: " + qualifiedTableName
         );
 
-        String sql = "SELECT * FROM " + tableName;
+        LightExportPlanner.ExportPlan exportPlan = isLightModeEnabled(lightMode)
+            ? lightExportPlanner.plan(table)
+            : new LightExportPlanner.ExportPlan(
+                "SELECT * FROM " + qualifiedTableName,
+                "SELECT COUNT(*) FROM " + qualifiedTableName,
+                0,
+                false
+            );
+        boolean auditEnabled = shouldProduceLightModeReport(lightMode) || isDryRun(lightMode);
+        long expectedRowCount = auditEnabled ? countRowsForPlan(conn, exportPlan, lightMode, sourceDialect) : -1L;
+        long finalCap = auditEnabled
+            ? (isLightModeEnabled(lightMode) ? Math.min(expectedRowCount, lightMode.max_rows_per_table) : expectedRowCount)
+            : -1L;
+        logLightModeReportLine(table.getTableName(), expectedRowCount, finalCap, lightMode);
+
+        if (isDryRun(lightMode)) {
+            return new ExportReportEntry(table.getTableName(), expectedRowCount, finalCap, 0, true, exportPlan.codAccFiltered(), null);
+        }
 
         try (
-            Statement stmt = conn.createStatement(
+            PreparedStatement stmt = conn.prepareStatement(
+                exportPlan.sql(),
                 ResultSet.TYPE_FORWARD_ONLY,
                 ResultSet.CONCUR_READ_ONLY
             )
         ) {
-            stmt.setFetchSize(1000); // Oracle streaming
+            stmt.setFetchSize(1000);
+            bindLightModeParameters(stmt, exportPlan, lightMode, sourceDialect);
 
             try (
-                ResultSet rs = stmt.executeQuery(sql);
+                ResultSet rs = stmt.executeQuery();
                 CSVWriter writer = new CSVWriter(
                     new OutputStreamWriter(
-                        new FileOutputStream(outputFile),
+                        new FileOutputStream(outputFile.toFile()),
                         StandardCharsets.UTF_8
                     )
                 )
@@ -146,8 +201,7 @@ public class Import {
                 while (rs.next()) {
                     String[] row = new String[columnCount];
                     for (int i = 1; i <= columnCount; i++) {
-                        Object val = rs.getObject(i);
-                        row[i - 1] = (val != null) ? val.toString() : null;
+                        row[i - 1] = JdbcCsvValueFormatter.format(rs, meta, i);
                     }
                     writer.writeNext(row, false);
 
@@ -155,19 +209,32 @@ public class Import {
                         writer.flush(); // keep memory usage low
                     }
                 }
+                return new ExportReportEntry(
+                    table.getTableName(),
+                    expectedRowCount,
+                    finalCap,
+                    rowCount,
+                    false,
+                    exportPlan.codAccFiltered(),
+                    null
+                );
             }
         }
     }
 
-    /**
-     * Export Oracle sequences into a SEQUENCE.csv file compatible with the target MySQL table.
-     */
     private static void exportSequencesToCSV(
         Connection conn,
         String schema,
-        String outputDir
+        Path outputDir,
+        LightModeConfig lightMode,
+        List<ExportReportEntry> reportEntries
     ) throws SQLException, IOException {
-        String outputFile = outputDir + File.separator + "SEQUENCE.csv";
+        Path outputFile = outputDir.resolve("SEQUENCE.csv");
+        String countSql = """
+            SELECT COUNT(*)
+            FROM all_sequences
+            WHERE sequence_owner = ?
+            """;
         String sql = """
             SELECT
                 sequence_name,
@@ -187,12 +254,34 @@ public class Import {
             WHERE sequence_owner = ?
             ORDER BY sequence_name
             """;
+        if (isLightModeEnabled(lightMode)) {
+            sql = sql + " FETCH FIRST " + lightMode.max_rows_per_table + " ROWS ONLY";
+        }
+        boolean auditEnabled = shouldProduceLightModeReport(lightMode) || isDryRun(lightMode);
+        long expectedRowCount = -1L;
+        if (auditEnabled) {
+            try (PreparedStatement countStmt = conn.prepareStatement(countSql)) {
+                countStmt.setString(1, schema.toUpperCase());
+                try (ResultSet rs = countStmt.executeQuery()) {
+                    rs.next();
+                    expectedRowCount = rs.getLong(1);
+                }
+            }
+        }
+        long finalCap = auditEnabled
+            ? (isLightModeEnabled(lightMode) ? Math.min(expectedRowCount, lightMode.max_rows_per_table) : expectedRowCount)
+            : -1L;
+        logLightModeReportLine("SEQUENCE", expectedRowCount, finalCap, lightMode);
+        if (isDryRun(lightMode)) {
+            reportEntries.add(new ExportReportEntry("SEQUENCE", expectedRowCount, finalCap, 0, true, false, null));
+            return;
+        }
 
         try (
             PreparedStatement stmt = conn.prepareStatement(sql);
             CSVWriter writer = new CSVWriter(
                 new OutputStreamWriter(
-                    new FileOutputStream(outputFile),
+                    new FileOutputStream(outputFile.toFile()),
                     StandardCharsets.UTF_8
                 )
             )
@@ -235,27 +324,182 @@ public class Import {
                         writer.flush();
                     }
                 }
+                reportEntries.add(new ExportReportEntry("SEQUENCE", expectedRowCount, finalCap, rowCount, false, false, null));
             }
         }
     }
 
-    /**
-     * Get Oracle connection.
-     */
-    static Connection getConnectionTarget(boolean source, Config config)
-        throws SQLException {
-        DbConfig db = source
-            ? config.db_config_source
-            : config.db_config_target;
-        // Using Oracle service name format
-        String url = String.format(
-            "jdbc:oracle:thin:@//%s:1521/%s",
-            db.host,
-            db.database
-        );
-        Properties props = new Properties();
-        props.setProperty("user", db.user);
-        props.setProperty("password", db.password);
-        return DriverManager.getConnection(url, props);
+    private static String resolveSchema(DbConfig dbConfig, DatabaseDialect dialect) {
+        if (dbConfig.schema != null && !dbConfig.schema.isBlank()) {
+            return dbConfig.schema;
+        }
+        return switch (dialect) {
+            case ORACLE -> dbConfig.user != null ? dbConfig.user.toUpperCase(Locale.ROOT) : null;
+            case SQLSERVER -> "dbo";
+            case MYSQL -> null;
+        };
+    }
+
+    private static void validateUniqueFileNames(List<SourceTableRef> tableRefs) {
+        Map<String, List<SourceTableRef>> byFileStem = new HashMap<>();
+        for (SourceTableRef tableRef : tableRefs) {
+            byFileStem.computeIfAbsent(tableRef.getFileStem(), ignored -> new ArrayList<>()).add(tableRef);
+        }
+
+        List<String> collisions = byFileStem.entrySet().stream()
+            .filter(entry -> entry.getValue().size() > 1)
+            .map(entry -> entry.getKey())
+            .sorted()
+            .toList();
+
+        if (!collisions.isEmpty()) {
+            throw new IllegalStateException(
+                "Multiple source tables would map to the same CSV file name: " + collisions
+                    + ". Narrow db_config_source.schema or rename the target mapping."
+            );
+        }
+    }
+
+    private static String buildQualifiedTableName(Connection conn, SourceTableRef table) throws SQLException {
+        DatabaseMetaData metaData = conn.getMetaData();
+        String quote = normalizeQuote(metaData.getIdentifierQuoteString());
+        List<String> parts = new ArrayList<>();
+        if (table.getCatalog() != null && !table.getCatalog().isBlank()) {
+            parts.add(quoteIdentifier(table.getCatalog(), quote));
+        }
+        if (table.getSchema() != null && !table.getSchema().isBlank()) {
+            parts.add(quoteIdentifier(table.getSchema(), quote));
+        }
+        parts.add(quoteIdentifier(table.getTableName(), quote));
+        return String.join(".", parts);
+    }
+
+    private static String normalizeQuote(String quote) {
+        if (quote == null) {
+            return "\"";
+        }
+        String trimmed = quote.trim();
+        return trimmed.isEmpty() ? "\"" : trimmed;
+    }
+
+    private static String quoteIdentifier(String identifier, String quote) {
+        String escaped = identifier.replace(quote, quote + quote);
+        return quote + escaped + quote;
+    }
+
+    private static boolean isLightModeEnabled(LightModeConfig lightMode) {
+        return lightMode != null
+            && lightMode.enabled
+            && lightMode.cod_acc != null
+            && !lightMode.cod_acc.isBlank()
+            && lightMode.max_rows_per_table > 0;
+    }
+
+    private static boolean shouldProduceLightModeReport(LightModeConfig lightMode) {
+        return isLightModeEnabled(lightMode) && lightMode.report_enabled;
+    }
+
+    private static boolean isDryRun(LightModeConfig lightMode) {
+        return isLightModeEnabled(lightMode) && lightMode.dry_run;
+    }
+
+    private static void bindLightModeParameters(
+        PreparedStatement stmt,
+        LightExportPlanner.ExportPlan exportPlan,
+        LightModeConfig lightMode,
+        DatabaseDialect sourceDialect
+        ) throws SQLException {
+        if (!exportPlan.codAccFiltered()) {
+            return;
+        }
+        for (int index = 1; index <= exportPlan.parameterCount(); index++) {
+            stmt.setString(index, normalizeCodAcc(lightMode.cod_acc, sourceDialect));
+        }
+    }
+
+    private static long countRowsForPlan(
+        Connection conn,
+        LightExportPlanner.ExportPlan exportPlan,
+        LightModeConfig lightMode,
+        DatabaseDialect sourceDialect
+    ) throws SQLException {
+        try (PreparedStatement stmt = conn.prepareStatement(exportPlan.countSql())) {
+            bindLightModeParameters(stmt, exportPlan, lightMode, sourceDialect);
+            try (ResultSet rs = stmt.executeQuery()) {
+                rs.next();
+                return rs.getLong(1);
+            }
+        }
+    }
+
+    private static void logLightModeReportLine(String tableName, long expectedRowCount, long finalCap, LightModeConfig lightMode) {
+        if (!shouldProduceLightModeReport(lightMode)) {
+            return;
+        }
+        String dryRunTag = isDryRun(lightMode) ? " [dry-run]" : "";
+        System.out.println(String.format(
+            "[LIGHT]%s %s expected_before_cap=%d final_cap=%d",
+            dryRunTag,
+            tableName,
+            expectedRowCount,
+            finalCap
+        ));
+    }
+
+    private static void writeLightModeReport(
+        Path outputDir,
+        LightModeConfig lightMode,
+        List<ExportReportEntry> reportEntries
+    ) throws IOException {
+        if (!shouldProduceLightModeReport(lightMode)) {
+            return;
+        }
+        List<ExportReportEntry> sortedEntries = reportEntries.stream()
+            .sorted(Comparator.comparing(ExportReportEntry::tableName))
+            .toList();
+        Path reportPath = outputDir.resolve(lightMode.report_file);
+        Files.createDirectories(reportPath.getParent());
+        try (CSVWriter writer = new CSVWriter(Files.newBufferedWriter(reportPath, StandardCharsets.UTF_8))) {
+            writer.writeNext(new String[] {
+                "table_name",
+                "expected_before_cap",
+                "final_cap",
+                "exported_rows",
+                "dry_run",
+                "cod_acc_filtered",
+                "error"
+            }, false);
+            for (ExportReportEntry entry : sortedEntries) {
+                writer.writeNext(new String[] {
+                    entry.tableName(),
+                    String.valueOf(entry.expectedBeforeCap()),
+                    String.valueOf(entry.finalCap()),
+                    String.valueOf(entry.exportedRows()),
+                    String.valueOf(entry.dryRun()),
+                    String.valueOf(entry.codAccFiltered()),
+                    entry.error() == null ? "" : entry.error()
+                }, false);
+            }
+        }
+    }
+
+    private static String normalizeCodAcc(String codAcc, DatabaseDialect sourceDialect) {
+        return sourceDialect == DatabaseDialect.ORACLE
+            ? codAcc.toUpperCase(Locale.ROOT)
+            : codAcc;
+    }
+
+    private record ExportReportEntry(
+        String tableName,
+        long expectedBeforeCap,
+        long finalCap,
+        long exportedRows,
+        boolean dryRun,
+        boolean codAccFiltered,
+        String error
+    ) {
+        private static ExportReportEntry error(String tableName, String error) {
+            return new ExportReportEntry(tableName, 0, 0, 0, false, false, error);
+        }
     }
 }
