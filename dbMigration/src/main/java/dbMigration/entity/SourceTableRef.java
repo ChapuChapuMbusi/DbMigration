@@ -1,5 +1,7 @@
 package dbMigration.entity;
 
+import java.util.Locale;
+
 public class SourceTableRef {
 
     private final String catalog;
@@ -25,6 +27,14 @@ public class SourceTableRef {
     }
 
     public String getFileStem() {
-        return tableName;
+        return normalizeTableName(tableName);
+    }
+
+    public String getLogicalTableName() {
+        return normalizeTableName(tableName);
+    }
+
+    private static String normalizeTableName(String value) {
+        return value == null ? "" : value.trim().toUpperCase(Locale.ROOT);
     }
 }

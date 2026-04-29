@@ -29,7 +29,10 @@ public class Import {
             System.out.println("Connected to Source Database: " + sourceDialect);
             outputDir = OutputPathResolver.resolveOutputDirectory(config.data_dir);
 
-            List<SourceTableRef> tables = getTableRefs(conn, dbConfig, sourceDialect);
+            List<SourceTableRef> tables = getTableRefs(conn, config, dbConfig, sourceDialect);
+            if (isLightModeEnabled(lightMode) && config.include_tables != null && !config.include_tables.isEmpty()) {
+                System.out.println("Restricting export to tables: " + config.include_tables);
+            }
             LightExportPlanner lightExportPlanner = isLightModeEnabled(lightMode)
                 ? LightExportPlanner.create(conn, tables, sourceDialect, lightMode)
                 : null;
@@ -52,14 +55,14 @@ public class Import {
                         } catch (SQLException e) {
                             System.err.println(
                                 "Connection error for table " +
-                                    table.getTableName() +
+                                    table.getLogicalTableName() +
                                     ": " +
                                     e.getMessage()
                             );
-                            return ExportReportEntry.error(table.getTableName(), e.getMessage());
+                            return ExportReportEntry.error(table.getLogicalTableName(), e.getMessage());
                         } catch (IOException e) {
                             e.printStackTrace();
-                            return ExportReportEntry.error(table.getTableName(), e.getMessage());
+                            return ExportReportEntry.error(table.getLogicalTableName(), e.getMessage());
                         }
                     })
                 );
@@ -101,9 +104,14 @@ public class Import {
         }
     }
 
-    private static List<SourceTableRef> getTableRefs(Connection conn, DbConfig dbConfig, DatabaseDialect dialect)
+    private static List<SourceTableRef> getTableRefs(Connection conn, Config config, DbConfig dbConfig, DatabaseDialect dialect)
         throws SQLException {
         List<SourceTableRef> tableRefs = new ArrayList<>();
+        Set<String> includeTables = config != null
+            && isLightModeEnabled(config.light_mode)
+            && config.include_tables != null
+            ? config.include_tables
+            : Set.of();
         DatabaseMetaData metaData = conn.getMetaData();
         String catalog = dialect == DatabaseDialect.MYSQL || dialect == DatabaseDialect.SQLSERVER
             ? dbConfig.database
@@ -120,6 +128,11 @@ public class Import {
                     )
                 );
             }
+        }
+        if (!includeTables.isEmpty()) {
+            tableRefs = tableRefs.stream()
+                .filter(tableRef -> includeTables.contains(tableRef.getLogicalTableName()))
+                .collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
         }
         tableRefs.sort(
             Comparator
@@ -154,17 +167,16 @@ public class Import {
                 "SELECT * FROM " + qualifiedTableName,
                 "SELECT COUNT(*) FROM " + qualifiedTableName,
                 0,
-                false
+                false,
+                null
             );
         boolean auditEnabled = shouldProduceLightModeReport(lightMode) || isDryRun(lightMode);
         long expectedRowCount = auditEnabled ? countRowsForPlan(conn, exportPlan, lightMode, sourceDialect) : -1L;
-        long finalCap = auditEnabled
-            ? (isLightModeEnabled(lightMode) ? Math.min(expectedRowCount, lightMode.max_rows_per_table) : expectedRowCount)
-            : -1L;
-        logLightModeReportLine(table.getTableName(), expectedRowCount, finalCap, lightMode);
+        long finalCap = auditEnabled ? resolveFinalCap(expectedRowCount, exportPlan, lightMode) : -1L;
+        logLightModeReportLine(table.getLogicalTableName(), expectedRowCount, finalCap, lightMode);
 
         if (isDryRun(lightMode)) {
-            return new ExportReportEntry(table.getTableName(), expectedRowCount, finalCap, 0, true, exportPlan.codAccFiltered(), null);
+            return new ExportReportEntry(table.getLogicalTableName(), expectedRowCount, finalCap, 0, true, exportPlan.codAccFiltered(), null);
         }
 
         try (
@@ -174,7 +186,11 @@ public class Import {
                 ResultSet.CONCUR_READ_ONLY
             )
         ) {
-            stmt.setFetchSize(1000);
+            if (sourceDialect == DatabaseDialect.MYSQL) {
+                stmt.setFetchSize(Integer.MIN_VALUE);
+            } else {
+                stmt.setFetchSize(1000);
+            }
             bindLightModeParameters(stmt, exportPlan, lightMode, sourceDialect);
 
             try (
@@ -210,7 +226,7 @@ public class Import {
                     }
                 }
                 return new ExportReportEntry(
-                    table.getTableName(),
+                    table.getLogicalTableName(),
                     expectedRowCount,
                     finalCap,
                     rowCount,
@@ -254,8 +270,9 @@ public class Import {
             WHERE sequence_owner = ?
             ORDER BY sequence_name
             """;
-        if (isLightModeEnabled(lightMode)) {
-            sql = sql + " FETCH FIRST " + lightMode.max_rows_per_table + " ROWS ONLY";
+        Integer sequenceRowLimit = resolveGlobalRowLimit(lightMode);
+        if (sequenceRowLimit != null) {
+            sql = sql + " FETCH FIRST " + sequenceRowLimit + " ROWS ONLY";
         }
         boolean auditEnabled = shouldProduceLightModeReport(lightMode) || isDryRun(lightMode);
         long expectedRowCount = -1L;
@@ -269,7 +286,7 @@ public class Import {
             }
         }
         long finalCap = auditEnabled
-            ? (isLightModeEnabled(lightMode) ? Math.min(expectedRowCount, lightMode.max_rows_per_table) : expectedRowCount)
+            ? (sequenceRowLimit == null ? expectedRowCount : Math.min(expectedRowCount, sequenceRowLimit))
             : -1L;
         logLightModeReportLine("SEQUENCE", expectedRowCount, finalCap, lightMode);
         if (isDryRun(lightMode)) {
@@ -391,8 +408,7 @@ public class Import {
         return lightMode != null
             && lightMode.enabled
             && lightMode.cod_acc != null
-            && !lightMode.cod_acc.isBlank()
-            && lightMode.max_rows_per_table > 0;
+            && !lightMode.cod_acc.isBlank();
     }
 
     private static boolean shouldProduceLightModeReport(LightModeConfig lightMode) {
@@ -415,6 +431,25 @@ public class Import {
         for (int index = 1; index <= exportPlan.parameterCount(); index++) {
             stmt.setString(index, normalizeCodAcc(lightMode.cod_acc, sourceDialect));
         }
+    }
+
+    private static long resolveFinalCap(
+        long expectedRowCount,
+        LightExportPlanner.ExportPlan exportPlan,
+        LightModeConfig lightMode
+    ) {
+        if (!isLightModeEnabled(lightMode)) {
+            return expectedRowCount;
+        }
+        Integer rowLimit = exportPlan.rowLimit();
+        return rowLimit == null ? expectedRowCount : Math.min(expectedRowCount, rowLimit);
+    }
+
+    private static Integer resolveGlobalRowLimit(LightModeConfig lightMode) {
+        if (lightMode == null || lightMode.max_rows_per_table <= 0) {
+            return null;
+        }
+        return lightMode.max_rows_per_table;
     }
 
     private static long countRowsForPlan(

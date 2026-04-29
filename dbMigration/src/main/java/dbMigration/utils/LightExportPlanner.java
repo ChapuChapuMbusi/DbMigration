@@ -78,35 +78,43 @@ public final class LightExportPlanner {
         }
 
         String orderBy = resolveOrderBy(tableInfo);
+        Integer rowLimit = resolveRowLimit(tableKey);
         ManualFilter manualFilter = resolveManualFilter(tableKey);
         if (manualFilter != null) {
             return new ExportPlan(
-                    buildSelectSql(tableInfo, manualFilter.sql(), orderBy),
+                    buildSelectSql(tableInfo, manualFilter.sql(), orderBy, rowLimit),
                     buildCountSql(tableInfo, manualFilter.sql()),
                     manualFilter.parameterCount(),
-                    true);
+                    true,
+                    rowLimit);
         }
 
         List<RelationshipEdge> path = findPathToAgreement(tableKey);
         if (path == null) {
-            return new ExportPlan(buildSelectSql(tableInfo, null, orderBy), buildCountSql(tableInfo, null), 0, false);
+            return new ExportPlan(
+                    buildSelectSql(tableInfo, null, orderBy, rowLimit),
+                    buildCountSql(tableInfo, null),
+                    0,
+                    false,
+                    rowLimit);
         }
 
         AliasCounter aliasCounter = new AliasCounter(1);
         String predicate = buildPredicate("t0", tableKey, path, 0, aliasCounter);
         return new ExportPlan(
-                buildSelectSql(tableInfo, predicate, orderBy),
+                buildSelectSql(tableInfo, predicate, orderBy, rowLimit),
                 buildCountSql(tableInfo, predicate),
                 countParameters(path, tableKey),
-                true);
+                true,
+                rowLimit);
     }
 
-    private String buildSelectSql(TableInfo tableInfo, String predicate, String orderByClause) {
+    private String buildSelectSql(TableInfo tableInfo, String predicate, String orderByClause, Integer rowLimit) {
         String qualifiedTable = tableInfo != null ? qualify(tableInfo.tableRef()) : null;
         return switch (dialect) {
-            case MYSQL -> buildMySqlLikeSelect(qualifiedTable, predicate, orderByClause);
-            case ORACLE -> buildOracleSelect(qualifiedTable, predicate, orderByClause);
-            case SQLSERVER -> buildSqlServerSelect(qualifiedTable, predicate, orderByClause);
+            case MYSQL -> buildMySqlLikeSelect(qualifiedTable, predicate, orderByClause, rowLimit);
+            case ORACLE -> buildOracleSelect(qualifiedTable, predicate, orderByClause, rowLimit);
+            case SQLSERVER -> buildSqlServerSelect(qualifiedTable, predicate, orderByClause, rowLimit);
         };
     }
 
@@ -120,7 +128,7 @@ public final class LightExportPlanner {
         return sql.toString();
     }
 
-    private String buildMySqlLikeSelect(String qualifiedTable, String predicate, String orderByClause) {
+    private String buildMySqlLikeSelect(String qualifiedTable, String predicate, String orderByClause, Integer rowLimit) {
         StringBuilder sql = new StringBuilder("SELECT * FROM ").append(qualifiedTable).append(" t0");
         if (predicate != null && !predicate.isBlank()) {
             sql.append(" WHERE ").append(predicate);
@@ -128,11 +136,13 @@ public final class LightExportPlanner {
         if (orderByClause != null && !orderByClause.isBlank()) {
             sql.append(" ORDER BY ").append(orderByClause);
         }
-        sql.append(" LIMIT ").append(config.max_rows_per_table);
+        if (rowLimit != null) {
+            sql.append(" LIMIT ").append(rowLimit);
+        }
         return sql.toString();
     }
 
-    private String buildOracleSelect(String qualifiedTable, String predicate, String orderByClause) {
+    private String buildOracleSelect(String qualifiedTable, String predicate, String orderByClause, Integer rowLimit) {
         StringBuilder sql = new StringBuilder("SELECT * FROM ").append(qualifiedTable).append(" t0");
         if (predicate != null && !predicate.isBlank()) {
             sql.append(" WHERE ").append(predicate);
@@ -140,16 +150,18 @@ public final class LightExportPlanner {
         if (orderByClause != null && !orderByClause.isBlank()) {
             sql.append(" ORDER BY ").append(orderByClause);
         }
-        sql.append(" FETCH FIRST ").append(config.max_rows_per_table).append(" ROWS ONLY");
+        if (rowLimit != null) {
+            sql.append(" FETCH FIRST ").append(rowLimit).append(" ROWS ONLY");
+        }
         return sql.toString();
     }
 
-    private String buildSqlServerSelect(String qualifiedTable, String predicate, String orderByClause) {
-        StringBuilder sql = new StringBuilder("SELECT TOP (")
-                .append(config.max_rows_per_table)
-                .append(") * FROM ")
-                .append(qualifiedTable)
-                .append(" t0");
+    private String buildSqlServerSelect(String qualifiedTable, String predicate, String orderByClause, Integer rowLimit) {
+        StringBuilder sql = new StringBuilder("SELECT ");
+        if (rowLimit != null) {
+            sql.append("TOP (").append(rowLimit).append(") ");
+        }
+        sql.append("* FROM ").append(qualifiedTable).append(" t0");
         if (predicate != null && !predicate.isBlank()) {
             sql.append(" WHERE ").append(predicate);
         }
@@ -426,6 +438,13 @@ public final class LightExportPlanner {
         return new ManualFilter(sql, parameterCount);
     }
 
+    private Integer resolveRowLimit(String tableKey) {
+        if (config.uncapped_tables.contains(tableKey) || config.max_rows_per_table <= 0) {
+            return null;
+        }
+        return config.max_rows_per_table;
+    }
+
     private static int countOccurrences(String text, String token) {
         int count = 0;
         int fromIndex = 0;
@@ -460,7 +479,7 @@ public final class LightExportPlanner {
         return name == null ? "" : name.toUpperCase(Locale.ROOT);
     }
 
-    public record ExportPlan(String sql, String countSql, int parameterCount, boolean codAccFiltered) {
+    public record ExportPlan(String sql, String countSql, int parameterCount, boolean codAccFiltered, Integer rowLimit) {
     }
 
     private record RelationshipEdge(String targetTableKey, List<String> currentColumns, List<String> targetColumns) {

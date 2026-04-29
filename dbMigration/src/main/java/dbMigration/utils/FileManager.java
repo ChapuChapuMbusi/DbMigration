@@ -1,15 +1,17 @@
 package dbMigration.utils;
 
-import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import dbMigration.MigrationApp;
 
 public class FileManager {
 
@@ -41,44 +43,54 @@ public class FileManager {
     }
 
     private static void splitFile(File sourceFile, File targetFolder, long maxPartSize) throws IOException {
-        byte[] buffer = new byte[8192]; // 8KB buffer
         int partNumber = 1;
-        try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream(sourceFile))) {
-            long bytesReadInPart = 0;
-            FileOutputStream fos = null;
+        long bytesWrittenInPart = 0L;
+        BufferedWriter writer = null;
+        byte[] newlineBytes = "\n".getBytes(StandardCharsets.UTF_8);
 
-            int bytesRead;
-            while ((bytesRead = bis.read(buffer)) != -1) {
-                if (fos == null) {
-                    File partFile = new File(targetFolder,
-                            sourceFile.getName().replace(".csv", "") + ".part" + partNumber + ".csv");
-                    fos = new FileOutputStream(partFile);
-                }
-
-                if (bytesReadInPart + bytesRead > maxPartSize) {
-                    // Write only the portion that fits in this part
-                    int bytesToWrite = (int) (maxPartSize - bytesReadInPart);
-                    fos.write(buffer, 0, bytesToWrite);
-                    fos.close();
-
-
-                    // Prepare next part
-                    partNumber++;
-                    File partFile = new File(targetFolder,
-                            sourceFile.getName().replace(".csv", "") + ".part" + partNumber + ".csv");
-                    fos = new FileOutputStream(partFile);
-
-                    // Write remaining bytes to new part
-                    fos.write(buffer, bytesToWrite, bytesRead - bytesToWrite);
-                    bytesReadInPart = bytesRead - bytesToWrite;
-                } else {
-                    fos.write(buffer, 0, bytesRead);
-                    bytesReadInPart += bytesRead;
-                }
+        try (BufferedReader reader = new BufferedReader(
+                new InputStreamReader(new FileInputStream(sourceFile), StandardCharsets.UTF_8))) {
+            String header = reader.readLine();
+            if (header == null) {
+                return;
             }
 
-            if (fos != null) {
-                fos.close();
+            byte[] headerBytes = header.getBytes(StandardCharsets.UTF_8);
+            String line;
+            while ((line = reader.readLine()) != null) {
+                byte[] lineBytes = line.getBytes(StandardCharsets.UTF_8);
+                long entrySize = lineBytes.length + newlineBytes.length;
+
+                if (writer == null || (bytesWrittenInPart > 0 && bytesWrittenInPart + entrySize > maxPartSize)) {
+                    if (writer != null) {
+                        writer.close();
+                    }
+                    File partFile = new File(targetFolder,
+                            sourceFile.getName().replace(".csv", "") + ".part" + partNumber + ".csv");
+                    writer = new BufferedWriter(
+                            new OutputStreamWriter(new FileOutputStream(partFile), StandardCharsets.UTF_8));
+                    writer.write(header);
+                    writer.newLine();
+                    bytesWrittenInPart = headerBytes.length + newlineBytes.length;
+                    partNumber++;
+                }
+
+                writer.write(line);
+                writer.newLine();
+                bytesWrittenInPart += entrySize;
+            }
+
+            if (writer == null) {
+                File partFile = new File(targetFolder,
+                        sourceFile.getName().replace(".csv", "") + ".part" + partNumber + ".csv");
+                writer = new BufferedWriter(
+                        new OutputStreamWriter(new FileOutputStream(partFile), StandardCharsets.UTF_8));
+                writer.write(header);
+                writer.newLine();
+            }
+        } finally {
+            if (writer != null) {
+                writer.close();
             }
         }
     }

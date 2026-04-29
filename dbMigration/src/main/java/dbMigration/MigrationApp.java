@@ -25,6 +25,8 @@ import dbMigration.utils.OutputPathResolver;
 public class MigrationApp {
 
     private static Import importUtils = new Import();
+    private static final Set<String> AGREEMENT_COLUMNS = Set.of("COD_ACC", "CODICE_ACCORDO");
+    private static final String COD_ACC_PLACEHOLDER = ":cod_acc";
 
     static Config config;
     static String LOG_FILE = "src/resources/load_data_log.txt";
@@ -75,13 +77,16 @@ public class MigrationApp {
         logger.info("files splitted");
 
         Path tmpDir = outputDir.resolve("TMP");
+        removeLocks(outputDir.toString());
+        removeLocks(tmpDir.toString());
         Map<String, String> csvTableMap = buildCsvTableMap(tmpDir.toString());
         try (Connection conn = DbConnectionFactory.openTargetConnection(config)) {
             csvTableMap = filterCsvTableMapByTargetTables(csvTableMap, conn);
         }
-        int totalFiles = csvTableMap.size();
+        Map<String, List<String>> tableCsvMap = groupCsvPathsByTable(csvTableMap);
+        int totalTables = tableCsvMap.size();
         log("=== Starting parallel data load with " + config.max_workers + " workers ===");
-        log("Total files to process: " + totalFiles);
+        log("Total tables to process: " + totalTables);
 
         List<String> completed = Collections.synchronizedList(new ArrayList<>());
         Map<String, String> failed = Collections.synchronizedMap(new HashMap<>());
@@ -90,31 +95,34 @@ public class MigrationApp {
         // creare mappa di index che vengono eliminati dal DB e toglil controlli per FK
         // e Index
         try (Connection conn = DbConnectionFactory.openTargetConnection(config)) {
-            tableMetaMaps = csvTableMap.entrySet().stream().collect(Collectors.toMap(k -> k.getKey(), v -> {
+            tableMetaMaps = tableCsvMap.keySet().stream().collect(Collectors.toMap(table -> table, table -> {
                 try {
                     removeForeignKeyChecks(conn);
-                    return removeIndexes(v.getValue(), conn);
+                    return removeIndexes(table, conn);
 
                 } catch (SQLException e) {
                     logger.error("could not remove indexes");
                     e.printStackTrace();
                     return new TableMeta();
                 }
-            }));
+            }, (left, right) -> left, LinkedHashMap::new));
         }
 
         logger.info("dropped indexes and fkeys");
 
         ExecutorService executor = Executors.newFixedThreadPool(config.max_workers);
         List<Future<String>> futures = new ArrayList<>();
-        for (Map.Entry<String, String> entry : csvTableMap.entrySet()) {
-            futures.add(executor.submit(() -> loadSingleCsv(entry, completed, failed,
+        for (Map.Entry<String, List<String>> entry : tableCsvMap.entrySet()) {
+            futures.add(executor.submit(() -> loadTableCsvs(entry.getKey(), entry.getValue(), completed, failed,
                     skipped)));
         }
         int done = 0;
         for (Future<String> future : futures) {
-            future.get();
-            printProgress(++done, totalFiles);
+            String result = future.get();
+            if (!result.startsWith("OK >>")) {
+                log(result);
+            }
+            printProgress(++done, totalTables);
         }
         executor.shutdown();
         executor.awaitTermination(5, TimeUnit.MINUTES);
@@ -123,19 +131,19 @@ public class MigrationApp {
 
         // Retry failed
         if (!failed.isEmpty()) {
-            log("Retrying " + failed.size() + " failed files...");
+            log("Retrying " + failed.size() + " failed tables...");
             List<String> retrySuccess = new ArrayList<>();
             Map<String, String> retryStillFailed = new HashMap<>();
-            for (Map.Entry<String, String> entry : failed.entrySet()) {
-                String result = loadSingleCsv(entry, completed, retryStillFailed, skipped);
+            for (String table : failed.keySet()) {
+                String result = loadTableCsvs(table, tableCsvMap.getOrDefault(table, List.of()), completed, retryStillFailed, skipped);
                 log("[RETRY] " + result);
                 if (result.startsWith("OK >>"))
-                    retrySuccess.add(entry.getKey());
+                    retrySuccess.add(table);
                 else
-                    retryStillFailed.put(entry.getKey(), entry.getValue());
+                    retryStillFailed.put(table, failed.get(table));
             }
-            completed.addAll(retrySuccess);
-            failed.remove(retrySuccess);
+            failed.clear();
+            failed.putAll(retryStillFailed);
         }
         try (Connection conn = DbConnectionFactory.openTargetConnection(config)) {
             restoreIndexes(tableMetaMaps, conn);
@@ -144,6 +152,7 @@ public class MigrationApp {
         // Final summary
         log("=== All data loads completed ===");
         log("Total successful: " + completed.size());
+        log("Total skipped: " + skipped.size());
         log("Total failed: " + failed.size());
         // for (Map<String, String> item : failed) {
         // log(" ❌ " + item.get("table") + " failed permanently.");
@@ -168,11 +177,25 @@ public class MigrationApp {
 
                 // remove .partN suffix if present
                 table = table.replaceAll("\\.part\\d+$", "");
+                table = normalizeTableName(table);
 
                 map.put(p.toString(), table);
             });
         }
         return map;
+    }
+
+    static Map<String, List<String>> groupCsvPathsByTable(Map<String, String> csvTableMap) {
+        Map<String, List<String>> grouped = new LinkedHashMap<>();
+        csvTableMap.entrySet().stream()
+                .sorted(Comparator
+                        .comparing(Map.Entry<String, String>::getValue)
+                        .thenComparingInt(entry -> extractPartNumber(entry.getKey()))
+                        .thenComparing(Map.Entry::getKey))
+                .forEach(entry -> grouped
+                        .computeIfAbsent(entry.getValue(), ignored -> new ArrayList<>())
+                        .add(entry.getKey()));
+        return grouped;
     }
 
     static Map<String, String> filterCsvTableMapByTargetTables(Map<String, String> csvTableMap, Connection conn)
@@ -236,11 +259,14 @@ public class MigrationApp {
         return tableName == null ? "" : tableName.trim().toUpperCase(Locale.ROOT);
     }
 
-    static String loadSingleCsv(Map.Entry<String, String> item, List<String> completed, Map<String, String> failed,
+    static String loadTableCsvs(String table, List<String> csvPaths, List<String> completed, Map<String, String> failed,
             List<String> skipped) {
-        String csvPath = item.getKey();
-        String table = item.getValue();
-        String lockPath = csvPath + ".lock";
+        table = normalizeTableName(table);
+        if (csvPaths == null || csvPaths.isEmpty()) {
+            failed.put(table, "No CSV files found");
+            return table + ": ERROR - No CSV files found";
+        }
+        String lockPath = csvPaths.get(0) + "." + table + ".lock";
         File lockFile = new File(lockPath);
 
         if (lockFile.exists()) {
@@ -251,7 +277,7 @@ public class MigrationApp {
         try (FileWriter lock = new FileWriter(lockFile)) {
             lock.write("locked");
         } catch (IOException e) {
-            failed.put(item.getKey(), item.getValue());
+            failed.put(table, e.getMessage());
             return table + ": ERROR - " + e.getMessage();
         }
 
@@ -262,32 +288,28 @@ public class MigrationApp {
 
                 removeForeignKeyChecks(conn);
                 List<TargetColumn> columns = getTargetColumns(conn, table);
-
-                String colMapping = columns.stream()
-                        .map(TargetColumn::userVariable)
-                        .collect(Collectors.joining(", "));
-                String setClause = columns.stream()
-                        .map(MigrationApp::buildLoadAssignment)
-                        .collect(Collectors.joining(", "));
-                String sql = String.format(
-                        "LOAD DATA LOCAL INFILE '%s' INTO TABLE `%s` FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\\n' IGNORE 1 LINES (%s) SET %s;",
-                        csvPath.replace("\\", "\\\\"), table, colMapping, setClause);
-
-                stmt.execute(sql);
-
-                restoreForeignKeyChecks(conn);
+                int deleted = maybeDeleteFilteredRows(conn, table, columns);
+                int afterDelete = deleted > 0 ? countRows(stmt, table) : before;
+                for (String csvPath : csvPaths) {
+                    loadCsvPart(stmt, table, csvPath, columns);
+                }
 
                 int after = countRows(stmt, table);
-                int inserted = after - before;
+                int inserted = after - afterDelete;
 
                 // stmt.execute("COMMIT;");
 
                 completed.add(table);
+                if (deleted > 0) {
+                    log(String.format("DELETE %s filtered rows from table %s", deleted, table));
+                }
                 log(String.format("INSERT %s in table %s", inserted, table));
                 return "OK >> " + table + ": " + inserted + " rows inserted";
+            } finally {
+                restoreForeignKeyChecks(conn);
             }
         } catch (Exception e) {
-            failed.put(item.getKey(), item.getValue());
+            failed.put(table, e.getMessage());
             // log(String.format("ERROR : table %s, with message: %s", table,
             // e.getMessage()));
             return table + ": ERROR - " + e.getMessage();
@@ -302,8 +324,22 @@ public class MigrationApp {
         return rs.getInt(1);
     }
 
+    private static void loadCsvPart(Statement stmt, String table, String csvPath, List<TargetColumn> columns) throws SQLException {
+        String colMapping = columns.stream()
+                .map(TargetColumn::userVariable)
+                .collect(Collectors.joining(", "));
+        String setClause = columns.stream()
+                .map(MigrationApp::buildLoadAssignment)
+                .collect(Collectors.joining(", "));
+        String sql = String.format(
+                "LOAD DATA LOCAL INFILE '%s' INTO TABLE `%s` FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\\n' IGNORE 1 LINES (%s) SET %s;",
+                csvPath.replace("\\", "\\\\"), table, colMapping, setClause);
+
+        stmt.execute(sql);
+    }
+
     static void printProgress(int done, int total) {
-        System.out.print(String.format("Progress: %d/%d files completed\r", done, total));
+        System.out.print(String.format("Progress: %d/%d tables completed\r", done, total));
     }
 
     static void log(String message) {
@@ -351,10 +387,17 @@ public class MigrationApp {
         lightMode.cod_acc = props.getProperty("light_mode.cod_acc");
         lightMode.max_rows_per_table = Integer.parseInt(props.getProperty("light_mode.max_rows_per_table", "50"));
         lightMode.relation_search_depth = Integer.parseInt(props.getProperty("light_mode.relation_search_depth", "6"));
+        lightMode.uncapped_tables.addAll(parseUppercaseCsvSet(props.getProperty("light_mode.uncapped_tables", "")));
+        lightMode.replace_filtered_tables.addAll(parseUppercaseCsvSet(props.getProperty("light_mode.replace_filtered_tables", "")));
         props.stringPropertyNames().stream()
                 .filter(name -> name.startsWith("light_mode.manual_filter."))
                 .forEach(name -> lightMode.manual_filters.put(
                         name.substring("light_mode.manual_filter.".length()).toUpperCase(Locale.ROOT),
+                        props.getProperty(name)));
+        props.stringPropertyNames().stream()
+                .filter(name -> name.startsWith("light_mode.manual_delete_filter."))
+                .forEach(name -> lightMode.manual_delete_filters.put(
+                        name.substring("light_mode.manual_delete_filter.".length()).toUpperCase(Locale.ROOT),
                         props.getProperty(name)));
         props.stringPropertyNames().stream()
                 .filter(name -> name.startsWith("light_mode.manual_order_by."))
@@ -362,9 +405,21 @@ public class MigrationApp {
                         name.substring("light_mode.manual_order_by.".length()).toUpperCase(Locale.ROOT),
                         props.getProperty(name)));
         cfg.light_mode = lightMode;
+        cfg.include_tables = parseUppercaseCsvSet(props.getProperty("include_tables", ""));
         cfg.data_dir = props.getProperty("data_dir");
         cfg.max_workers = Integer.parseInt(props.getProperty("max_workers"));
         return cfg;
+    }
+
+    private static Set<String> parseUppercaseCsvSet(String rawValue) {
+        if (rawValue == null || rawValue.isBlank()) {
+            return new LinkedHashSet<>();
+        }
+        return Arrays.stream(rawValue.split(","))
+                .map(String::trim)
+                .filter(value -> !value.isBlank())
+                .map(value -> value.toUpperCase(Locale.ROOT))
+                .collect(Collectors.toCollection(LinkedHashSet::new));
     }
 
     private static boolean checkConnections(Config conf) {
@@ -596,6 +651,101 @@ public class MigrationApp {
         return columns;
     }
 
+    private static int maybeDeleteFilteredRows(Connection conn, String table, List<TargetColumn> columns) throws SQLException {
+        DeletePlan deletePlan = resolveDeletePlan(table, columns, config.light_mode);
+        if (deletePlan == null) {
+            return 0;
+        }
+        String sql = String.format("DELETE FROM `%s` WHERE %s", table, deletePlan.predicate());
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            bindDeleteParameters(stmt, deletePlan.parameterCount(), config.light_mode);
+            return stmt.executeUpdate();
+        }
+    }
+
+    private static DeletePlan resolveDeletePlan(String table, List<TargetColumn> columns, LightModeConfig lightMode) {
+        if (!isLightModeEnabled(lightMode)) {
+            return null;
+        }
+
+        String manualFilter = lightMode.manual_delete_filters.get(table);
+        if (manualFilter != null && !manualFilter.isBlank()) {
+            int parameterCount = countOccurrences(manualFilter, COD_ACC_PLACEHOLDER);
+            return new DeletePlan(manualFilter.replace(COD_ACC_PLACEHOLDER, "?"), parameterCount);
+        }
+
+        if (!lightMode.replace_filtered_tables.contains(table)) {
+            return null;
+        }
+
+        List<String> agreementColumns = columns.stream()
+                .map(TargetColumn::name)
+                .filter(MigrationApp::isAgreementLikeColumn)
+                .toList();
+        if (agreementColumns.isEmpty()) {
+            logger.warn("Light-mode replace is enabled for {}, but no COD_ACC-like target column was found", table);
+            return null;
+        }
+
+        String predicate = agreementColumns.stream()
+                .map(column -> String.format("`%s` = ?", column))
+                .collect(Collectors.joining(" OR "));
+        if (agreementColumns.size() > 1) {
+            predicate = "(" + predicate + ")";
+        }
+        return new DeletePlan(predicate, agreementColumns.size());
+    }
+
+    private static void bindDeleteParameters(PreparedStatement stmt, int parameterCount, LightModeConfig lightMode)
+            throws SQLException {
+        DatabaseDialect targetDialect = DbConnectionFactory.getTargetDialect(config);
+        String codAcc = normalizeCodAcc(lightMode.cod_acc, targetDialect);
+        for (int index = 1; index <= parameterCount; index++) {
+            stmt.setString(index, codAcc);
+        }
+    }
+
+    private static boolean isLightModeEnabled(LightModeConfig lightMode) {
+        return lightMode != null
+                && lightMode.enabled
+                && lightMode.cod_acc != null
+                && !lightMode.cod_acc.isBlank();
+    }
+
+    private static String normalizeCodAcc(String codAcc, DatabaseDialect dialect) {
+        return dialect == DatabaseDialect.ORACLE ? codAcc.toUpperCase(Locale.ROOT) : codAcc;
+    }
+
+    private static boolean isAgreementLikeColumn(String columnName) {
+        String normalized = normalizeTableName(columnName);
+        return AGREEMENT_COLUMNS.contains(normalized)
+                || normalized.startsWith("COD_ACC_")
+                || normalized.startsWith("CODICE_ACCORDO_");
+    }
+
+    private static int countOccurrences(String text, String token) {
+        int count = 0;
+        int fromIndex = 0;
+        while ((fromIndex = text.indexOf(token, fromIndex)) >= 0) {
+            count++;
+            fromIndex += token.length();
+        }
+        return count;
+    }
+
+    private static int extractPartNumber(String csvPath) {
+        int markerIndex = csvPath.lastIndexOf(".part");
+        int suffixIndex = csvPath.lastIndexOf(".csv");
+        if (markerIndex < 0 || suffixIndex <= markerIndex + 5) {
+            return 0;
+        }
+        try {
+            return Integer.parseInt(csvPath.substring(markerIndex + 5, suffixIndex));
+        } catch (NumberFormatException e) {
+            return 0;
+        }
+    }
+
     private static String buildLoadAssignment(TargetColumn column) {
         String rawValue = normalizeNullableValue(column.userVariable());
         String expression = isBinaryType(column.dataType())
@@ -624,5 +774,8 @@ public class MigrationApp {
         private String userVariable() {
             return "@v" + ordinalPosition;
         }
+    }
+
+    private record DeletePlan(String predicate, int parameterCount) {
     }
 }

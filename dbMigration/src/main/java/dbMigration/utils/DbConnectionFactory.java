@@ -37,6 +37,7 @@ public final class DbConnectionFactory {
         props.setProperty("password", dbConfig.password);
         if (dialect == DatabaseDialect.MYSQL) {
             props.setProperty("allowLoadLocalInfile", String.valueOf(dbConfig.allow_local_infile));
+            props.setProperty("zeroDateTimeBehavior", "CONVERT_TO_NULL");
         }
         return DriverManager.getConnection(resolveJdbcUrl(dbConfig, dialect), props);
     }
